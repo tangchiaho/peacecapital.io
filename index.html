@@ -1,93 +1,226 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Peace Capital</title>
-  <meta name="description" content="Peace Capital is an independent investment platform focused on strategic equity investments and long-term partnerships." />
+  <title>Peace Capital｜Private Equity Platform</title>
+  <meta name="description" content="Peace Capital is a private equity platform focused on advanced materials, sustainability, and long-term capital partnerships." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Peace Capital｜Private Equity Platform" />
+  <meta property="og:description" content="A private equity platform focused on materials, sustainability, and long-term capital partnerships." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://peacecapital.io/" />
   <style>
-    :root { --bg:#0b0f17; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#1f2937; }
+    :root{
+      --bg:#071019;
+      --bg2:#0c1724;
+      --card:#0f1b2b;
+      --line:#1e2a3b;
+      --text:#edf3f8;
+      --muted:#9fb0c3;
+      --accent:#7fd0b2;
+      --accent2:#d2b56d;
+      --radius:22px;
+    }
     *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
     body{
-      margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Noto Sans", "PingFang TC", "Microsoft JhengHei", sans-serif;
-      background:linear-gradient(180deg, var(--bg), #060812);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
       color:var(--text);
+      background:
+        radial-gradient(1200px 500px at 10% 0%, rgba(127,208,178,.10), transparent 60%),
+        radial-gradient(1000px 480px at 90% 10%, rgba(210,181,109,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg), #050b12 100%);
+      line-height:1.65;
     }
-    a{color:var(--text); text-decoration:none; border-bottom:1px solid rgba(229,231,235,.25)}
-    a:hover{border-bottom-color:rgba(229,231,235,.7)}
-    .wrap{max-width:920px; margin:0 auto; padding:56px 20px 72px}
-    .top{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:40px}
-    .brand{display:flex; align-items:center; gap:14px}
-    .mark{
-      width:44px; height:44px; border-radius:12px;
-      background:linear-gradient(135deg,#111827,#0b1220);
-      border:1px solid rgba(255,255,255,.08);
-      display:grid; place-items:center;
-      font-weight:700; letter-spacing:.06em;
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;gap:16px;
+      padding:16px 20px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(10,17,28,.7);
+      backdrop-filter: blur(10px);
     }
-    .brand h1{font-size:20px; margin:0}
-    .brand p{margin:4px 0 0; color:var(--muted); font-size:13px}
-    .hero{padding:28px; border:1px solid rgba(255,255,255,.08); background:rgba(17,24,39,.55); border-radius:18px}
-    .hero h2{margin:0 0 10px; font-size:34px; line-height:1.15}
-    .hero .sub{color:var(--muted); font-size:16px; line-height:1.6; max-width:70ch}
-    .grid{display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px}
-    @media (min-width:860px){ .grid{grid-template-columns:1fr 1fr} }
-    .card{padding:18px; border-radius:16px; background:rgba(17,24,39,.45); border:1px solid rgba(255,255,255,.08)}
-    .card h3{margin:0 0 8px; font-size:15px; letter-spacing:.02em}
-    .card p{margin:0; color:var(--muted); line-height:1.6; font-size:14px}
-    ul{margin:10px 0 0 18px; color:var(--muted); line-height:1.8; font-size:14px}
-    .foot{margin-top:26px; padding-top:18px; border-top:1px solid rgba(255,255,255,.08); color:var(--muted); font-size:12px; display:flex; gap:10px; flex-wrap:wrap}
-    .pill{border:1px solid rgba(255,255,255,.12); padding:6px 10px; border-radius:999px}
+    .brand-title{font-size:28px;font-weight:800;letter-spacing:-.5px}
+    .brand-sub{font-size:13px;color:var(--muted)}
+    .nav-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    .nav-links a{font-size:14px;color:var(--muted)}
+    .hero{padding:72px 4px 36px}
+    .eyebrow{font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.4px}
+    h1{
+      margin:14px 0 18px;
+      font-size:64px;
+      line-height:1.02;
+      letter-spacing:-1.8px;
+    }
+    .lead{
+      max-width:860px;
+      font-size:21px;
+      color:var(--muted);
+    }
+    .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:14px 20px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      font-weight:600;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(127,208,178,.16), rgba(210,181,109,.12));
+      border-color:rgba(127,208,178,.25);
+    }
+    .section{margin-top:36px}
+    .section-title{
+      font-size:14px;
+      font-weight:700;
+      letter-spacing:.4px;
+      color:var(--muted);
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:16px;
+    }
+    .card{
+      grid-column:span 6;
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(15,27,43,.62);
+    }
+    .card h3{
+      margin:0 0 8px;
+      font-size:24px;
+      letter-spacing:-.3px;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+    }
+    .mini-links{
+      margin-top:16px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .pill{
+      display:inline-flex;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer{
+      margin-top:60px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    @media (max-width:900px){
+      h1{font-size:44px}
+      .lead{font-size:18px}
+      .card{grid-column:span 12}
+      .nav{border-radius:24px;align-items:flex-start;flex-direction:column}
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="top">
-      <div class="brand">
-        <div class="mark">PC</div>
-        <div>
-          <h1>Peace Capital</h1>
-          <p>Independent Investment Platform · Taiwan</p>
-        </div>
+    <div class="nav">
+      <div>
+        <div class="brand-title">Peace Capital</div>
+        <div class="brand-sub">Private Equity Platform</div>
       </div>
-      <div class="pill">peacecapital.io</div>
+      <div class="nav-links">
+        <a href="/hoyao/">HOYAO</a>
+        <a href="/#platform">Platform</a>
+        <a href="/#focus">Focus</a>
+      </div>
     </div>
 
-    <section class="hero">
-      <h2>Long-term equity, built on trust.</h2>
-      <p class="sub">
-        Peace Capital is an independent investment platform focused on strategic equity investments and long-term partnerships.
-        We collaborate with entrepreneurs and businesses to support sustainable value creation across industries.
-      </p>
+    <div class="hero">
+      <div class="eyebrow">PRIVATE EQUITY PLATFORM</div>
+      <h1>Capital, Materials, and Long-Term Value</h1>
+      <div class="lead">
+        Peace Capital is a platform-oriented investment brand focused on advanced materials,
+        sustainability, and long-term capital partnerships. It serves as the parent entry point
+        for investment narratives, industrial themes, and affiliated operating brands.
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="/hoyao/">Explore HOYAO Materials</a>
+        <a class="btn" href="mailto:hello@peacecapital.io">Contact</a>
+      </div>
+    </div>
 
+    <div class="section" id="platform">
+      <div class="section-title">Platform Structure</div>
       <div class="grid">
         <div class="card">
-          <h3>Focus</h3>
-          <p>Selective opportunities with clear fundamentals and long-term growth potential.</p>
-          <ul>
-            <li>Primary market opportunities &amp; strategic equity positions</li>
-            <li>Growth-stage businesses and long-term partnerships</li>
-            <li>Technology, healthcare, and sustainability-related industries</li>
-          </ul>
+          <h3>Peace Capital</h3>
+          <p>
+            The parent platform for investment positioning, capital narrative,
+            sector research, and long-term portfolio architecture.
+          </p>
+          <div class="mini-links">
+            <span class="pill">Private Equity</span>
+            <span class="pill">Platform</span>
+            <span class="pill">Long-Term Capital</span>
+          </div>
         </div>
 
         <div class="card">
-          <h3>Contact</h3>
+          <h3>HOYAO Materials</h3>
           <p>
-            <strong>Thomas Tang</strong><br/>
-            Founder<br/><br/>
-            Email: <a href="mailto:thomas@peacecapital.io">thomas@peacecapital.io</a><br/>
-            LinkedIn: <a href="#" title="Add your LinkedIn URL here">Add your profile</a>
+            A focused materials brand exploring advanced natural fiber materials,
+            fire safety, and sustainable architecture applications.
+          </p>
+          <div class="mini-links">
+            <a class="pill" href="/hoyao/">Enter Site</a>
+            <a class="pill" href="/hoyao/zh/">中文</a>
+            <a class="pill" href="/hoyao/en/">English</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="focus">
+      <div class="section-title">Focus Areas</div>
+      <div class="grid">
+        <div class="card">
+          <h3>Capital Platform</h3>
+          <p>
+            Building a platform that connects investment narratives, industrial opportunities,
+            and long-horizon value creation.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Industrial Themes</h3>
+          <p>
+            Including advanced materials, sustainability, architecture-related innovation,
+            and other long-term strategic sectors.
           </p>
         </div>
       </div>
+    </div>
 
-      <div class="foot">
-        <span class="pill">Peace Capital Co., Ltd.</span>
-        <span class="pill">Partnership-first</span>
-        <span class="pill">Simple · Professional · Low-profile</span>
-      </div>
-    </section>
+    <div class="footer">
+      <div>© 2026 Peace Capital</div>
+      <div>peacecapital.io</div>
+    </div>
   </div>
 </body>
 </html>
