@@ -4,8 +4,8 @@
   --text:#eaf0f6;
   --muted:#a9b6c3;
   --line:#1b2636;
-  --accent:#c8a85a;   /* 低調金色 */
-  --accent2:#77c7a5;  /* 低調綠 */
+  --accent:#c8a85a;
+  --accent2:#77c7a5;
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   --radius: 18px;
 }
@@ -22,14 +22,11 @@ body{
 }
 
 a{color:inherit;text-decoration:none}
-a:hover{opacity:.9}
-
 .container{max-width:1100px;margin:0 auto;padding:28px 20px 64px}
 .nav{
   display:flex;align-items:center;justify-content:space-between;
   gap:14px; padding:14px 18px; border:1px solid var(--line);
-  border-radius:999px; background:rgba(17,24,36,.65); backdrop-filter: blur(10px);
-  box-shadow: var(--shadow);
+  border-radius:999px; background:rgba(17,24,36,.65);
 }
 .brand{display:flex;align-items:center;gap:12px}
 .logo{
@@ -37,27 +34,21 @@ a:hover{opacity:.9}
   background: linear-gradient(135deg, rgba(200,168,90,.9), rgba(119,199,165,.85));
   display:grid;place-items:center;color:#081018;font-weight:800;
 }
-.brand .name{font-weight:800;letter-spacing:.2px}
-.brand .sub{font-size:12px;color:var(--muted);margin-top:-2px}
-
-.links{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:flex-end}
-.links a{
-  font-size:14px;color:var(--muted);
-  padding:8px 10px;border-radius:999px;border:1px solid transparent;
-}
-.links a.active{color:var(--text);border-color:var(--line);background:rgba(255,255,255,.03)}
-.lang{display:flex;gap:8px;align-items:center}
+.brand .name{font-weight:800}
+.brand .sub{font-size:12px;color:var(--muted)}
+.links{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.links a{font-size:14px;color:var(--muted)}
+.links a.active{color:var(--text)}
+.lang{display:flex;gap:8px}
 .pill{
   font-size:13px;color:var(--text);
   padding:8px 12px;border:1px solid var(--line);
   border-radius:999px;background:rgba(255,255,255,.02);
 }
-.pill:hover{background:rgba(255,255,255,.04)}
 .hero{padding:56px 6px 26px}
-.kicker{color:var(--accent2);font-weight:700;letter-spacing:.4px;font-size:13px}
+.kicker{color:var(--accent2);font-weight:700;font-size:13px}
 .h1{
   margin:10px 0 14px;font-size:44px;line-height:1.1;font-weight:900;
-  letter-spacing:-.6px;
 }
 .lead{color:var(--muted);font-size:18px;max-width:820px}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
@@ -80,7 +71,6 @@ a:hover{opacity:.9}
   background:rgba(17,24,36,.55);
   border-radius: var(--radius);
   padding:18px 18px 16px;
-  box-shadow: var(--shadow);
 }
 .card h3{margin:2px 0 8px;font-size:16px}
 .card p{margin:0;color:var(--muted);font-size:14px}
@@ -90,26 +80,8 @@ a:hover{opacity:.9}
   padding:6px 10px;border:1px solid var(--line);
   border-radius:999px;background:rgba(255,255,255,.02)
 }
-.section{margin-top:34px}
-.section h2{margin:0 0 10px;font-size:20px}
-.section p{margin:0;color:var(--muted);max-width:900px}
-.list{margin-top:14px;display:grid;gap:12px;grid-template-columns: repeat(12, 1fr);}
-.item{
-  grid-column: span 4;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.02);
-  border-radius: 16px; padding:14px;
-}
-.item b{display:block;margin-bottom:6px}
-.footer{
-  margin-top:52px; padding-top:18px;
-  border-top:1px solid var(--line); color:var(--muted); font-size:13px;
-  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap
-}
 
 @media (max-width:900px){
   .h1{font-size:36px}
   .card{grid-column: span 12}
-  .item{grid-column: span 12}
-  .links{justify-content:flex-start}
 }
