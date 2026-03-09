@@ -1,0 +1,16 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="320" fill="#F7F6F2"/>
+
+  <!-- Bridge symbol -->
+  <g transform="translate(72 72)">
+    <path d="M0 104 C20 104, 48 104, 72 104 C96 104, 124 104, 144 104" stroke="#171717" stroke-width="6" stroke-linecap="round"/>
+    <path d="M22 98 C22 54, 54 20, 90 20 C126 20, 158 54, 158 98" stroke="#171717" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g fill="#171717">
+    <text x="278" y="158" font-size="86" font-family="'Times New Roman', 'Iowan Old Style', 'Baskerville', serif" letter-spacing="-1.5">
+      Peace Capital
+    </text>
+  </g>
+</svg>
