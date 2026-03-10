@@ -1,7 +1,16 @@
-<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="none">
-  <rect width="512" height="512" fill="#F7F6F2"/>
-  
-  <!-- Horizon / Bridge Symbol -->
-  <path d="M96 300 C160 300, 224 300, 256 300 C288 300, 352 300, 416 300" stroke="#171717" stroke-width="10" stroke-linecap="round"/>
-  <path d="M176 292 C176 210, 224 160, 256 160 C288 160, 336 210, 336 292" stroke="#171717" stroke-width="14" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+
+<path fill="#2F3342" d="
+M0 0
+A50 50 0 0 1 50 50
+L50 100
+L0 100 Z"/>
+
+<path fill="#2F3342" d="
+M65 100
+A35 35 0 0 1 100 65
+L100 100 Z"/>
+
+<rect x="0" y="100" width="25" height="12" fill="#2F3342"/>
+
 </svg>
