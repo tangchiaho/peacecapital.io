@@ -1,11 +1,92 @@
-<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="720" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8F7F3"/>
+      <stop offset="1" stop-color="#F1EEE8"/>
+    </linearGradient>
 
-<rect width="640" height="640" fill="#F7F6F2"/>
+    <linearGradient id="layer1" x1="0" y1="350" x2="720" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ECE8E1" stop-opacity="0.2"/>
+      <stop offset="0.5" stop-color="#E6E2DB" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#E2DED7" stop-opacity="0.35"/>
+    </linearGradient>
 
-<path d="M0 160C120 80 260 80 380 160C500 240 520 360 640 440V640H0V160Z" fill="#ECEAE5"/>
+    <linearGradient id="layer2" x1="0" y1="430" x2="720" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAE6DF" stop-opacity="0.18"/>
+      <stop offset="0.45" stop-color="#E4E0D9" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#DFDBD4" stop-opacity="0.3"/>
+    </linearGradient>
 
-<circle cx="520" cy="120" r="60" fill="#E6E4DE"/>
+    <linearGradient id="layer3" x1="0" y1="520" x2="720" y2="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E7E3DC" stop-opacity="0.16"/>
+      <stop offset="0.5" stop-color="#E0DCD5" stop-opacity="0.68"/>
+      <stop offset="1" stop-color="#DCD8D1" stop-opacity="0.28"/>
+    </linearGradient>
 
-<rect x="120" y="420" width="160" height="160" rx="16" fill="#EDEBE6"/>
+    <radialGradient id="mist" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(485 430) rotate(90) scale(180 230)">
+      <stop offset="0" stop-color="#F5F3EF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#F5F3EF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
 
+  <rect width="720" height="720" fill="url(#bg)"/>
+
+  <path
+    d="M0 468
+       C86 430 167 407 251 403
+       C339 399 413 420 492 458
+       C579 500 649 512 720 500
+       L720 720
+       L0 720
+       Z"
+    fill="url(#layer1)"
+  />
+
+  <path
+    d="M0 547
+       C88 513 181 494 278 495
+       C377 496 462 525 543 567
+       C612 603 666 615 720 608
+       L720 720
+       L0 720
+       Z"
+    fill="url(#layer2)"
+  />
+
+  <path
+    d="M0 616
+       C101 594 206 586 314 594
+       C423 603 516 628 603 660
+       C644 675 683 683 720 684
+       L720 720
+       L0 720
+       Z"
+    fill="url(#layer3)"
+  />
+
+  <ellipse cx="494" cy="430" rx="230" ry="180" fill="url(#mist)"/>
+
+  <path
+    d="M0 505
+       C92 478 190 470 289 478
+       C389 486 478 514 562 550
+       C624 577 674 590 720 590"
+    stroke="#E7E2DB"
+    stroke-opacity="0.55"
+    stroke-width="2.5"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="M0 585
+       C104 565 212 564 321 576
+       C432 588 529 615 617 648
+       C653 662 687 670 720 671"
+    stroke="#E2DDD6"
+    stroke-opacity="0.48"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
 </svg>
