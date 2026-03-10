@@ -1,0 +1,13 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="180" fill="#F7F6F2"/>
+
+  <!-- Peace Capital icon -->
+  <path d="M40 110
+           A50 50 0 0 1 110 40
+           L110 65
+           A35 35 0 0 0 65 110
+           Z"
+        fill="#2F3A4A"/>
+
+  <rect x="40" y="110" width="25" height="12" fill="#2F3A4A"/>
+</svg>
