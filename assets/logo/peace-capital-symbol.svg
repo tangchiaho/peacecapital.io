@@ -1,22 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <g fill="#2F3A4A">
-    <!-- top-left block -->
-    <path d="M20 24H58C78 24 94 36 104 56H82C75 43 64 36 50 36H20V24Z"/>
-    <!-- left column -->
-    <path d="M20 36H36V94H20V36Z"/>
-    <!-- bottom-left base -->
-    <rect x="20" y="96" width="24" height="12"/>
-    <!-- bottom-right block -->
-    <path d="M52 108C52 82 66 62 88 50C95 46 101 44 108 44V108H52Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g fill="#2F3747">
+
+    <!-- 左上弧形 -->
+    <path d="
+      M10 10
+      H55
+      A45 45 0 0 1 55 55
+      H10
+      Z
+    "/>
+
+    <!-- 右下弧形 -->
+    <path d="
+      M55 55
+      A45 45 0 0 1 100 100
+      H55
+      Z
+    "/>
+
+    <!-- 左下底座 -->
+    <rect x="10" y="70" width="20" height="20"/>
+
   </g>
 
-  <!-- white dividing arch -->
+  <!-- 中間白色弧線 -->
   <path
-    d="M36 98C40 76 52 58 74 46C82 42 90 40 98 40"
+    d="
+      M30 85
+      A55 55 0 0 1 85 30
+    "
     fill="none"
-    stroke="#FFFFFF"
+    stroke="white"
     stroke-width="10"
     stroke-linecap="round"
-    stroke-linejoin="round"
   />
+
 </svg>
