@@ -1,7 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <g fill="#2F3A4A">
-    <path d="M24 96 A40 40 0 0 1 96 24 L96 44 A28 28 0 0 0 44 96 Z"/>
-    <rect x="24" y="96" width="20" height="10"/>
-    <path d="M24 24 L96 24 L24 96 Z"/>
+    <!-- top-left block -->
+    <path d="M20 24H58C78 24 94 36 104 56H82C75 43 64 36 50 36H20V24Z"/>
+    <!-- left column -->
+    <path d="M20 36H36V94H20V36Z"/>
+    <!-- bottom-left base -->
+    <rect x="20" y="96" width="24" height="12"/>
+    <!-- bottom-right block -->
+    <path d="M52 108C52 82 66 62 88 50C95 46 101 44 108 44V108H52Z"/>
   </g>
+
+  <!-- white dividing arch -->
+  <path
+    d="M36 98C40 76 52 58 74 46C82 42 90 40 98 40"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
 </svg>
