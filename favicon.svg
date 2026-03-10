@@ -1,9 +1,13 @@
-<svg width="64" height="64" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="none">
-  <rect width="512" height="512" fill="#F7F6F2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#F7F6F2"/>
 
-  <path d="M96 300 C160 300, 224 300, 256 300 C288 300, 352 300, 416 300"
-        stroke="#171717" stroke-width="12" stroke-linecap="round"/>
+  <!-- Peace Capital icon -->
+  <path d="M16 40
+           A20 20 0 0 1 40 16
+           L40 24
+           A14 14 0 0 0 24 40
+           Z"
+        fill="#2F3A4A"/>
 
-  <path d="M176 292 C176 210, 224 160, 256 160 C288 160, 336 210, 336 292"
-        stroke="#171717" stroke-width="16" stroke-linecap="round"/>
+  <rect x="16" y="40" width="10" height="6" fill="#2F3A4A"/>
 </svg>
