@@ -1,23 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 180">
+  <style>
+    .symbol { fill: #ffffff; }
+    .wordmark {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 48px;
+      letter-spacing: 4px;
+      fill: #ffffff;
+    }
+  </style>
 
-<style>
-.symbol{fill:#ffffff;}
-.wordmark{
-font-family: Georgia, "Times New Roman", serif;
-font-size:48px;
-letter-spacing:4px;
-fill:#ffffff;
-}
-</style>
+  <g class="symbol" transform="translate(20,40)">
+    <path d="M0 0 A50 50 0 0 1 50 50 L50 100 L0 100 Z"/>
+    <path d="M65 100 A35 35 0 0 1 100 65 L100 100 Z"/>
+    <rect x="0" y="100" width="25" height="12"/>
+  </g>
 
-<g class="symbol" transform="translate(20,40)">
-<path d="M0 0 A50 50 0 0 1 50 50 L50 100 L0 100 Z"/>
-<path d="M65 100 A35 35 0 0 1 100 65 L100 100 Z"/>
-<rect x="0" y="100" width="25" height="12"/>
-</g>
-
-<text x="150" y="110" class="wordmark">
-PEACE CAPITAL
-</text>
-
+  <text x="150" y="110" class="wordmark">PEACE CAPITAL</text>
 </svg>
