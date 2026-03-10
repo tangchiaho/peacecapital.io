@@ -1,38 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <g fill="#2F3747">
-
-    <!-- 左上弧形 -->
-    <path d="
-      M10 10
-      H55
-      A45 45 0 0 1 55 55
-      H10
-      Z
-    "/>
-
-    <!-- 右下弧形 -->
-    <path d="
-      M55 55
-      A45 45 0 0 1 100 100
-      H55
-      Z
-    "/>
-
-    <!-- 左下底座 -->
-    <rect x="10" y="70" width="20" height="20"/>
-
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#1C2F4A">
+    <path d="M64 64 L256 64 A192 192 0 0 1 448 256 L256 256 L64 256 Z"/>
+    <path d="M256 256 L448 256 L448 448 L256 448 Z"/>
+    <rect x="64" y="320" width="128" height="128"/>
   </g>
-
-  <!-- 中間白色弧線 -->
-  <path
-    d="
-      M30 85
-      A55 55 0 0 1 85 30
-    "
-    fill="none"
-    stroke="white"
-    stroke-width="10"
-    stroke-linecap="round"
-  />
-
 </svg>
