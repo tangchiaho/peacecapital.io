@@ -76,7 +76,7 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 
-.brand-symbol { width: 20px; height: 20px; flex-shrink: 0; }
+.brand-logo { height: 36px; width: auto; flex-shrink: 0; }
 
 .brand-en {
   font-family: var(--font-sans);
@@ -348,7 +348,15 @@ img { max-width: 100%; display: block; }
   align-items: end;
 }
 
-.founder-photo-wrap { position: relative; }
+.founder-photo-wrap {
+  position: relative;
+  /* 柔化去背邊緣：外層淡陰影讓頭髮與背景過渡更自然 */
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(20, 18, 16, 0.04),
+    0 0 32px -8px rgba(20, 18, 16, 0.08);
+}
 
 .founder-photo {
   width: 100%;
@@ -356,6 +364,8 @@ img { max-width: 100%; display: block; }
   object-fit: cover;
   object-position: top center;
   filter: grayscale(8%) contrast(1.02);
+  /* 讓透明邊緣與陰影過渡更柔和 */
+  display: block;
 }
 
 .founder-text { padding-bottom: 8px; }
@@ -409,6 +419,8 @@ img { max-width: 100%; display: block; }
   gap: 64px;
   align-items: start;
 }
+
+.footer-brand-logo { height: 32px; width: auto; flex-shrink: 0; margin-bottom: 10px; }
 
 .footer-brand .brand-en {
   font-family: var(--font-sans);
