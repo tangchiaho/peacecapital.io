@@ -14,6 +14,7 @@ Official static website for **Peace Capital（和平資本）**.
 | `/about/` | About |
 | `/focus/` | Focus |
 | `/contact/` | Contact |
+| `/insights/` | Insights (content ready; nav entry temporarily hidden) |
 
 ## Brand assets
 
