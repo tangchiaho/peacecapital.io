@@ -914,7 +914,7 @@ img { max-width: 100%; display: block; }
     align-items: stretch;
     gap: 0;
     padding: 12px 28px 28px;
-    background: rgba(245, 243, 237, 0.98);
+    background: #f5f3ed;
     border-bottom: 1px solid var(--line);
   }
   .nav.is-open { display: flex; }
