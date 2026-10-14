@@ -1,15 +1,27 @@
 {
   "name": "Peace Capital",
   "short_name": "Peace Capital",
+  "description": "Independent judgment. Patient capital. Enduring partnerships.",
   "icons": [
     {
       "src": "/favicon-96x96.png",
       "sizes": "96x96",
       "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/classic/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
     }
   ],
-  "theme_color": "#f7f6f2",
-  "background_color": "#f7f6f2",
+  "theme_color": "#f5f3ed",
+  "background_color": "#f5f3ed",
   "display": "standalone",
-  "start_url": "/"
+  "start_url": "/",
+  "lang": "zh-Hant"
 }

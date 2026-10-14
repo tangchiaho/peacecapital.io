@@ -1,23 +1,27 @@
 # Peace Capital Website
 
-This repository hosts the official static website for:
+Official static website for **Peace Capital（和平資本）**.
 
-- Peace Capital
-- HOYAO Materials
+- Domain: https://peacecapital.io
+- Hosting: GitHub Pages
+- Brand: Classic Institution (Cormorant Garamond wordmark)
 
-## Structure
+## Pages
 
-- `/` → Peace Capital main site
-- `/hoyao/` → HOYAO Materials landing page
-- `/hoyao/zh/` → Chinese site
-- `/hoyao/en/` → English site
+| Path | Page |
+|------|------|
+| `/` | Home |
+| `/about/` | About |
+| `/focus/` | Focus |
+| `/contact/` | Contact |
+
+## Brand assets
+
+- Live wordmark: HTML/CSS lockup in header & footer
+- Source assets: `assets/brand/classic/`
+- Root favicon / apple-touch / `assets/img/og-image.png`
 
 ## Stack
 
-- HTML
-- CSS
-- GitHub Pages
-
-## Domain
-
-- https://peacecapital.io
+- HTML / CSS / light vanilla JS
+- No build step
