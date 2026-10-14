@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Identity Comparison | Peace Capital</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f5f3ed">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=IBM+Plex+Sans:wght@400;500&family=Noto+Sans+TC:wght@300;400;500&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f3ed;
+      --text: #1c1b19;
+      --muted: #6b6860;
+      --line: rgba(28,27,25,0.1);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Sans 3', 'Noto Sans TC', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 500;
+      line-height: 1.15;
+      margin: 0 0 18px;
+      letter-spacing: -0.01em;
+    }
+    .lead {
+      max-width: 620px;
+      color: var(--muted);
+      margin: 0;
+      font-size: 1.02rem;
+    }
+    .shared {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .shared article {
+      padding-top: 8px;
+    }
+    .shared h2 {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin: 0 0 10px;
+    }
+    .shared p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      padding: 48px 0 72px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      background: #faf8f3;
+      padding: 36px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    .card-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .wordmark-classic .en {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.85rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .wordmark-modern .en {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .wordmark .zh {
+      margin-top: 10px;
+      font-size: 0.78rem;
+      letter-spacing: 0.3em;
+      color: var(--muted);
+    }
+    .meta {
+      margin: 32px 0 0;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .meta ul {
+      margin: 12px 0 0;
+      padding-left: 1.1em;
+    }
+    .meta li { margin-bottom: 6px; }
+    .assets {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .assets img {
+      display: block;
+      border: 1px solid var(--line);
+      background: var(--bg);
+    }
+    .favicon {
+      width: 48px;
+      height: 48px;
+    }
+    .og {
+      width: 180px;
+      height: auto;
+    }
+    .actions {
+      margin-top: auto;
+      padding-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 18px;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--text);
+    }
+    .btn-solid {
+      background: var(--text);
+      color: var(--bg);
+    }
+    .btn-solid:hover { opacity: 0.88; }
+    .btn-ghost:hover { background: rgba(28,27,25,0.04); }
+    .note {
+      border-top: 1px solid var(--line);
+      padding: 40px 0 72px;
+    }
+    .note h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin: 0 0 14px;
+    }
+    .note p {
+      max-width: 720px;
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--text); }
+    @media (max-width: 860px) {
+      .grid, .shared { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Peace Capital · Brand Review</p>
+      <h1>兩套機構字標方向比較</h1>
+      <p class="lead">
+        以精緻 PEACE CAPITAL 英文字標為核心，搭配低調「和平資本」。
+        配色回到 Charcoal × Warm Ivory，弱化金色；不做複雜圖騰。
+        以下為實際網頁預覽，暫不部署至正式站。
+      </p>
+    </div>
+  </header>
+
+  <section class="wrap shared" aria-label="Shared principles">
+    <article>
+      <h2>Color</h2>
+      <p>Warm Ivory <code>#F5F3ED</code><br>Charcoal <code>#1C1B19</code><br>金色退為極少使用／改以炭黑層次</p>
+    </article>
+    <article>
+      <h2>Lockup</h2>
+      <p>英文 Wordmark 為主識別；中文次要、縮小、降對比。Favicon 採單一字母「P」。</p>
+    </article>
+    <article>
+      <h2>Hero graphic</h2>
+      <p>建議移除首頁抽象裝飾圖形，改以字體、比例與留白建立機構感。</p>
+    </article>
+  </section>
+
+  <section class="wrap grid" aria-label="Direction comparison">
+    <article class="card">
+      <p class="card-label">Direction A · Classic Institution</p>
+      <div class="wordmark wordmark-classic">
+        <div class="en">Peace Capital</div>
+        <div class="zh">和平資本</div>
+      </div>
+      <div class="meta">
+        <strong style="color:var(--text);font-weight:400;">成熟 Serif 字標</strong>
+        <ul>
+          <li>字體：Cormorant Garamond（字標／標題）</li>
+          <li>內文：Source Sans 3 + Noto Sans TC</li>
+          <li>字距偏寬、莊重耐看</li>
+          <li>適合私人銀行／家族辦公室語感</li>
+        </ul>
+      </div>
+      <div class="assets">
+        <img class="favicon" src="/assets/brand/classic/favicon-96.png" alt="Classic favicon">
+        <img class="og" src="/assets/brand/classic/og-image.png" alt="Classic OG image">
+      </div>
+      <div class="actions">
+        <a class="btn btn-solid" href="/brand/classic/">開啟經典預覽</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <p class="card-label">Direction B · Modern Institution</p>
+      <div class="wordmark wordmark-modern">
+        <div class="en">Peace Capital</div>
+        <div class="zh">和平資本</div>
+      </div>
+      <div class="meta">
+        <strong style="color:var(--text);font-weight:400;">現代機構字標</strong>
+        <ul>
+          <li>字體：IBM Plex Sans（字標／全站）</li>
+          <li>中文：Noto Sans TC</li>
+          <li>字形乾淨、比例穩健、國際化</li>
+          <li>適合全球投資機構／研究型平台</li>
+        </ul>
+      </div>
+      <div class="assets">
+        <img class="favicon" src="/assets/brand/modern/favicon-96.png" alt="Modern favicon">
+        <img class="og" src="/assets/brand/modern/og-image.png" alt="Modern OG image">
+      </div>
+      <div class="actions">
+        <a class="btn btn-solid" href="/brand/modern/">開啟現代預覽</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="wrap note">
+    <h2>關於抽象裝飾圖形</h2>
+    <p>
+      現有首頁右側抽象面板（沙丘／絲綢質感）在品牌敘事上偏「意境插畫」，
+      對成熟投資機構而言容易分散對字標與主張的注意力。
+    </p>
+    <p>
+      兩套預覽皆<strong style="font-weight:500;color:var(--text);">移除該裝飾圖形</strong>，
+      改以字級層次、行寬與留白建立第一視窗的權威感；若後續需要視覺錨點，建議改為極克制的直線／紙感紋理，而非獨立插圖區塊。
+    </p>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      Draft comparison only · <a href="/">返回目前正式首頁結構</a>
+    </div>
+  </footer>
+</body>
+</html>
