@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /brand/
+Disallow: /insights/_drafts/
 
 Sitemap: https://peacecapital.io/sitemap.xml

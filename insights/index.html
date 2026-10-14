@@ -6,10 +6,10 @@
 
   <title>Insights | Peace Capital 和平資本</title>
 
-  <meta name="description" content="Peace Capital Insights：產業研究、投資理念與長期價值觀察。依分類、作者與日期瀏覽研究文章。">
+  <meta name="description" content="Peace Capital Insights：產業研究、投資理念與長期價值觀察專區。研究文章將持續更新。">
   <meta name="author" content="Peace Capital">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#f6f5f0">
+  <meta name="theme-color" content="#f5f3ed">
 
   <link rel="canonical" href="https://peacecapital.io/insights/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,8 +71,9 @@
 <body>
   <header class="header">
     <div class="header-inner">
-      <a href="/" class="brand brand-lockup" aria-label="Peace Capital 首頁">
-        <img src="/assets/logo/peace-capital-logo-light.svg" alt="Peace Capital" class="brand-logo" width="160" height="36">
+      <a href="/" class="brand-wordmark" aria-label="Peace Capital 首頁">
+        <span class="brand-en">Peace Capital</span>
+        <span class="brand-zh">和平資本</span>
       </a>
 
       <button class="nav-toggle" type="button" aria-label="開啟選單" aria-expanded="false" aria-controls="primary-nav">
@@ -120,58 +121,18 @@
           <button class="filter-chip" type="button" data-filter="research" aria-pressed="false">Research</button>
         </div>
 
-        <ul class="insight-list">
-          <li class="insight-item" data-category="philosophy">
-            <a class="insight-link" href="/insights/understanding-precedes-investing/">
-              <div class="insight-meta">
-                <span class="insight-category">Philosophy</span>
-                <time class="insight-date" datetime="2026-03-12">Mar 12, 2026</time>
-              </div>
-              <div>
-                <h2 class="insight-title">Understanding precedes investing</h2>
-                <p class="insight-excerpt">
-                  Why deep observation and industry context must come before capital decisions—
-                  and how patience becomes a source of judgment rather than delay.
-                </p>
-                <span class="insight-author">Thomas Tang</span>
-              </div>
-            </a>
-          </li>
+        <ul class="insight-list" id="insight-list"></ul>
 
-          <li class="insight-item" data-category="approach">
-            <a class="insight-link" href="/insights/patient-capital-structural-growth/">
-              <div class="insight-meta">
-                <span class="insight-category">Approach</span>
-                <time class="insight-date" datetime="2026-03-05">Mar 5, 2026</time>
-              </div>
-              <div>
-                <h2 class="insight-title">Patient capital in structural growth</h2>
-                <p class="insight-excerpt">
-                  How time horizon shapes what we choose to study, ignore, and eventually support
-                  when industries compound over decades.
-                </p>
-                <span class="insight-author">Peace Capital Research</span>
-              </div>
-            </a>
-          </li>
-
-          <li class="insight-item" data-category="research">
-            <a class="insight-link" href="/insights/proximity-and-judgment/">
-              <div class="insight-meta">
-                <span class="insight-category">Research</span>
-                <time class="insight-date" datetime="2026-02-18">Feb 18, 2026</time>
-              </div>
-              <div>
-                <h2 class="insight-title">Proximity and judgment</h2>
-                <p class="insight-excerpt">
-                  Understanding companies requires staying close to operators, markets, and change—
-                  without confusing activity for insight.
-                </p>
-                <span class="insight-author">Thomas Tang</span>
-              </div>
-            </a>
-          </li>
-        </ul>
+        <div class="insights-empty" id="insights-empty">
+          <h2>Publications forthcoming</h2>
+          <p>
+            Research notes will appear here with category, author, and publication date.
+            The listing layout is ready for ongoing updates.
+          </p>
+          <p>
+            研究文章確認後將於此發布。專區已保留分類、作者、日期與獨立文章頁之結構，以便後續持續更新。
+          </p>
+        </div>
       </div>
     </section>
   </main>
@@ -179,8 +140,10 @@
   <footer class="footer" aria-label="Site Footer">
     <div class="footer-container">
       <div class="footer-brand">
-        <img src="/assets/logo/peace-capital-logo-dark.svg" alt="Peace Capital" class="footer-brand-logo" width="140" height="32">
-        <div class="brand-zh">和平資本</div>
+        <div class="brand-wordmark">
+          <span class="brand-en">Peace Capital</span>
+          <span class="brand-zh">和平資本</span>
+        </div>
         <nav class="footer-nav" aria-label="Footer Navigation">
           <a href="/">Home</a>
           <a href="/about/">About</a>
@@ -224,7 +187,17 @@
     (function () {
       var chips = document.querySelectorAll('.filter-chip');
       var items = document.querySelectorAll('.insight-item');
+      var empty = document.getElementById('insights-empty');
       if (!chips.length) return;
+
+      function refreshEmpty() {
+        if (!empty) return;
+        var visible = 0;
+        items.forEach(function (item) {
+          if (!item.hidden) visible += 1;
+        });
+        empty.hidden = visible > 0;
+      }
 
       chips.forEach(function (chip) {
         chip.addEventListener('click', function () {
@@ -238,8 +211,11 @@
             var show = filter === 'all' || item.getAttribute('data-category') === filter;
             item.hidden = !show;
           });
+          refreshEmpty();
         });
       });
+
+      refreshEmpty();
     })();
   </script>
 </body>
