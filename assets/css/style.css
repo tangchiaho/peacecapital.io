@@ -1034,7 +1034,7 @@ img { max-width: 100%; display: block; }
   .brand-logo { height: 30px; }
   .brand-en { font-size: 0.78rem; }
 
-  .nav { inset-top: 68px; top: 68px; }
+  .nav { top: 68px; }
 
   .hero { padding: 72px 0 60px; min-height: auto; }
   .hero-title { font-size: clamp(2.6rem, 11vw, 4.2rem); }
