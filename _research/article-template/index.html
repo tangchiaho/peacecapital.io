@@ -31,7 +31,6 @@
   <meta property="og:site_name" content="Peace Capital">
   <meta property="og:locale" content="zh_TW">
   <meta property="article:published_time" content="2026-01-01">
-  <meta property="article:modified_time" content="2026-01-01">
   <meta property="article:section" content="【主主題中文名，如：半導體】">
   <meta property="article:author" content="和平資本">
 
@@ -59,6 +58,7 @@
         "datePublished": "2026-01-01",
         "dateModified": "2026-01-01",
         "inLanguage": "zh-Hant",
+
         "articleSection": "【主主題中文名】",
         "keywords": ["【關鍵字1】", "【關鍵字2】", "【關鍵字3】"],
         "image": "https://peacecapital.io/assets/img/og-image.png",
@@ -170,11 +170,7 @@
             <dd>和平資本</dd>
           </div>
           <div>
-            <dt>發布</dt>
-            <dd><time datetime="2026-01-01">2026 年 1 月 1 日</time></dd>
-          </div>
-          <div>
-            <dt>更新</dt>
+            <dt>發佈日期</dt>
             <dd><time datetime="2026-01-01">2026 年 1 月 1 日</time></dd>
           </div>
         </dl>
@@ -190,14 +186,28 @@
         <h3>【H3：補充說明或子問題】</h3>
         <p>【子段落。避免空泛形容；標明資訊來自何種公開資料。】</p>
 
-        <figure class="pc-figure" aria-labelledby="fig-template-caption">
+        <figure class="pc-figure pc-figure--media" aria-labelledby="fig-template-caption">
           <figcaption id="fig-template-caption" class="pc-figure-caption">
             <span class="pc-figure-label">圖 1</span>
             <span class="pc-figure-title">【圖表標題：用文字即可理解的重點】</span>
           </figcaption>
-          <div class="research-figure-placeholder" role="img" aria-label="圖表佔位：正式稿改為實際圖表或 HTML 表格">
-            <p>圖表佔位</p>
-            <p>正式發布時改為實際圖解／比較表；圖中資訊須同時以文字或表格呈現。</p>
+          <div class="pc-media">
+            <div class="pc-media-frame pc-media-frame--pending" data-image-slot="【slot-id】">
+              <img
+                class="pc-media-image"
+                src=""
+                alt="【替代文字：完整描述圖中重點】"
+                width="1600"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                hidden
+              >
+              <div class="pc-media-placeholder" aria-hidden="true">
+                <p class="pc-media-placeholder-label">圖位預備</p>
+                <p>正式圖片稍後置入；圖中資訊須同時以正文文字說明。</p>
+              </div>
+            </div>
           </div>
           <p class="pc-figure-note">產業研究示意圖／根據公開資料整理之示意圖（非特定企業現場照片）。</p>
         </figure>
