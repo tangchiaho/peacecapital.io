@@ -1,0 +1,25 @@
+# GitHub Pages (legacy / Jekyll) configuration for peacecapital.io
+# Source: repository root on the Pages branch (currently main).
+#
+# This site is hand-authored HTML/CSS/JS. Jekyll is used only as the
+# Pages build pipeline — not as a CMS. Internal research ops materials
+# live under _research/ (underscore = excluded from site output).
+
+title: Peace Capital
+lang: zh-Hant
+encoding: utf-8
+
+# Do not process Markdown into public pages from ops folders.
+exclude:
+  - README.md
+  - .gitignore
+  - .DS_Store
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - _research
+
+# Keep static HTML/CSS/JS as-is (no theme).
+theme: null
+plugins: []
