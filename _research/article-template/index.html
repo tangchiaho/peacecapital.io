@@ -5,29 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!--
-    研究文章模板（供複製，非正式發布頁）
+    研究文章模板（原始碼，位於 _research/，不會部署到 GitHub Pages）
     使用方式：
-    1. 複製本資料夾至 /insights/{slug}/
-    2. 移除 robots noindex
-    3. 替換所有 【】 佔位內容、canonical、JSON-LD、來源與延伸閱讀
-    4. 更新 /insights/index.html 與 /sitemap.xml
+    1. 複製本資料夾至 insights/{slug}/
+    2. 替換所有 【】 佔位內容、canonical、JSON-LD、來源與延伸閱讀
+    3. 更新 insights/index.html 與 sitemap.xml
   -->
 
   <title>【SEO 標題：清楚回答讀者問題】｜和平資本產業研究</title>
 
   <meta name="description" content="【120 字內：說明本文回答什麼問題、涵蓋哪些可查證面向，避免口號。】">
   <meta name="author" content="和平資本">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#f5f3ed">
 
-  <link rel="canonical" href="https://peacecapital.io/templates/research-article/">
+  <link rel="canonical" href="https://peacecapital.io/insights/【slug】/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="【SEO 標題】">
   <meta property="og:description" content="【社群分享摘要】">
-  <meta property="og:url" content="https://peacecapital.io/templates/research-article/">
+  <meta property="og:url" content="https://peacecapital.io/insights/【slug】/">
   <meta property="og:image" content="https://peacecapital.io/assets/img/og-image.png">
   <meta property="og:site_name" content="Peace Capital">
   <meta property="og:locale" content="zh_TW">
@@ -54,7 +53,7 @@
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://peacecapital.io/templates/research-article/#article",
+        "@id": "https://peacecapital.io/insights/【slug】/#article",
         "headline": "【SEO 標題】",
         "description": "【與 meta description 一致】",
         "datePublished": "2026-01-01",
@@ -82,7 +81,7 @@
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://peacecapital.io/templates/research-article/"
+          "@id": "https://peacecapital.io/insights/【slug】/"
         },
         "isPartOf": {
           "@type": "CollectionPage",
@@ -91,7 +90,7 @@
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://peacecapital.io/templates/research-article/#breadcrumb",
+        "@id": "https://peacecapital.io/insights/【slug】/#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -109,7 +108,7 @@
             "@type": "ListItem",
             "position": 3,
             "name": "【SEO 標題】",
-            "item": "https://peacecapital.io/templates/research-article/"
+            "item": "https://peacecapital.io/insights/【slug】/"
           }
         ]
       }
@@ -145,8 +144,6 @@
   <main>
     <header class="article-hero">
       <div class="container">
-        <p class="research-template-banner" role="note">模板預覽 · 非正式文章 · 請勿索引</p>
-
         <nav class="breadcrumb" aria-label="麵包屑導覽">
           <a href="/">首頁</a>
           <span class="breadcrumb-sep" aria-hidden="true">/</span>

@@ -20,7 +20,7 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Research library: only published pages. Do not list /docs/ or /templates/. -->
+  <!-- Research library: published pages only. Internal _research/ is not deployed. -->
   <url>
     <loc>https://peacecapital.io/insights/</loc>
     <lastmod>2026-10-15</lastmod>

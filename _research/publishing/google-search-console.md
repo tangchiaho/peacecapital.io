@@ -2,6 +2,8 @@
 
 本文件只列出**需要你手動完成**的步驟。代理人無法假設帳號已驗證，也不能代替你完成網域所有權確認。
 
+內部規劃文件位於 `_research/`，**不會**由 GitHub Pages 部署；請勿把內部路徑提交到 Sitemap。
+
 ## A. 驗證網站所有權（擇一）
 
 建議優先使用 **網域屬性（Domain）**，一次涵蓋 `peacecapital.io` 與 `www`（若有）。
@@ -36,8 +38,9 @@
 
 1. GSC → 索引 → Sitemap。
 2. 提交：`https://peacecapital.io/sitemap.xml`
-3. 確認狀態為「成功」；若失敗，檢查是否被 `robots.txt` 擋住或回傳非 200。
+3. 確認狀態為「成功」；若失敗，檢查是否回傳非 200。
 4. 目前 `robots.txt` 已宣告：`Sitemap: https://peacecapital.io/sitemap.xml`
+5. Sitemap **只應包含**正式公開頁（首頁、About、Focus、Contact、Insights、已發布研究）。
 
 ## C. 索引檢查（每篇正式文章上線後）
 
@@ -52,18 +55,19 @@
 | 項目 | 頻率 | 目的 |
 |------|------|------|
 | 涵蓋範圍／頁面索引 | 每月 | 發現 404、軟 404、重複頁 |
-| 強化項目（產品以外的結構化資料） | 有新文章時 | 確認 Article／Breadcrumb 無錯誤 |
+| 強化項目（結構化資料） | 有新文章時 | 確認 Article／Breadcrumb 無錯誤 |
 | 核心網頁指標 | 每季 | 行動裝置閱讀體驗 |
 | 搜尋效能 | 每月 | 觀察實際查詢與點擊，回頭調整標題與摘要 |
 
 ## E. 不要做的事
 
-- 不要提交 `/docs/`、`/templates/` 或 `noindex` 頁面。
+- 不要提交 `_research/` 或不存在的內部路徑。
+- 不要用 `robots.txt Disallow` 假裝隱藏已部署頁面，又同時依賴 `noindex`（兩者併用會互相打架）。
 - 不要為了加速索引而製造大量薄內容頁。
 - 不要在未驗證前假設「已可於 Google 搜尋到最新內容」。
 
 ## F. 與本站架構的對應
 
 - 正式研究頁：`/insights/{slug}/` → 進 sitemap  
-- 規劃與模板：`/docs/`、`/templates/` → robots Disallow + noindex  
+- 內部規劃與模板：`_research/` → Pages 建置排除  
 - 分類入口：僅在達門檻後建立並再提交 sitemap  

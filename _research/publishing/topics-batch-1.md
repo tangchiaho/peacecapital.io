@@ -231,6 +231,6 @@
 3. `customer-concentration-b2b-suppliers`  
 4. `semiconductor-photoresist-materials`  
 5. `reading-manufacturing-capex-depreciation`  
-6. 其餘依資料完备度推進  
+6. 其餘依資料完備度推進  
 
 每篇完成後才加入 sitemap 與 Insights 列表；達主題門檻再建 `/insights/topics/...`。
