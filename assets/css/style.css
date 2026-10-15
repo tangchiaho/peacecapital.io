@@ -1053,6 +1053,7 @@ body {
   line-height: 1.95;
 }
 .page-lead { max-width: 680px; }
+.page-hero .page-lead-zh { margin-top: 0; font-size: 1.05rem; }
 .page-hero { padding: 78px 0 62px; }
 .page-hero .container { max-width: 830px; }
 .breadcrumb { font-size: .8rem; letter-spacing: .02em; }
@@ -1137,10 +1138,10 @@ body {
 .article-body .pc-sources li { color: #514b45; font-size: .91rem; line-height: 1.85; }
 .article-body .pc-article-small { font-size: .83rem !important; color: #726a62 !important; }
 .article-body a.pc-inline-link { color: #2b2926; text-decoration-thickness: 1px; text-underline-offset: 5px; }
-.pc-insight-item h2 { font-size: clamp(1.3rem, 2.45vw, 1.77rem); line-height: 1.55; }
-.pc-insight-item p { color: #4a4640; font-size: 1.02rem; line-height: 1.9; }
-.pc-insight-item .pc-insight-meta { font-size: .79rem; letter-spacing: .03em; color: #6e685f; }
-.pc-insight-item .pc-read { font-size: .86rem; letter-spacing: .025em; text-transform: none; }
+main .pc-insight-item h2 { font-family: var(--font-cjk); font-size: clamp(1.3rem, 2.45vw, 1.77rem); font-weight: 500; line-height: 1.55; }
+main .pc-insight-item p { color: #4a4640; font-size: 1.02rem; line-height: 1.9; }
+main .pc-insight-item .pc-insight-meta { font-size: .79rem; letter-spacing: .03em; color: #6e685f; }
+main .pc-insight-item .pc-read { font-size: .86rem; letter-spacing: .025em; text-transform: none; }
 @media (max-width: 900px) {
   .nav a { font-size: 1rem; letter-spacing: .02em; }
   .section { padding-top: 82px; padding-bottom: 82px; }
