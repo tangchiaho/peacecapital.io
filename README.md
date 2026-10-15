@@ -14,6 +14,19 @@ Official static website for **Peace Capital（和平資本）**.
 | `/about/` | About |
 | `/focus/` | Focus |
 | `/contact/` | Contact |
+| `/insights/` | Industry research library |
+| `/insights/{slug}/` | Research article |
+
+## Research publishing
+
+Long-term Insights architecture (SEO / taxonomy / template / topic pipeline):
+
+- Plan: `docs/research-publishing/architecture.md`
+- Topic backlog: `docs/research-publishing/topics-batch-1.md`
+- Search Console checklist: `docs/research-publishing/google-search-console.md`
+- Reusable article template: `templates/research-article/` (`noindex`, not in sitemap)
+
+Publishing flow: copy template → fill content & JSON-LD → list on `/insights/` → add to `sitemap.xml`. Create `/insights/topics/{topic}/` only after ≥2 published articles in that topic.
 
 ## Brand assets
 
