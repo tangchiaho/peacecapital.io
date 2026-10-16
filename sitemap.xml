@@ -23,9 +23,15 @@
   <!-- Research library: published pages only. Internal _research/ is not deployed. -->
   <url>
     <loc>https://peacecapital.io/insights/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://peacecapital.io/insights/probe-card-industry/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://peacecapital.io/insights/materials-lab-to-industry/</loc>
