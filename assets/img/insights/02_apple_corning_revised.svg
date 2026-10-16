@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="850" viewBox="0 0 1440 850" role="img" aria-label="Apple × Corning｜玻璃合作的三個公開節點">
+<style>
+.title{font:700 52px "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;fill:#1d2d27}
+.subtitle{font:25px "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;fill:#58665e}
+.head{font:700 26px "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;fill:#223c32}
+.sub{font:700 24px "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;fill:#304c40}
+.body{font:22px "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;fill:#435349}
+.num{font:700 22px Georgia,serif;fill:#fff}
+.chip{font:600 20px "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;fill:#355549}
+.tiny{font:18px "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;fill:#6b7971}
+</style>
+<rect width="1440" height="850" fill="#f7f7f3"/>
+<rect x="32" y="43" width="45" height="4" fill="#a6b4a5"/>
+<text x="32" y="113" class="title">Apple × Corning｜玻璃合作的三個公開節點</text>
+<text x="32" y="171" class="subtitle">從終端產品的材料需求，走向製造能力與供應布局。</text>
+<g transform="translate(32 226)">
+<rect width="330" height="470" rx="16" fill="#fffdf9" stroke="#dcded7"/>
+<circle cx="44" cy="45" r="23" fill="#305448"/><text x="44" y="52" text-anchor="middle" class="num">1</text>
+<text x="80" y="54" class="head">2007｜產品導入</text>
+<line x1="24" y1="89" x2="306" y2="89" stroke="#d8dcd4"/>
+<text x="26" y="142" class="sub">第一代 iPhone</text><text x="26" y="195" class="body">材料性能需符合</text><text x="26" y="248" class="body">終端產品要求</text><text x="26" y="301" class="body">並能穩定供應</text>
+<rect x="24" y="390" width="282" height="54" rx="9" fill="#edf2ed"/>
+<text x="165" y="423" text-anchor="middle" class="chip">需求牽引材料開發</text>
+</g><g transform="translate(383 226)">
+<rect width="330" height="470" rx="16" fill="#fffdf9" stroke="#dcded7"/>
+<circle cx="44" cy="45" r="23" fill="#305448"/><text x="44" y="52" text-anchor="middle" class="num">2</text>
+<text x="80" y="54" class="head">2017｜製造支持</text>
+<line x1="24" y1="89" x2="306" y2="89" stroke="#d8dcd4"/>
+<text x="26" y="142" class="sub">Apple 公布 2 億美元</text><text x="26" y="195" class="body">先進製造基金支持</text><text x="26" y="248" class="body">研發、資本設備與</text><text x="26" y="301" class="body">玻璃加工技術</text>
+<rect x="24" y="390" width="282" height="54" rx="9" fill="#edf2ed"/>
+<text x="165" y="423" text-anchor="middle" class="chip">支持能力，不等於已完工</text>
+</g><g transform="translate(734 226)">
+<rect width="330" height="470" rx="16" fill="#fffdf9" stroke="#dcded7"/>
+<circle cx="44" cy="45" r="23" fill="#305448"/><text x="44" y="52" text-anchor="middle" class="num">3</text>
+<text x="80" y="54" class="head">2025｜布局擴大</text>
+<line x1="24" y1="89" x2="306" y2="89" stroke="#d8dcd4"/>
+<text x="26" y="142" class="sub">Apple 宣布 25 億美元</text><text x="26" y="195" class="body">新的製造合作承諾</text><text x="26" y="248" class="body">肯塔基州蓋板玻璃</text><text x="26" y="301" class="body">及創新中心規劃</text>
+<rect x="24" y="390" width="282" height="54" rx="9" fill="#edf2ed"/>
+<text x="165" y="423" text-anchor="middle" class="chip">公告規劃 ≠ 已實現成果</text>
+</g><g transform="translate(1085 226)">
+<rect width="330" height="470" rx="16" fill="#fffdf9" stroke="#dcded7"/>
+<circle cx="44" cy="45" r="23" fill="#305448"/><text x="44" y="52" text-anchor="middle" class="num">4</text>
+<text x="80" y="54" class="head">研究時要看什麼</text>
+<line x1="24" y1="89" x2="306" y2="89" stroke="#d8dcd4"/>
+<text x="26" y="142" class="sub">產能與交付進度</text><text x="26" y="195" class="body">技術共同開發</text><text x="26" y="248" class="body">資本支出與折舊</text><text x="26" y="301" class="body">客戶集中度和利潤</text>
+<rect x="24" y="390" width="282" height="54" rx="9" fill="#edf2ed"/>
+<text x="165" y="423" text-anchor="middle" class="chip">合作深化 ≠ 保證高獲利</text>
+</g>
+<line x1="32" y1="745" x2="1408" y2="745" stroke="#cfd6cf"/>
+<text x="32" y="787" class="tiny">公開節點依 Apple 2017／2025 年新聞稿整理；示意並非真實廠房或產品圖。</text>
+<text x="1408" y="800" text-anchor="end" class="tiny">Peace Capital · 02</text>
+</svg>
