@@ -1,0 +1,21 @@
+/* Probe-card draft article: extends Peace Capital's shared research stylesheet. */
+.pc-probe-article .pc-draft-review { margin-bottom: 24px; color: var(--muted-lt); }
+.pc-probe-article .source-link { color: #426e58; text-decoration: underline; text-underline-offset: 3px; padding: 0 2px; font-size: .82em; }
+.pc-probe-article .pc-figure { width: min(850px, calc(100vw - 48px)); max-width: none; position: relative; margin: 2.5em 0 2.8em 50%; transform: translateX(-50%); }
+.pc-probe-article .pc-media-image { display: block; width: 100%; height: auto; }
+.pc-probe-article .pc-figure-note { color: var(--muted-lt); font-size: .82rem; line-height: 1.8; margin: 9px 0 0; }
+.pc-probe-article .zoom-hint { color: #426e58; margin-left: .6em; }
+.pc-probe-article .table-scroll { margin: 26px 0 32px; border: 1px solid var(--line-strong); overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.pc-probe-article .table-scroll table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: .86rem; line-height: 1.75; }
+.pc-probe-article .table-scroll th { text-align: left; background: #eceee9; color: #31533f; font-weight: 500; }
+.pc-probe-article .table-scroll th,.pc-probe-article .table-scroll td { border-bottom: 1px solid var(--line-strong); padding: 12px; vertical-align: top; }
+.pc-probe-article #section-9 + ol { padding-left: 1.7em; font-size: .85rem; line-height: 1.75; overflow-wrap: anywhere; }
+.pc-probe-article #section-9 + ol a { text-decoration: underline; text-underline-offset: 2px; }
+.pc-probe-article [id^="ref-"] { scroll-margin-top: 110px; }
+.pc-probe-article h3 { margin-top: 1.8em; font-family: var(--font-cjk); font-size: 1.06rem; font-weight: 500; }
+.pc-probe-article hr { margin: 48px 0 14px; border: 0; border-top: 1px solid var(--line-strong); }
+@media(max-width:680px) {
+  .pc-probe-article .pc-figure { width: calc(100vw - 24px); }
+  .pc-probe-article .pc-figure-note { font-size: .76rem; }
+  .pc-probe-article .zoom-hint { display: block; margin-left: 0; }
+}
