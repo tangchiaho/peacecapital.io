@@ -48,7 +48,7 @@
 1. `lang="zh-Hant"`
 2. SEO `<title>`、meta description、canonical
 3. Open Graph / Twitter（`og:type=article`）
-4. 可見的發布日期與**實質更新**日期（`datetime`）
+4. 可見的**發佈日期**（單一欄位；一般修訂不另顯示更新日期）
 5. 作者／編輯單位（和平資本；組織作者即可）
 6. H1 唯一；正文使用 H2／H3
 7. 摘要（HTML 文字，非僅圖片）
