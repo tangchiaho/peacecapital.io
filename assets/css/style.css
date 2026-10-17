@@ -1360,3 +1360,9 @@ img { max-width: 100%; display: block; }
   .pc-case-svg { display: none; }
   .pc-case-stack { display: block; padding: 4px 0 8px; }
 }
+
+
+/* Keep research metadata readable on narrow phones. */
+@media (max-width: 380px) {
+  .research-byline { grid-template-columns: 1fr; }
+}
