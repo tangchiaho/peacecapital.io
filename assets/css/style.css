@@ -434,27 +434,8 @@ img { max-width: 100%; display: block; }
 }
 
 /* Founder */
-.founder-grid {
-  display: grid;
-  grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
-  gap: 72px;
-  align-items: end;
-}
-
-.founder-photo-wrap {
-  overflow: hidden;
-  border-radius: 2px;
-  box-shadow:
-    0 0 0 1px rgba(28, 27, 25, 0.04),
-    0 0 28px -8px rgba(28, 27, 25, 0.08);
-}
-
-.founder-photo {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: top center;
-  filter: grayscale(8%) contrast(1.02);
+.founder-text {
+  max-width: 40em;
 }
 
 .founder-name-zh-main {
