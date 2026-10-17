@@ -19,7 +19,11 @@
   <meta property="og:title" content="探針卡是什麼？從晶圓測試、AI 與 HBM，看半導體測試產業的技術與商業門檻">
   <meta property="og:description" content="解析探針卡的晶圓測試原理、PCB 與探針頭技術、AI／HBM 測試需求，以及 Technoprobe、FormFactor 與全球測試設備商的合作關係。">
   <meta property="og:url" content="https://peacecapital.io/insights/probe-card-industry/">
-  <meta property="og:image" content="https://peacecapital.io/assets/img/og-image.png">
+  <meta property="og:image" content="https://peacecapital.io/assets/img/insights/probe-card/probe-card-social-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="探針卡產業研究｜半導體測試的關鍵介面">
   <meta property="og:site_name" content="Peace Capital">
   <meta property="og:locale" content="zh_TW">
   <meta property="article:published_time" content="2026-10-16">
@@ -29,7 +33,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="探針卡是什麼？從晶圓測試、AI 與 HBM，看半導體測試產業的技術與商業門檻">
   <meta name="twitter:description" content="解析探針卡的晶圓測試原理、PCB 與探針頭技術、AI／HBM 測試需求，以及 Technoprobe、FormFactor 與全球測試設備商的合作關係。">
-  <meta name="twitter:image" content="https://peacecapital.io/assets/img/og-image.png">
+  <meta name="twitter:image" content="https://peacecapital.io/assets/img/insights/probe-card/probe-card-social-cover.jpg">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
@@ -59,7 +63,7 @@
           "Technoprobe",
           "FormFactor"
         ],
-        "image": "https://peacecapital.io/assets/img/og-image.png",
+        "image": "https://peacecapital.io/assets/img/insights/probe-card/probe-card-social-cover.jpg",
         "author": {
           "@type": "Organization",
           "@id": "https://peacecapital.io/#organization",
@@ -132,6 +136,26 @@
 .probe-card-content ol a{text-decoration:underline;text-underline-offset:3px}
 .probe-card-content .pc-figure-note{font-size:.78rem!important}
 @media(max-width:640px){.probe-card-content .pc-probe-table-scroll table{font-size:.8rem}.probe-card-content ol li{font-size:.79rem}}
+
+/* Probe-card article reading enhancements */
+.probe-card-content .pc-article-toc{margin:0 0 2.1em;border:1px solid var(--line-strong);border-radius:6px;background:#f3f3ed}
+.probe-card-content .pc-article-toc details{padding:12px 20px}
+.probe-card-content .pc-article-toc summary{cursor:pointer;list-style-position:inside;font-weight:600;font-size:.95rem;color:var(--text)}
+.probe-card-content .pc-article-toc summary span{margin-left:8px;font-weight:400;font-size:.82rem;color:var(--muted-lt)}
+.probe-card-content .pc-article-toc ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 28px;margin:14px 0 4px;padding-left:1.4em}
+.probe-card-content .pc-article-toc li{margin:.12em 0;font-size:.88rem;line-height:1.75}
+.probe-card-content .pc-article-toc a{text-decoration:none;border-bottom:1px solid transparent}
+.probe-card-content .pc-article-toc a:hover,.probe-card-content .pc-article-toc a:focus-visible{border-color:currentColor}
+.probe-card-content h2[id]{scroll-margin-top:108px}
+.probe-card-content .pc-probe-holdings-note{padding:12px 16px;border-left:2px solid #8da29a;background:#f1f3ef;font-size:.95rem;line-height:1.85}
+.probe-card-content .pc-probe-holdings-note strong{font-weight:600}
+.probe-card-content .research-related{margin-top:3em;padding:20px 0 0;border-top:1px solid var(--line-strong)}
+.probe-card-content .research-related h2{margin:.4em 0 .9em}
+.probe-card-content .research-related ul{padding:0;list-style:none}
+.probe-card-content .research-related li{padding:12px 0;border-bottom:1px solid var(--line)}
+.probe-card-content .research-related a{border-bottom:1px solid currentColor}
+.probe-card-content .research-related .research-related-note{display:block;font-size:.82rem;color:var(--muted-lt)}
+@media(max-width:640px){.probe-card-content .pc-article-toc ol{grid-template-columns:1fr;gap:0}.probe-card-content .pc-article-toc details{padding:12px 14px}.probe-card-content .pc-article-toc summary span{display:block;margin:2px 0 0 21px}}
 </style>
 </head>
 
@@ -171,6 +195,8 @@
   </header>
   <div class="article-body"><article class="container probe-card-content">
     
+
+<nav class="pc-article-toc" aria-label="本文目錄"><details><summary>本文目錄 <span>快速跳至研究章節</span></summary><ol><li><a href="#section-1">晶圓測試與探針卡的角色</a></li><li><a href="#section-2">探針卡的主要零組件</a></li><li><a href="#section-3">懸臂式、垂直式與 MEMS</a></li><li><a href="#section-4">AI、HBM 與先進封裝的需求</a></li><li><a href="#section-5">設備商與介面供應商合作</a></li><li><a href="#section-6">全球主要廠商的定位</a></li><li><a href="#section-7">產業投資應追蹤什麼</a></li><li><a href="#section-8">研究結語</a></li><li><a href="#section-9">原始資料與引用來源</a></li></ol></details></nav>
 <p>半導體產業談到先進製程，焦點多半落在電晶體密度、晶圓代工能力，或 AI 晶片的運算效能。但晶片製造得出來，並不代表能以可接受的成本、效率與可靠度交付給客戶。在這兩者之間，還有一個經常被低估的環節：<strong>測試</strong>。</p>
 <p>探針卡（Probe Card）是晶圓電性測試的重要介面。它不負責運算，也不是測試機本身，卻需要讓數以千計、甚至更多的微小電性接點，在嚴格的機械與電氣條件下，可靠地連接晶圓與測試設備。晶片的接點配置、訊號速度、功耗與封裝方式一旦改變，探針卡也可能必須重新設計。</p>
 <p>因此，研究探針卡產業，不只是研究「一張卡片為什麼能賣得貴」，而是理解<strong>晶片複雜度如何轉化成測試介面需求，以及哪些供應商能把技術難度轉成持續的商業價值</strong>。</p>
@@ -184,13 +210,13 @@
 </ul>
 <p>換句話說，<strong>ATE 負責測、Prober 負責對位與接觸動作、Probe Card 負責可靠地接上</strong>。探針卡和測試座（Test Socket）、負載板（Load Board）並非同義詞；後兩者常見於封裝測試等不同介面配置，不能把所有半導體測試介面都計入探針卡市場。<a aria-label="閱讀第 1 筆引用來源" class="pc-inline-link source-link" href="#ref-1">[1]</a><a aria-label="閱讀第 3 筆引用來源" class="pc-inline-link source-link" href="#ref-3">[3]</a></p>
 <p>探針卡是一種會磨耗、需要維護與依產品設計變動的精密工具，但其替換頻率並不固定，與測試量、接觸次數、針尖清潔、良率要求與設計生命週期都有關係。把它簡單說成「每測一片晶圓就必須換一次的耗材」，並不正確。<a aria-label="閱讀第 1 筆引用來源" class="pc-inline-link source-link" href="#ref-1">[1]</a><a aria-label="閱讀第 4 筆引用來源" class="pc-inline-link source-link" href="#ref-4">[4]</a></p>
-<figure class="pc-figure pc-figure--media" id="figure-1"><a class="pc-media-frame is-ready" href="/assets/img/insights/probe-card/01_wafer_probing_system.webp" rel="noopener" target="_blank"><picture><source media="(max-width: 640px)" srcset="/assets/img/insights/probe-card/01_wafer_probing_system_mobile.webp"/><img alt="探針卡如何完成晶圓電性測試" class="pc-media-image" decoding="async" height="940" loading="lazy" src="/assets/img/insights/probe-card/01_wafer_probing_system.webp" width="1600"/></picture></a><figcaption class="pc-figure-note">圖 1｜ATE、Probe Card 與 Prober 各自的工作及相互連接。點擊圖片可放大。圖片為說明性示意，不代表特定廠商設計。<span class="pc-probe-zoom-hint">按圖放大</span></figcaption></figure>
+<figure class="pc-figure pc-figure--media" id="figure-1"><a class="pc-media-frame is-ready" href="/assets/img/insights/probe-card/01_wafer_probing_system.webp" data-desktop-href="/assets/img/insights/probe-card/01_wafer_probing_system.webp" data-mobile-href="/assets/img/insights/probe-card/01_wafer_probing_system_mobile.webp" aria-label="在新分頁開啟圖 1 原始尺寸" rel="noopener noreferrer" target="_blank"><picture><source media="(max-width: 640px)" srcset="/assets/img/insights/probe-card/01_wafer_probing_system_mobile.webp" width="1080" height="1570" type="image/webp"/><img alt="探針卡如何完成晶圓電性測試" class="pc-media-image" decoding="async" height="940" loading="lazy" src="/assets/img/insights/probe-card/01_wafer_probing_system.webp" width="1600"/></picture></a><figcaption class="pc-figure-note">圖 1｜ATE、Probe Card 與 Prober 各自的工作及相互連接。點擊圖片可放大。圖片為說明性示意，不代表特定廠商設計。<span class="pc-probe-zoom-hint">按圖放大</span></figcaption></figure>
 <h2 id="section-2">二、探針卡裡面有什麼？不只是一排針</h2>
 <p>從電性傳輸的角度，一張高階探針卡通常涉及 <strong>PCB、空間轉換／扇出載板（Space Transformer／Substrate）、探針頭（Probe Head）與探針（Probes）</strong>，加上機械支撐、連接與校準設計。實際架構會依技術方案不同而變化，不能把所有產品畫成完全相同的堆疊。<a aria-label="閱讀第 3 筆引用來源" class="pc-inline-link source-link" href="#ref-3">[3]</a><a aria-label="閱讀第 5 筆引用來源" class="pc-inline-link source-link" href="#ref-5">[5]</a></p>
 <p><strong>PCB 的價值</strong>不只在能否布線，更在電源完整性（Power Integrity）、訊號完整性（Signal Integrity）、高頻特性與測試機介面配置。<strong>空間轉換載板</strong>要把較大的電性接點間距轉接到晶粒上密集的 Pad／Bump 陣列，兼顧線路密度、材料特性與熱機械穩定。<strong>探針頭及針尖</strong>則直接面對接觸電阻、接觸力、針尖磨損、平坦度、重複定位與溫度變化。<a aria-label="閱讀第 3 筆引用來源" class="pc-inline-link source-link" href="#ref-3">[3]</a><a aria-label="閱讀第 5 筆引用來源" class="pc-inline-link source-link" href="#ref-5">[5]</a></p>
 <p>這也解釋為什麼只比較「最小針距」容易失真：某款產品能達到的 Pitch、針數、頻寬、通電能力與平行測試數，未必能在同一片晶圓、同一測試條件下全部同時成立。更有意義的是檢查<strong>實際應用規格、量產良率、接觸壽命、維護成本與測試吞吐量</strong>。</p>
 <p>以台灣中華精測（CHPT）為例，公司公開說明其探針卡整合 PCB、基板與探針頭，並揭露不同系列產品的針距、頻率、耐電流與測試環境條件。這可以說明供應商如何把材料、電路與精密機構能力結合，但單一產品型錄規格不能直接當成跨廠商的整體技術排名。<a aria-label="閱讀第 3 筆引用來源" class="pc-inline-link source-link" href="#ref-3">[3]</a></p>
-<figure class="pc-figure pc-figure--media" id="figure-2"><a class="pc-media-frame is-ready" href="/assets/img/insights/probe-card/02_probe_card_components.webp" rel="noopener" target="_blank"><picture><source media="(max-width: 640px)" srcset="/assets/img/insights/probe-card/02_probe_card_components_mobile.webp"/><img alt="PCB、載板、探針頭和微小接觸探針的分層概念" class="pc-media-image" decoding="async" height="940" loading="lazy" src="/assets/img/insights/probe-card/02_probe_card_components.webp" width="1600"/></picture></a><figcaption class="pc-figure-note">圖 2｜探針卡零組件的功能分工，非單一產品的實際組裝圖。點擊圖片可放大。圖片為說明性示意，不代表特定廠商設計。<span class="pc-probe-zoom-hint">按圖放大</span></figcaption></figure>
+<figure class="pc-figure pc-figure--media" id="figure-2"><a class="pc-media-frame is-ready" href="/assets/img/insights/probe-card/02_probe_card_components.webp" data-desktop-href="/assets/img/insights/probe-card/02_probe_card_components.webp" data-mobile-href="/assets/img/insights/probe-card/02_probe_card_components_mobile.webp" aria-label="在新分頁開啟圖 2 原始尺寸" rel="noopener noreferrer" target="_blank"><picture><source media="(max-width: 640px)" srcset="/assets/img/insights/probe-card/02_probe_card_components_mobile.webp" width="1080" height="1570" type="image/webp"/><img alt="PCB、載板、探針頭和微小接觸探針的分層概念" class="pc-media-image" decoding="async" height="940" loading="lazy" src="/assets/img/insights/probe-card/02_probe_card_components.webp" width="1600"/></picture></a><figcaption class="pc-figure-note">圖 2｜探針卡零組件的功能分工，非單一產品的實際組裝圖。點擊圖片可放大。圖片為說明性示意，不代表特定廠商設計。<span class="pc-probe-zoom-hint">按圖放大</span></figcaption></figure>
 <h2 id="section-3">三、懸臂式、垂直式和 MEMS：不應混為三個互斥分類</h2>
 <p>市場資料常把探針卡分成懸臂式（Cantilever）、垂直式（Vertical）及 MEMS。這樣方便入門，卻不完全精確：<strong>Cantilever 與 Vertical 多半指探針的結構／接觸方式；MEMS 則偏向微機電製造技術，可能用於不同結構形式</strong>。<a aria-label="閱讀第 6 筆引用來源" class="pc-inline-link source-link" href="#ref-6">[6]</a><a aria-label="閱讀第 7 筆引用來源" class="pc-inline-link source-link" href="#ref-7">[7]</a></p>
 <p>傳統懸臂式適合若干周邊 Pad 配置及相應成本、維護條件；垂直式則可針對密集陣列、多晶粒平行測試及其他設計條件提供不同解決方案。MEMS 製程能協助製作微小且一致的探針結構，但「MEMS」三個字不自動保證所有測試指標都比較好。應用、接點位置、電流、訊號速率與機械容差，才是選型依據。</p>
@@ -201,7 +227,7 @@
 <p>在高密度微凸塊（Micro-bump）或銅柱等介面上，探針接觸可能面臨更小間距、更低接觸力、熱膨脹偏移與高速訊號量測等挑戰；另一方面，DRAM 大量平行測試又格外重視單位時間可測試的晶粒數及設備利用效率。<a aria-label="閱讀第 8 筆引用來源" class="pc-inline-link source-link" href="#ref-8">[8]</a><a aria-label="閱讀第 9 筆引用來源" class="pc-inline-link source-link" href="#ref-9">[9]</a></p>
 <p>FormFactor 在 HBM 與先進封裝應用資料中，同時討論測試精度、已知良品晶粒／堆疊，以及 <strong>Cost per Good Die（每顆合格晶粒的測試成本）</strong>。這個概念比「針數愈多、售價愈高」更接近客戶真正的經濟決策。<a aria-label="閱讀第 8 筆引用來源" class="pc-inline-link source-link" href="#ref-8">[8]</a><a aria-label="閱讀第 10 筆引用來源" class="pc-inline-link source-link" href="#ref-10">[10]</a></p>
 <p>需要注意的是，<strong>AI 需求增加不代表所有探針卡廠商都會等比例成長</strong>。邏輯與記憶體、晶圓測試與封裝後測試、研發用與量產用設備，對產品規格與供應商資格的要求都不同。供應商有沒有實際導入目標客戶、處於開發還是量產階段，往往比題材本身更重要。</p>
-<figure class="pc-figure pc-figure--media" id="figure-3"><a class="pc-media-frame is-ready" href="/assets/img/insights/probe-card/03_hbm_kgs_test_flow.webp" rel="noopener" target="_blank"><picture><source media="(max-width: 640px)" srcset="/assets/img/insights/probe-card/03_hbm_kgs_test_flow_mobile.webp"/><img alt="從晶圓測試、KGD 到 HBM 堆疊封裝後測試" class="pc-media-image" decoding="async" height="940" loading="lazy" src="/assets/img/insights/probe-card/03_hbm_kgs_test_flow.webp" width="1600"/></picture></a><figcaption class="pc-figure-note">圖 3｜HBM 的測試節點概念，產品流程可能不同。點擊圖片可放大。圖片為說明性示意，不代表特定廠商設計。<span class="pc-probe-zoom-hint">按圖放大</span></figcaption></figure>
+<figure class="pc-figure pc-figure--media" id="figure-3"><a class="pc-media-frame is-ready" href="/assets/img/insights/probe-card/03_hbm_kgs_test_flow.webp" data-desktop-href="/assets/img/insights/probe-card/03_hbm_kgs_test_flow.webp" data-mobile-href="/assets/img/insights/probe-card/03_hbm_kgs_test_flow_mobile.webp" aria-label="在新分頁開啟圖 3 原始尺寸" rel="noopener noreferrer" target="_blank"><picture><source media="(max-width: 640px)" srcset="/assets/img/insights/probe-card/03_hbm_kgs_test_flow_mobile.webp" width="1080" height="1570" type="image/webp"/><img alt="從晶圓測試、KGD 到 HBM 堆疊封裝後測試" class="pc-media-image" decoding="async" height="940" loading="lazy" src="/assets/img/insights/probe-card/03_hbm_kgs_test_flow.webp" width="1600"/></picture></a><figcaption class="pc-figure-note">圖 3｜HBM 的測試節點概念，產品流程可能不同。點擊圖片可放大。圖片為說明性示意，不代表特定廠商設計。<span class="pc-probe-zoom-hint">按圖放大</span></figcaption></figure>
 <h2 id="section-5">五、產業正在發生什麼？測試設備商開始深化介面合作</h2>
 <p>探針卡產業值得關注的一個變化，是上游 ATE 設備商與測試介面供應商之間，持續出現<strong>股權投資、業務整合與共同開發</strong>。以下四組事件具有可查證的官方紀錄，且交易狀態必須明確區分。</p>
 <h3>案例一：Technoprobe × Teradyne，從合作走向業務整合</h3>
@@ -210,6 +236,7 @@
 <p>Technoprobe 2026 年上半年財報揭露的集團營收約為 <strong>4.64 億歐元</strong>，年增 <strong>42.4%</strong>，EBITDA 約 <strong>2.06 億歐元</strong>，同期報告列示 Investments 約 <strong>9,027 萬歐元</strong>。公司指出 AI 相關需求與產品組合為主要動力之一。這些是<strong>集團合併數據及公司定義的非 IFRS 指標</strong>，不能直接當成 AI 探針卡的單獨營收，更不能單以營收成長認定未來投資報酬已確定。<a aria-label="閱讀第 12 筆引用來源" class="pc-inline-link source-link" href="#ref-12">[12]</a></p>
 <h3>案例二：Advantest 同時與 Technoprobe、FormFactor 建立合作</h3>
 <p>2025 年 1 月，愛德萬測試（Advantest）公告已取得 Technoprobe <strong>2.5%</strong> 股權，並宣布將向美國 FormFactor 購入未揭露金額的少數股權，與兩家公司建立涉及<strong>技術及 PCB 製造</strong>的合作關係。當時公告也強調維持多家可靠供應商的重要性。<a aria-label="閱讀第 13 筆引用來源" class="pc-inline-link source-link" href="#ref-13">[13]</a></p>
+<p class="pc-probe-holdings-note"><strong>後續持股資料：</strong>Technoprobe 官方股東資料顯示，截至 <strong>2026 年 8 月 7 日</strong>，Advantest Europe GmbH 持有 Technoprobe 約 <strong>5.00% 股本</strong>（32,663,043 股；表列投票權比例 2.90%）。上述 2025 年的 2.5% 為當時最初投資公告，不應與其後持股快照混為一談，也不代表持股增加部分在相同日期一次完成。<a aria-label="閱讀第 18 筆引用來源" class="pc-inline-link source-link" href="#ref-18">[18]</a></p>
 <p>這個案例尤其值得注意：設備商不是只和單一家探針卡供應商綁定，而是透過多個合作對象，回應測試難度與產能需求。競爭與合作可能同時存在；股權比例、合作範圍及實際採購關係則必須分開看。</p>
 <h3>案例三：Technoprobe × 台灣穎崴，從技術擁有權走向跨境商業合作</h3>
 <p>2025 年 12 月 9 日，Technoprobe 宣布與台灣穎崴（WinWay）及 MS SUN Technology 簽署一項關於 <strong>TPEG 專有技術測試解決方案</strong>的策略協議。依官方公告，Technoprobe 保留相關智慧財產權，並擔任該技術方案的<strong>獨家開發者與製造商</strong>；穎崴取得五年期的組裝、安裝、維護、維修、銷售及配銷權利，透過 MS SUN 採購產品。公告列出五年期<strong>最低採購金額約 6,000 萬美元</strong>。<a aria-label="閱讀第 17 筆引用來源" class="pc-inline-link source-link" href="#ref-17">[17]</a></p>
@@ -217,7 +244,7 @@
 <h3>案例四：2026 年 Teradyne × FormFactor，新一輪策略合作</h3>
 <p>2026 年 10 月 12 日，Teradyne 與 FormFactor 宣布合作開發新一代半導體測試技術，並公告 Teradyne 同意對 FormFactor 進行約 <strong>3 億美元策略性股權投資</strong>，範圍涉及高效能運算、HBM、先進封裝及矽光子等應用。<strong>截至該公告，股權交易仍受交割條件及監管核准限制，不能寫成投資已完成。</strong><a aria-label="閱讀第 14 筆引用來源" class="pc-inline-link source-link" href="#ref-14">[14]</a></p>
 <p>將上述四組事件放在一起，可以提出一個產業假說：在高階測試需求下，<strong>探針卡的系統整合價值正在提升，ATE 平台、測試介面與晶片客戶之間的協作可能更緊密</strong>。但這是根據公開企業行為所作的分析，不是已被證明的市場集中度趨勢，更不是所有探針卡廠商都將獲利的結論。</p>
-<figure class="pc-figure pc-figure--media" id="figure-4"><a class="pc-media-frame is-ready" href="/assets/img/insights/probe-card/04_probe_card_partnerships.webp" rel="noopener" target="_blank"><picture><source media="(max-width: 640px)" srcset="/assets/img/insights/probe-card/04_probe_card_partnerships_mobile.webp"/><img alt="企業公告合作與股權投資四個節點及其交易狀態" class="pc-media-image" decoding="async" height="940" loading="lazy" src="/assets/img/insights/probe-card/04_probe_card_partnerships.webp" width="1600"/></picture></a><figcaption class="pc-figure-note">圖 4｜全球探針卡與 ATE 合作關係之公開事件（非獨家供應關係）。點擊圖片可放大。圖片為說明性示意，不代表特定廠商設計。<span class="pc-probe-zoom-hint">按圖放大</span></figcaption></figure>
+<figure class="pc-figure pc-figure--media" id="figure-4"><a class="pc-media-frame is-ready" href="/assets/img/insights/probe-card/04_probe_card_partnerships.webp" data-desktop-href="/assets/img/insights/probe-card/04_probe_card_partnerships.webp" data-mobile-href="/assets/img/insights/probe-card/04_probe_card_partnerships_mobile.webp" aria-label="在新分頁開啟圖 4 原始尺寸" rel="noopener noreferrer" target="_blank"><picture><source media="(max-width: 640px)" srcset="/assets/img/insights/probe-card/04_probe_card_partnerships_mobile.webp" width="1080" height="1570" type="image/webp"/><img alt="企業公告合作與股權投資四個節點及其交易狀態" class="pc-media-image" decoding="async" height="940" loading="lazy" src="/assets/img/insights/probe-card/04_probe_card_partnerships.webp" width="1600"/></picture></a><figcaption class="pc-figure-note">圖 4｜全球探針卡與 ATE 合作關係之公開事件（非獨家供應關係）。點擊圖片可放大。圖片為說明性示意，不代表特定廠商設計。<span class="pc-probe-zoom-hint">按圖放大</span></figcaption></figure>
 <h2 id="section-6">六、全球供應商比較：產品重疊，但商業模式不完全相同</h2>
 <div class="pc-probe-table-scroll"><table>
 <thead>
@@ -297,8 +324,14 @@
 <li id="ref-15"><a href="https://www.winwayglobal.com/zh-TW/products/wafer" rel="noopener noreferrer" target="_blank">穎崴：晶圓測試產品</a></li>
 <li id="ref-16"><a href="https://www.mjc.co.jp/en/overview/" rel="noopener noreferrer" target="_blank">MJC：公司產品與記憶體探針卡應用</a></li>
 <li id="ref-17"><a href="https://www.technoprobe.com/wp-content/uploads/2025/12/PR-Strategic-Agreement.pdf" rel="noopener noreferrer" target="_blank">Technoprobe：與台灣穎崴及 MS SUN TPEG 技術合作公告（2025-12-09）</a></li>
+<li id="ref-18"><a href="https://www.technoprobe.com/investors/investor-relations/shareholders-and-share-capital" rel="noopener noreferrer" target="_blank">Technoprobe：Shareholders and Share Capital（截至 2026-08-07；Advantest Europe GmbH 股本持股 5.00%）</a></li>
 </ol>
 <hr/>
+
+    <section class="research-related" aria-labelledby="probe-related-title">
+<h2 id="probe-related-title">延伸閱讀</h2>
+<ul><li><a href="/insights/materials-lab-to-industry/">新材料從實驗室走向產業應用，真正的門檻在哪裡？</a><span class="research-related-note">從製造可靠度、客戶驗證與長期供應的角度，補充對半導體測試介面的理解。</span></li></ul>
+</section>
 
     <div class="pc-article-foot"><a href="/insights/">← 返回產業觀點</a><a href="/focus/">探索關注領域 →</a></div>
     <p class="pc-article-small pc-article-disclaimer">本文依截至 2026 年 10 月 16 日可查證之公開資料整理；內容為一般產業研究與觀察，不構成投資邀約、招攬或個別投資建議。公司合作、財務數據與交易狀態以原始公告為準。圖為編輯示意，不代表特定廠商實際設備或工程規格。</p>
@@ -348,6 +381,20 @@
     </div>
   </footer>
 
+  <script>
+    (() => {
+      const mobile = window.matchMedia('(max-width: 640px)');
+      const links = document.querySelectorAll('.probe-card-content .pc-media-frame[data-mobile-href]');
+      const syncLinks = () => {
+        links.forEach(link => {
+          link.href = mobile.matches ? link.dataset.mobileHref : link.dataset.desktopHref;
+        });
+      };
+      syncLinks();
+      if (mobile.addEventListener) mobile.addEventListener('change', syncLinks);
+      else mobile.addListener(syncLinks);
+    })();
+  </script>
   <script src="/assets/js/site.js" defer></script>
 </body>
 </html>
