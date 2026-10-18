@@ -1347,3 +1347,6 @@ img { max-width: 100%; display: block; }
 @media (max-width: 380px) {
   .research-byline { grid-template-columns: 1fr; }
 }
+
+/* Research reading cues and graphic attribution */
+.article-body .research-key{color:#245541;font-weight:650}.article-body .research-highlight{color:#234334;background:#e3ebdc;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.08em .12em;font-weight:600}.article-body .figure-download{display:inline-block;color:#315344;font-size:.8rem;text-decoration:underline;text-underline-offset:4px;margin-top:12px}.pc-media picture,.pc-media picture img{display:block;width:100%;height:auto}.editorial-cover picture,.editorial-cover picture img{display:block;width:100%;height:auto}.editorial-cover .figure-download{display:inline-block;font-size:.78rem;color:#315344;margin:0 0 16px;text-decoration:underline}.editorial-cover img{max-height:none!important;object-fit:contain}.editorial-cover figcaption{padding-bottom:8px}@media(max-width:640px){.editorial-cover .figure-download{margin-left:18px}}
