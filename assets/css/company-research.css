@@ -2,3 +2,5 @@
 @media(max-width:640px){.company-hero{padding:30px 0 22px}.company-hero .article-title{font-size:1.9rem;line-height:1.5}.company-hero .pc-article-abstract p{font-size:1rem}.company-content{width:calc(100% - 36px)}.company-summary{padding:18px}.company-summary h2{font-size:1.3rem}.company-facts{gap:18px}.company-facts strong{font-size:.9rem}.company-content h2{font-size:1.45rem}.company-content .table-hint{display:block;font-size:.78rem;color:#627064;margin-bottom:-12px}.company-content table{font-size:.8rem}.company-content .method-note,.company-content .reading-portal,.company-portal{padding:17px}.company-content .editorial-takeaway{padding:18px}.company-index-item{padding-left:12px}}
 
 .company-title-name{display:block;font-size:.78em;margin-bottom:.35em;line-height:1.5}
+
+.company-title-question{display:block}@media(max-width:360px){.company-hero .article-title{font-size:1.65rem}}
