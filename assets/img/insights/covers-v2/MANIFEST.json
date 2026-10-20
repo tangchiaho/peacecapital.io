@@ -11,33 +11,33 @@
         "path": "assets/img/insights/covers-v2/materials-lab-to-industry-cover.jpg",
         "size": [
           1600,
-          744
+          1067
         ],
-        "bytes": 199834
+        "bytes": 254304
       },
       "cover-mobile": {
         "path": "assets/img/insights/covers-v2/materials-lab-to-industry-cover-mobile.jpg",
         "size": [
           1200,
-          727
+          900
         ],
-        "bytes": 151530
+        "bytes": 179070
       },
       "feature": {
         "path": "assets/img/insights/covers-v2/materials-lab-to-industry-feature.jpg",
         "size": [
-          1200,
-          845
+          1400,
+          933
         ],
-        "bytes": 161358
+        "bytes": 195516
       },
       "thumb": {
         "path": "assets/img/insights/covers-v2/materials-lab-to-industry-thumb.jpg",
         "size": [
-          760,
-          562
+          720,
+          480
         ],
-        "bytes": 76472
+        "bytes": 61984
       },
       "og": {
         "path": "assets/img/insights/covers-v2/materials-lab-to-industry-og.jpg",
@@ -69,33 +69,33 @@
         "path": "assets/img/insights/covers-v2/material-customer-qualification-cover.jpg",
         "size": [
           1600,
-          744
+          1067
         ],
-        "bytes": 222533
+        "bytes": 279012
       },
       "cover-mobile": {
         "path": "assets/img/insights/covers-v2/material-customer-qualification-cover-mobile.jpg",
         "size": [
           1200,
-          727
+          900
         ],
-        "bytes": 170106
+        "bytes": 196562
       },
       "feature": {
         "path": "assets/img/insights/covers-v2/material-customer-qualification-feature.jpg",
         "size": [
-          1200,
-          845
+          1400,
+          933
         ],
-        "bytes": 178429
+        "bytes": 216980
       },
       "thumb": {
         "path": "assets/img/insights/covers-v2/material-customer-qualification-thumb.jpg",
         "size": [
-          760,
-          562
+          720,
+          480
         ],
-        "bytes": 85621
+        "bytes": 70027
       },
       "og": {
         "path": "assets/img/insights/covers-v2/material-customer-qualification-og.jpg",
@@ -127,33 +127,33 @@
         "path": "assets/img/insights/covers-v2/semiconductor-customer-qualification-cover.jpg",
         "size": [
           1600,
-          744
+          1067
         ],
-        "bytes": 209410
+        "bytes": 260416
       },
       "cover-mobile": {
         "path": "assets/img/insights/covers-v2/semiconductor-customer-qualification-cover-mobile.jpg",
         "size": [
           1200,
-          727
+          900
         ],
-        "bytes": 158372
+        "bytes": 174062
       },
       "feature": {
         "path": "assets/img/insights/covers-v2/semiconductor-customer-qualification-feature.jpg",
         "size": [
-          1200,
-          845
+          1400,
+          933
         ],
-        "bytes": 163491
+        "bytes": 203453
       },
       "thumb": {
         "path": "assets/img/insights/covers-v2/semiconductor-customer-qualification-thumb.jpg",
         "size": [
-          760,
-          562
+          720,
+          480
         ],
-        "bytes": 78631
+        "bytes": 68537
       },
       "og": {
         "path": "assets/img/insights/covers-v2/semiconductor-customer-qualification-og.jpg",
@@ -185,33 +185,33 @@
         "path": "assets/img/insights/covers-v2/advanced-packaging-value-chain-cover.jpg",
         "size": [
           1600,
-          744
+          1067
         ],
-        "bytes": 185275
+        "bytes": 233516
       },
       "cover-mobile": {
         "path": "assets/img/insights/covers-v2/advanced-packaging-value-chain-cover-mobile.jpg",
         "size": [
           1200,
-          727
+          900
         ],
-        "bytes": 141902
+        "bytes": 160408
       },
       "feature": {
         "path": "assets/img/insights/covers-v2/advanced-packaging-value-chain-feature.jpg",
         "size": [
-          1200,
-          845
+          1400,
+          933
         ],
-        "bytes": 147755
+        "bytes": 182399
       },
       "thumb": {
         "path": "assets/img/insights/covers-v2/advanced-packaging-value-chain-thumb.jpg",
         "size": [
-          760,
-          562
+          720,
+          480
         ],
-        "bytes": 72015
+        "bytes": 62383
       },
       "og": {
         "path": "assets/img/insights/covers-v2/advanced-packaging-value-chain-og.jpg",
@@ -243,33 +243,33 @@
         "path": "assets/img/insights/covers-v2/hbm-test-quality-gates-cover.jpg",
         "size": [
           1600,
-          744
+          1067
         ],
-        "bytes": 237143
+        "bytes": 282449
       },
       "cover-mobile": {
         "path": "assets/img/insights/covers-v2/hbm-test-quality-gates-cover-mobile.jpg",
         "size": [
           1200,
-          727
+          900
         ],
-        "bytes": 165084
+        "bytes": 192456
       },
       "feature": {
         "path": "assets/img/insights/covers-v2/hbm-test-quality-gates-feature.jpg",
         "size": [
-          1200,
-          845
+          1400,
+          933
         ],
-        "bytes": 174466
+        "bytes": 214358
       },
       "thumb": {
         "path": "assets/img/insights/covers-v2/hbm-test-quality-gates-thumb.jpg",
         "size": [
-          760,
-          562
+          720,
+          480
         ],
-        "bytes": 78402
+        "bytes": 62778
       },
       "og": {
         "path": "assets/img/insights/covers-v2/hbm-test-quality-gates-og.jpg",
@@ -301,33 +301,33 @@
         "path": "assets/img/insights/covers-v2/probe-card-industry-cover.jpg",
         "size": [
           1600,
-          744
+          1067
         ],
-        "bytes": 251839
+        "bytes": 307627
       },
       "cover-mobile": {
         "path": "assets/img/insights/covers-v2/probe-card-industry-cover-mobile.jpg",
         "size": [
           1200,
-          727
+          900
         ],
-        "bytes": 188697
+        "bytes": 208769
       },
       "feature": {
         "path": "assets/img/insights/covers-v2/probe-card-industry-feature.jpg",
         "size": [
-          1200,
-          845
+          1400,
+          933
         ],
-        "bytes": 195031
+        "bytes": 241533
       },
       "thumb": {
         "path": "assets/img/insights/covers-v2/probe-card-industry-thumb.jpg",
         "size": [
-          760,
-          562
+          720,
+          480
         ],
-        "bytes": 94277
+        "bytes": 80972
       },
       "og": {
         "path": "assets/img/insights/covers-v2/probe-card-industry-og.jpg",
@@ -359,33 +359,33 @@
         "path": "assets/img/insights/covers-v2/technoprobe-cover.jpg",
         "size": [
           1600,
-          744
+          1067
         ],
-        "bytes": 193391
+        "bytes": 258555
       },
       "cover-mobile": {
         "path": "assets/img/insights/covers-v2/technoprobe-cover-mobile.jpg",
         "size": [
           1200,
-          727
+          900
         ],
-        "bytes": 153756
+        "bytes": 176340
       },
       "feature": {
         "path": "assets/img/insights/covers-v2/technoprobe-feature.jpg",
         "size": [
-          1200,
-          845
+          1400,
+          933
         ],
-        "bytes": 164004
+        "bytes": 203372
       },
       "thumb": {
         "path": "assets/img/insights/covers-v2/technoprobe-thumb.jpg",
         "size": [
-          760,
-          562
+          720,
+          480
         ],
-        "bytes": 79916
+        "bytes": 69057
       },
       "og": {
         "path": "assets/img/insights/covers-v2/technoprobe-og.jpg",
