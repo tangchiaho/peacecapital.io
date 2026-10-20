@@ -1,0 +1,408 @@
+{
+  "materials-lab-to-industry": {
+    "source": "0b508fdc-dd54-4ec9-8f38-fe76e50735ad.png",
+    "alt": "實驗室材料樣品夾具與板材列的編輯示意圖",
+    "focus": [
+      0.28,
+      0.45
+    ],
+    "files": {
+      "cover": {
+        "path": "assets/img/insights/covers-v2/materials-lab-to-industry-cover.jpg",
+        "size": [
+          1600,
+          1067
+        ],
+        "bytes": 254304
+      },
+      "cover-mobile": {
+        "path": "assets/img/insights/covers-v2/materials-lab-to-industry-cover-mobile.jpg",
+        "size": [
+          1200,
+          900
+        ],
+        "bytes": 179070
+      },
+      "feature": {
+        "path": "assets/img/insights/covers-v2/materials-lab-to-industry-feature.jpg",
+        "size": [
+          1400,
+          933
+        ],
+        "bytes": 195516
+      },
+      "thumb": {
+        "path": "assets/img/insights/covers-v2/materials-lab-to-industry-thumb.jpg",
+        "size": [
+          720,
+          480
+        ],
+        "bytes": 61984
+      },
+      "og": {
+        "path": "assets/img/insights/covers-v2/materials-lab-to-industry-og.jpg",
+        "size": [
+          1200,
+          630
+        ],
+        "bytes": 131768
+      },
+      "hero": {
+        "path": "assets/img/insights/covers-v2/materials-lab-to-industry-hero.jpg",
+        "size": [
+          1536,
+          1024
+        ],
+        "bytes": 241532
+      }
+    }
+  },
+  "material-customer-qualification": {
+    "source": "19f58e3a-4425-4922-b69a-4817dd17f093.png",
+    "alt": "材料樣品與信封並置於產業場景前的編輯示意圖",
+    "focus": [
+      0.42,
+      0.55
+    ],
+    "files": {
+      "cover": {
+        "path": "assets/img/insights/covers-v2/material-customer-qualification-cover.jpg",
+        "size": [
+          1600,
+          1067
+        ],
+        "bytes": 279012
+      },
+      "cover-mobile": {
+        "path": "assets/img/insights/covers-v2/material-customer-qualification-cover-mobile.jpg",
+        "size": [
+          1200,
+          900
+        ],
+        "bytes": 196562
+      },
+      "feature": {
+        "path": "assets/img/insights/covers-v2/material-customer-qualification-feature.jpg",
+        "size": [
+          1400,
+          933
+        ],
+        "bytes": 216980
+      },
+      "thumb": {
+        "path": "assets/img/insights/covers-v2/material-customer-qualification-thumb.jpg",
+        "size": [
+          720,
+          480
+        ],
+        "bytes": 70027
+      },
+      "og": {
+        "path": "assets/img/insights/covers-v2/material-customer-qualification-og.jpg",
+        "size": [
+          1200,
+          630
+        ],
+        "bytes": 147348
+      },
+      "hero": {
+        "path": "assets/img/insights/covers-v2/material-customer-qualification-hero.jpg",
+        "size": [
+          1536,
+          1024
+        ],
+        "bytes": 264204
+      }
+    }
+  },
+  "semiconductor-customer-qualification": {
+    "source": "65f24b78-3ec5-499b-b4ad-9bc7d583324e.png",
+    "alt": "晶片托盤與檢驗光源的編輯示意圖",
+    "focus": [
+      0.4,
+      0.45
+    ],
+    "files": {
+      "cover": {
+        "path": "assets/img/insights/covers-v2/semiconductor-customer-qualification-cover.jpg",
+        "size": [
+          1600,
+          1067
+        ],
+        "bytes": 260416
+      },
+      "cover-mobile": {
+        "path": "assets/img/insights/covers-v2/semiconductor-customer-qualification-cover-mobile.jpg",
+        "size": [
+          1200,
+          900
+        ],
+        "bytes": 174062
+      },
+      "feature": {
+        "path": "assets/img/insights/covers-v2/semiconductor-customer-qualification-feature.jpg",
+        "size": [
+          1400,
+          933
+        ],
+        "bytes": 203453
+      },
+      "thumb": {
+        "path": "assets/img/insights/covers-v2/semiconductor-customer-qualification-thumb.jpg",
+        "size": [
+          720,
+          480
+        ],
+        "bytes": 68537
+      },
+      "og": {
+        "path": "assets/img/insights/covers-v2/semiconductor-customer-qualification-og.jpg",
+        "size": [
+          1200,
+          630
+        ],
+        "bytes": 139868
+      },
+      "hero": {
+        "path": "assets/img/insights/covers-v2/semiconductor-customer-qualification-hero.jpg",
+        "size": [
+          1536,
+          1024
+        ],
+        "bytes": 246244
+      }
+    }
+  },
+  "advanced-packaging-value-chain": {
+    "source": "5c780327-83bc-4288-9cca-11c09b3c35e7.png",
+    "alt": "精密加工與產線輸送帶的編輯示意圖",
+    "focus": [
+      0.3,
+      0.5
+    ],
+    "files": {
+      "cover": {
+        "path": "assets/img/insights/covers-v2/advanced-packaging-value-chain-cover.jpg",
+        "size": [
+          1600,
+          1067
+        ],
+        "bytes": 233516
+      },
+      "cover-mobile": {
+        "path": "assets/img/insights/covers-v2/advanced-packaging-value-chain-cover-mobile.jpg",
+        "size": [
+          1200,
+          900
+        ],
+        "bytes": 160408
+      },
+      "feature": {
+        "path": "assets/img/insights/covers-v2/advanced-packaging-value-chain-feature.jpg",
+        "size": [
+          1400,
+          933
+        ],
+        "bytes": 182399
+      },
+      "thumb": {
+        "path": "assets/img/insights/covers-v2/advanced-packaging-value-chain-thumb.jpg",
+        "size": [
+          720,
+          480
+        ],
+        "bytes": 62383
+      },
+      "og": {
+        "path": "assets/img/insights/covers-v2/advanced-packaging-value-chain-og.jpg",
+        "size": [
+          1200,
+          630
+        ],
+        "bytes": 124491
+      },
+      "hero": {
+        "path": "assets/img/insights/covers-v2/advanced-packaging-value-chain-hero.jpg",
+        "size": [
+          1536,
+          1024
+        ],
+        "bytes": 220249
+      }
+    }
+  },
+  "hbm-test-quality-gates": {
+    "source": "77659ee6-af3f-436c-bb91-e12f45ef0c65.png",
+    "alt": "晶粒堆疊與探針測試介面的編輯示意圖",
+    "focus": [
+      0.72,
+      0.48
+    ],
+    "files": {
+      "cover": {
+        "path": "assets/img/insights/covers-v2/hbm-test-quality-gates-cover.jpg",
+        "size": [
+          1600,
+          1067
+        ],
+        "bytes": 282449
+      },
+      "cover-mobile": {
+        "path": "assets/img/insights/covers-v2/hbm-test-quality-gates-cover-mobile.jpg",
+        "size": [
+          1200,
+          900
+        ],
+        "bytes": 192456
+      },
+      "feature": {
+        "path": "assets/img/insights/covers-v2/hbm-test-quality-gates-feature.jpg",
+        "size": [
+          1400,
+          933
+        ],
+        "bytes": 214358
+      },
+      "thumb": {
+        "path": "assets/img/insights/covers-v2/hbm-test-quality-gates-thumb.jpg",
+        "size": [
+          720,
+          480
+        ],
+        "bytes": 62778
+      },
+      "og": {
+        "path": "assets/img/insights/covers-v2/hbm-test-quality-gates-og.jpg",
+        "size": [
+          1200,
+          630
+        ],
+        "bytes": 147410
+      },
+      "hero": {
+        "path": "assets/img/insights/covers-v2/hbm-test-quality-gates-hero.jpg",
+        "size": [
+          1536,
+          1024
+        ],
+        "bytes": 267015
+      }
+    }
+  },
+  "probe-card-industry": {
+    "source": "b5b69211-c8d3-4010-81d1-4fec357b5a1d.png",
+    "alt": "多層測試介面結構與探針的編輯示意圖",
+    "focus": [
+      0.5,
+      0.48
+    ],
+    "files": {
+      "cover": {
+        "path": "assets/img/insights/covers-v2/probe-card-industry-cover.jpg",
+        "size": [
+          1600,
+          1067
+        ],
+        "bytes": 307627
+      },
+      "cover-mobile": {
+        "path": "assets/img/insights/covers-v2/probe-card-industry-cover-mobile.jpg",
+        "size": [
+          1200,
+          900
+        ],
+        "bytes": 208769
+      },
+      "feature": {
+        "path": "assets/img/insights/covers-v2/probe-card-industry-feature.jpg",
+        "size": [
+          1400,
+          933
+        ],
+        "bytes": 241533
+      },
+      "thumb": {
+        "path": "assets/img/insights/covers-v2/probe-card-industry-thumb.jpg",
+        "size": [
+          720,
+          480
+        ],
+        "bytes": 80972
+      },
+      "og": {
+        "path": "assets/img/insights/covers-v2/probe-card-industry-og.jpg",
+        "size": [
+          1200,
+          630
+        ],
+        "bytes": 167634
+      },
+      "hero": {
+        "path": "assets/img/insights/covers-v2/probe-card-industry-hero.jpg",
+        "size": [
+          1536,
+          1024
+        ],
+        "bytes": 292231
+      }
+    }
+  },
+  "technoprobe": {
+    "source": "ecbe7a35-0c9c-4174-9317-1ffabacdb66b.png",
+    "alt": "精密量測與製造現場的編輯示意圖，非特定公司實際廠房或產品",
+    "focus": [
+      0.48,
+      0.62
+    ],
+    "files": {
+      "cover": {
+        "path": "assets/img/insights/covers-v2/technoprobe-cover.jpg",
+        "size": [
+          1600,
+          1067
+        ],
+        "bytes": 258555
+      },
+      "cover-mobile": {
+        "path": "assets/img/insights/covers-v2/technoprobe-cover-mobile.jpg",
+        "size": [
+          1200,
+          900
+        ],
+        "bytes": 176340
+      },
+      "feature": {
+        "path": "assets/img/insights/covers-v2/technoprobe-feature.jpg",
+        "size": [
+          1400,
+          933
+        ],
+        "bytes": 203372
+      },
+      "thumb": {
+        "path": "assets/img/insights/covers-v2/technoprobe-thumb.jpg",
+        "size": [
+          720,
+          480
+        ],
+        "bytes": 69057
+      },
+      "og": {
+        "path": "assets/img/insights/covers-v2/technoprobe-og.jpg",
+        "size": [
+          1200,
+          630
+        ],
+        "bytes": 130658
+      },
+      "hero": {
+        "path": "assets/img/insights/covers-v2/technoprobe-hero.jpg",
+        "size": [
+          1536,
+          1024
+        ],
+        "bytes": 244192
+      }
+    }
+  }
+}
