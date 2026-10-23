@@ -852,11 +852,12 @@ body.publication {
 
 .article-publication article .company-portal,
 .article-publication article .reading-portal {
-  border-top: 1px solid #a6b4a0;
-  border-bottom: 1px solid #dce0da;
-  padding: 22px 0;
+  border: 1px solid var(--pub-rule);
+  border-left: 3px solid var(--pub-accent);
+  border-radius: 0;
+  padding: 20px 24px 20px 28px;
   margin: 36px 0;
-  background: transparent;
+  background: var(--pub-soft);
 }
 
 .article-publication article .company-portal > a,
@@ -880,7 +881,9 @@ body.publication {
   color: #555c55;
   margin-bottom: 10px;
   letter-spacing: 0.06em;
+  display: block;
 }
+
 
 .article-publication article .company-sources,
 .article-publication article .sources {
@@ -991,7 +994,7 @@ body.publication {
 .article-publication article .publication-next > h2 {
   font-family: var(--font-cjk);
   font-size: 1.2rem;
-  margin: 24px 0 10px;
+  margin: 24px 0 14px;
 }
 
 .publication-next-story {
@@ -999,7 +1002,7 @@ body.publication {
   gap: 20px;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 18px 4px 18px 0;
   border-bottom: 1px solid #dce0da;
   text-decoration: none !important;
   transition: color var(--dur-fast) var(--ease-out);

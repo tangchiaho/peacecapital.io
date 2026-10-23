@@ -51,25 +51,66 @@
       }
     });
 
-    // Enable collapsible behaviour only after handlers are wired.
     document.documentElement.classList.add('js-nav');
   }
 
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var nodes = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if (!nodes.length) return;
 
-  var nodes = document.querySelectorAll('.reveal');
-  if (!nodes.length || !('IntersectionObserver' in window)) {
-    nodes.forEach(function (el) { el.classList.add('is-inview'); });
+  function showAll() {
+    nodes.forEach(function (el) {
+      el.classList.add('is-inview');
+      el.classList.remove('is-pending');
+    });
+  }
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    showAll();
     return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    showAll();
+    return;
+  }
+
+  var revealed = 0;
+
+  function markInView(el) {
+    if (el.classList.contains('is-inview')) return;
+    el.classList.add('is-inview');
+    el.classList.remove('is-pending');
+    revealed += 1;
+    if (revealed >= nodes.length) observer.disconnect();
   }
 
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-inview');
+      markInView(entry.target);
       observer.unobserve(entry.target);
     });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
 
-  nodes.forEach(function (el) { observer.observe(el); });
+  nodes.forEach(function (el) {
+    el.classList.add('is-pending');
+    observer.observe(el);
+  });
+
+  // Arm hide-until-visible only after observers are attached.
+  document.documentElement.classList.add('js-reveal');
+
+  // Immediately reveal anything already in (or near) the viewport.
+  requestAnimationFrame(function () {
+    nodes.forEach(function (el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.96 && rect.bottom > 0) {
+        markInView(el);
+        observer.unobserve(el);
+      }
+    });
+  });
+
+  // Failsafe: never leave content invisible after fast scroll / stalled IO.
+  window.setTimeout(showAll, 900);
 })();

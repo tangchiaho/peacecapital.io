@@ -198,60 +198,37 @@ summary:focus-visible,
 
 .hero-copy-block { max-width: 720px; }
 
+/* Hero brand signal is quiet — primary wordmark stays in the header */
 .hero-brand {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
-  margin-bottom: 36px;
+  gap: 6px;
+  margin-bottom: 22px;
 }
 
 .hero-brand-en {
-  font-family: var(--font-brand);
-  font-size: clamp(1.55rem, 2.8vw, 2rem);
-  font-weight: 600;
-  letter-spacing: 0.22em;
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--text);
-  line-height: 1;
-  padding-right: 0.06em;
+  color: var(--muted-lt);
+  line-height: 1.2;
 }
 
 .hero-brand-zh {
   font-family: var(--font-cjk);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  letter-spacing: 0.42em;
+  letter-spacing: 0.28em;
   color: var(--accent);
-  line-height: 1;
-}
-
-.hero-kicker {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 20px;
-}
-
-.hero-label {
-  margin: 0;
-  font-family: var(--font-en);
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted-lt);
-}
-
-.hero-kicker-divider {
-  width: 24px;
-  height: 1px;
-  background: var(--line-strong);
-  flex-shrink: 0;
+  line-height: 1.2;
 }
 
 .hero-title,
 .hero-title.zh-title {
-  max-width: 14em;
+  max-width: 18em;
   font-family: var(--font-cjk);
   font-size: clamp(2rem, 4vw, 3.05rem);
   font-weight: 500;
@@ -259,6 +236,16 @@ summary:focus-visible,
   line-height: 1.45;
   color: var(--text);
   text-wrap: pretty;
+}
+
+.hero-title-line {
+  display: inline;
+}
+
+@media (min-width: 901px) {
+  .hero-title-line {
+    display: block;
+  }
 }
 
 .hero-tagline-en {
@@ -1425,8 +1412,9 @@ summary:focus-visible,
   :root { --header-h: 68px; }
   .brand-en { font-size: 1.02rem; letter-spacing: 0.18em; }
   .nav { top: var(--header-h); }
-  .hero-brand { margin-bottom: 28px; }
-  .hero-brand-en { letter-spacing: 0.16em; }
+  .hero-brand { margin-bottom: 18px; }
+  .hero-title,
+  .hero-title.zh-title { max-width: none; }
 
   .hero-title,
   .hero-title.zh-title {
@@ -1552,13 +1540,23 @@ summary:focus-visible,
 /* Research reading cues and graphic attribution */
 .article-body .research-key{color:#245541;font-weight:650}.article-body .research-highlight{color:#234334;background:#e3ebdc;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.08em .12em;font-weight:600}.article-body .figure-download{display:inline-block;color:#315344;font-size:.8rem;text-decoration:underline;text-underline-offset:4px;margin-top:12px}.pc-media picture,.pc-media picture img{display:block;width:100%;height:auto}.editorial-cover picture,.editorial-cover picture img{display:block;width:100%;height:auto}.editorial-cover .figure-download{display:inline-block;font-size:.78rem;color:#315344;margin:0 0 16px;text-decoration:underline}.editorial-cover img{max-height:none!important;object-fit:contain}.editorial-cover figcaption{padding-bottom:8px}@media(max-width:640px){.editorial-cover .figure-download{margin-left:18px}}
 
-/* Quiet section reveals — visible by default; motion only when JS opts in */
+/*
+  Reveals stay visible by default.
+  Only html.js-reveal + .is-pending hides briefly after JS successfully arms observers.
+  Failsafe / reduced-motion / no-JS: content remains fully visible.
+*/
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  html.js-ready .reveal {
+  html.js-reveal .reveal.is-pending:not(.is-inview) {
     opacity: 0;
     transform: translateY(10px);
   }
-  html.js-ready .reveal.is-inview {
+
+  html.js-reveal .reveal.is-inview {
     opacity: 1;
     transform: none;
     transition:
