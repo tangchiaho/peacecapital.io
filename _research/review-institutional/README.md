@@ -1,18 +1,16 @@
-# Institutional visual review assets (temporary)
+# Institutional visual review assets (ready for merge QA)
 
-Excluded from GitHub Pages via `_research`. Delete after acceptance.
+Excluded from GitHub Pages via `_research`. Temporary acceptance pack.
 
-## Screenshots
-- `fin_home_desktop.png` / `fin_home_desktop_full.png`
-- `fin_home_focus_desktop.png`
-- `fin_home_mobile_390.png` / `fin_home_mobile_360.png` (+ `_full`, `_menu`)
-- `fin_focus_desktop.png`
-- `fin_insights_desktop.png` / `fin_insights_mobile.png`
-- `fin_technoprobe_hero_desktop.png` / `fin_technoprobe_toc_desktop.png` / mobile
+## Chart decode verification (Technoprobe)
+Desktop + mobile: scrolled to each of 3 figures, waited for `complete` + `decode()`, then captured.
+Result: **6/6 charts visible** (no blank figures). Cause of earlier blanks was screenshot timing/lazy load, not a production browsing defect after scroll.
 
-## Motion
-- `motion-demo.gif` — hero, focus crossfade, mobile menu, article TOC hint
-- `frame_*.png` — individual frames
+- `technoprobe-charts/desktop_chart_0.png` business-model
+- `technoprobe-charts/desktop_chart_1.png` growth-and-profit
+- `technoprobe-charts/desktop_chart_2.png` cash-and-investment
+- `technoprobe-charts/mobile_chart_*.png` mobile variants
+- `technoprobe-charts/decode-report.json`
 
-## Focus image sources
-See `/assets/img/focus/SOURCES.md`.
+## Other screenshots / motion
+See `fin_*` PNGs, `motion-demo.mp4`, `motion-demo.gif`.
