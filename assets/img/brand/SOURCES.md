@@ -1,19 +1,9 @@
-# Homepage brand artwork
+# Homepage photograph
 
-`peace-capital-shared-foundation-1400.webp` and
-`peace-capital-shared-foundation-800.webp` are responsive exports of the same
-original AI-generated conceptual artwork, created for Peace Capital using
-OpenAI image generation on 2026-10-23.
+| Files | Photographer | Photograph | License |
+| --- | --- | --- | --- |
+| `industry-context-1440.webp`, `industry-context-800.webp` | CHUTTERSNAP | [Container terminal from above](https://commons.wikimedia.org/wiki/File:Container_terminal_from_above_(Unsplash).jpg), Bukit Merah, Singapore, 10 May 2017 | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
 
-Art direction: three connected forest-green architectural frames on a shared
-foundation, one frosted-glass plane, cool white surroundings, realistic material
-detail and daylight. The composition expresses durable relationships, a long
-time horizon and partnership. It depicts a conceptual object, not an actual
-Peace Capital building, asset or completed investment.
-
-The image contains no typography or financial data. The accessible description
-and the Peace / Patience / Partnership caption are live HTML.
-
-Delivery: 1400 × 1120 and 800 × 640 WebP; eager/high-priority loading in the
-homepage hero, intrinsic dimensions, responsive `srcset`, mobile crop, and a
-single restrained entrance that respects reduced-motion preferences.
+Original: 3936 × 2624 JPEG. Site copies are resized and encoded as WebP;
+photographic content and colours are unchanged. Photographer and source are
+credited below the homepage image.

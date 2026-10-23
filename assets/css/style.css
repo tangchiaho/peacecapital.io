@@ -191,7 +191,7 @@ summary:focus-visible,
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Hero — copy + brand artwork as one composition */
+/* Hero — investment positioning with industry photography */
 .hero {
   display: flex;
   align-items: center;
@@ -298,17 +298,16 @@ summary:focus-visible,
 
 .hero-artwork {
   overflow: hidden;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 3 / 2;
   background: #e9eeeb;
   border: 1px solid var(--line);
-  box-shadow: 0 18px 42px -24px rgba(20, 53, 44, 0.24);
 }
 
 .hero-artwork img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 45%;
+  object-position: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -322,19 +321,33 @@ summary:focus-visible,
   }
 }
 
-.hero-mark-caption {
+.hero-photo-caption {
   display: flex;
   justify-content: space-between;
-  gap: 8px;
-  margin-top: 16px;
-  padding-top: 12px;
-  border-top: 1px solid var(--line-strong);
-  font-family: var(--font-en);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 14px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  line-height: 1.7;
   color: var(--muted-lt);
 }
+
+.hero-photo-caption [lang="en"] {
+  margin-left: 8px;
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+}
+
+.hero-photo-caption > a {
+  font-family: var(--font-en);
+  font-size: 0.64rem;
+  text-underline-offset: 3px;
+}
+
+.hero-photo-caption > a:hover,
+.hero-photo-caption > a:focus-visible { text-decoration: underline; }
 
 .btn {
   display: inline-flex;
@@ -1622,10 +1635,8 @@ summary:focus-visible,
   .hero-artwork {
     aspect-ratio: 3 / 2;
   }
-  .hero-mark-caption {
-    font-size: 0.62rem;
-    letter-spacing: 0.08em;
-    gap: 4px;
+  .hero-photo-caption {
+    gap: 4px 12px;
   }
   .hero-actions {
     margin-top: 24px;
