@@ -717,6 +717,13 @@ html.js-ready:not(.js-reduced) .hero-visual.is-drawn .mark-partner {
   opacity: 1;
 }
 
+.focus-panel-credit {
+  margin: 14px 0 0;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: var(--muted-lt);
+}
+
 @media (max-width: 900px) {
   .focus-panel {
     grid-template-columns: 1fr;
@@ -1604,15 +1611,25 @@ html.js-ready:not(.js-reduced) .hero-visual.is-drawn .mark-partner {
   }
 
   .section { padding: 64px 0; }
-  .hero { min-height: auto; padding: 56px 0 48px; }
+  .hero { min-height: auto; padding: 48px 0 40px; }
   .hero-layout {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 28px;
   }
   .hero-visual {
     justify-self: start;
-    width: min(100%, 320px);
-    order: -1;
+    width: min(42vw, 168px);
+    max-width: 168px;
+    order: 0; /* keep after copy: title → intro → CTA → mark */
+    margin-top: 4px;
+  }
+  .hero-mark-caption {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    gap: 4px;
+  }
+  .hero-actions {
+    margin-top: 24px;
   }
   .home-feature {
     grid-template-columns: 1fr;

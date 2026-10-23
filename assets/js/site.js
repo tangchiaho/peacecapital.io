@@ -86,9 +86,20 @@
         opt.setAttribute('aria-selected', on ? 'true' : 'false');
         opt.tabIndex = on ? 0 : -1;
       });
+      var creditText = '';
       images.forEach(function (img) {
-        img.classList.toggle('is-active', String(img.getAttribute('data-focus-image')) === String(i));
+        var on = String(img.getAttribute('data-focus-image')) === String(i);
+        img.classList.toggle('is-active', on);
+        if (on) creditText = img.getAttribute('data-credit') || '';
       });
+      var credit = panel.parentElement
+        ? panel.parentElement.querySelector('[data-focus-credit]')
+        : null;
+      if (!credit) credit = document.querySelector('[data-focus-credit]');
+      // Prefer credit sibling within the same section container
+      var sectionCredit = panel.closest('.container') && panel.closest('.container').querySelector('[data-focus-credit]');
+      if (sectionCredit) credit = sectionCredit;
+      if (credit && creditText) credit.textContent = creditText;
       if (list) {
         list.setAttribute('aria-activedescendant', options[i].id);
       }
