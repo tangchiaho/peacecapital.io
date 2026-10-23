@@ -506,6 +506,7 @@ summary:focus-visible,
 }
 
 #philosophy,
+#investment-approach,
 #founder {
   scroll-margin-top: 96px;
 }
@@ -828,6 +829,53 @@ summary:focus-visible,
 .focus-closing {
   margin-top: 56px;
   max-width: 40em;
+}
+
+/* About: dialogue at the opening, fieldwork alongside our role. */
+.investment-criteria { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-strong); }
+.investment-criteria > li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 24px; padding: 30px 0; border-bottom: 1px solid var(--line-strong); }
+.criterion-index { padding-top: 4px; color: var(--accent); font: 0.78rem/1.8 var(--font-en); font-variant-numeric: tabular-nums; }
+.criterion-copy { display: grid; grid-template-columns: minmax(160px, 0.65fr) minmax(0, 1.5fr); gap: 32px; }
+.criterion-copy h3 { color: var(--text); font-size: 1.14rem; font-weight: 600; line-height: 1.6; }
+.criterion-copy p { color: var(--muted); font-size: 1rem; line-height: 1.9; }
+.approach-evidence { margin-top: 24px; color: var(--muted); font-size: 0.9rem; line-height: 1.85; }
+.approach-evidence a { text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 4px; }
+.approach-evidence a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.about-principles { padding: 28px 0; background: var(--bg-soft); }
+.about-principles-layout { display: grid; grid-template-columns: minmax(140px, 0.3fr) minmax(0, 1fr); gap: 32px; align-items: baseline; }
+.about-principles h2 { color: var(--text); font-size: 1.05rem; font-weight: 500; line-height: 1.65; }
+.about-principles p { color: var(--muted); font-size: 0.92rem; line-height: 1.9; }
+
+.about-page .page-hero .about-opening-media {
+  max-width: var(--container);
+  margin-top: 40px;
+}
+
+.about-image { margin: 0; min-width: 0; }
+.about-image-frame { overflow: hidden; background: var(--bg-soft); }
+.about-image-frame img { width: 100%; height: 100%; object-fit: cover; }
+.about-dialogue-frame { aspect-ratio: 2.2 / 1; }
+.about-dialogue-frame img { object-position: center 53%; }
+.about-image figcaption { margin-top: 8px; color: var(--muted-lt); font-size: 0.68rem; line-height: 1.65; }
+.about-role-layout { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); align-items: center; gap: 64px; }
+.about-role-copy { min-width: 0; }
+.about-fieldwork-frame { aspect-ratio: 5 / 6; }
+.about-fieldwork-frame img { object-position: 25% center; }
+.about-role-copy .section-title { max-width: 14em; margin-bottom: 24px; }
+
+@media (max-width: 1080px) and (min-width: 901px) {
+  .about-role-layout { gap: 36px; }
+}
+
+@media (max-width: 900px) {
+  .investment-criteria > li { grid-template-columns: 28px minmax(0, 1fr); gap: 16px; padding: 24px 0; }
+  .criterion-copy { grid-template-columns: 1fr; gap: 10px; }
+  .about-principles-layout { grid-template-columns: 1fr; gap: 12px; }
+  .about-page .page-hero .about-opening-media { margin-top: 28px; }
+  .about-dialogue-frame { aspect-ratio: 3 / 2; }
+  .about-role-layout { grid-template-columns: 1fr; gap: 28px; }
+  .about-fieldwork-frame { aspect-ratio: 3 / 2; }
+  .about-role-copy .section-title { margin-bottom: 18px; }
 }
 
 /* Founder */
