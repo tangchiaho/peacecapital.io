@@ -440,9 +440,10 @@ summary:focus-visible,
 
 .home-feature-title {
   margin: 0 0 14px;
-  font-family: var(--font-display);
+  font-family: var(--font-cjk);
   font-size: clamp(1.45rem, 2.4vw, 1.85rem);
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: normal;
   line-height: 1.45;
   color: var(--text);
   text-wrap: pretty;
