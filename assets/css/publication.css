@@ -753,6 +753,7 @@ body.publication {
   width: 100%;
   height: auto;
   border-radius: 0;
+  background: var(--pub-soft);
 }
 
 .article-publication article .publication-figure figcaption {
