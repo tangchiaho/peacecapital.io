@@ -191,7 +191,7 @@ summary:focus-visible,
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Hero — copy + brand mark as one composition */
+/* Hero — copy + brand artwork as one composition */
 .hero {
   display: flex;
   align-items: center;
@@ -290,48 +290,45 @@ summary:focus-visible,
 
 .hero-visual {
   justify-self: end;
-  width: min(100%, 420px);
+  width: min(100%, 520px);
+  min-width: 0;
+  margin: 0;
   color: var(--accent);
 }
 
-.brand-mark {
-  display: block;
+.hero-artwork {
+  overflow: hidden;
+  aspect-ratio: 5 / 4;
+  background: #e9eeeb;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 42px -24px rgba(20, 53, 44, 0.24);
+}
+
+.hero-artwork img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
 }
 
-.mark-path {
-  stroke-dasharray: 1;
-  stroke-dashoffset: 0;
-}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-artwork img {
+    animation: hero-artwork-settle 800ms var(--ease-out) both;
+  }
 
-html.js-ready:not(.js-reduced) .hero-visual .mark-path {
-  stroke-dashoffset: 1;
-}
-
-html.js-ready:not(.js-reduced) .hero-visual.is-drawn .mark-path {
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset var(--dur-enter) var(--ease-out);
-}
-
-html.js-ready:not(.js-reduced) .hero-visual.is-drawn .mark-peace {
-  transition-delay: 0ms;
-}
-
-html.js-ready:not(.js-reduced) .hero-visual.is-drawn .mark-patience {
-  transition-delay: 120ms;
-}
-
-html.js-ready:not(.js-reduced) .hero-visual.is-drawn .mark-partner {
-  transition-delay: 220ms;
+  @keyframes hero-artwork-settle {
+    from { opacity: 0.72; transform: scale(1.025); }
+    to { opacity: 1; transform: scale(1); }
+  }
 }
 
 .hero-mark-caption {
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  margin-top: 14px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-strong);
   font-family: var(--font-en);
   font-size: 0.68rem;
   letter-spacing: 0.12em;
@@ -1618,13 +1615,15 @@ html.js-ready:not(.js-reduced) .hero-visual.is-drawn .mark-partner {
   }
   .hero-visual {
     justify-self: start;
-    width: min(42vw, 168px);
-    max-width: 168px;
-    order: 0; /* keep after copy: title → intro → CTA → mark */
+    width: min(100%, 420px);
+    order: 0; /* keep after copy: title → intro → CTA → artwork */
     margin-top: 4px;
   }
+  .hero-artwork {
+    aspect-ratio: 3 / 2;
+  }
   .hero-mark-caption {
-    font-size: 0.58rem;
+    font-size: 0.62rem;
     letter-spacing: 0.08em;
     gap: 4px;
   }
