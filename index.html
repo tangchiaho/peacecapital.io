@@ -43,7 +43,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <link rel="stylesheet" href="/assets/css/style.css?v=20261024-industry">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20261024-sectors">
 
   <script type="application/ld+json">
   {
@@ -190,39 +190,122 @@
           <a class="text-link" href="/focus/">探索關注領域</a>
         </div>
 
-        <div class="focus-panel" data-focus-panel>
-          <div class="focus-panel-list" role="listbox" aria-label="關注領域" aria-activedescendant="focus-opt-0">
-            <button type="button" role="option" id="focus-opt-0" class="focus-panel-option is-active" aria-selected="true" data-focus-index="0">
-              <span class="focus-name">生技與醫療<small class="focus-name-en" lang="en">Biotechnology &amp; Healthcare</small></span>
-              <span class="focus-desc">生技創新、醫療體系與精準醫療</span>
-            </button>
-            <button type="button" role="option" id="focus-opt-1" class="focus-panel-option" aria-selected="false" data-focus-index="1">
-              <span class="focus-name">人工智慧與軟體<small class="focus-name-en" lang="en">Artificial Intelligence &amp; Software</small></span>
-              <span class="focus-desc">AI 應用、企業軟體與垂直產業解決方案</span>
-            </button>
-            <button type="button" role="option" id="focus-opt-2" class="focus-panel-option" aria-selected="false" data-focus-index="2">
-              <span class="focus-name">半導體與數位基礎建設<small class="focus-name-en" lang="en">Technology &amp; Digital Infrastructure</small></span>
-              <span class="focus-desc">半導體、通訊與數位基礎建設</span>
-            </button>
-            <button type="button" role="option" id="focus-opt-3" class="focus-panel-option" aria-selected="false" data-focus-index="3">
-              <span class="focus-name">能源與永續<small class="focus-name-en" lang="en">Energy &amp; Sustainability</small></span>
-              <span class="focus-desc">再生能源、儲能技術與永續轉型</span>
-            </button>
-            <button type="button" role="option" id="focus-opt-4" class="focus-panel-option" aria-selected="false" data-focus-index="4">
-              <span class="focus-name">先進材料<small class="focus-name-en" lang="en">Advanced Materials</small></span>
-              <span class="focus-desc">新材料研發與工業應用創新</span>
-            </button>
-          </div>
-
-          <div class="focus-panel-media">
-            <img class="focus-panel-image is-active" data-focus-image="0" src="/assets/img/focus/focus-biotech.webp" width="1536" height="1024" alt="實驗室移液器，對應生技與醫療研究場景" loading="lazy" decoding="async" data-credit="影像：Wikimedia Commons「P1000 pipette」（CC0）">
-            <img class="focus-panel-image" data-focus-image="1" src="/assets/img/focus/focus-ai-software.webp" width="1536" height="1024" alt="程式碼畫面，對應人工智慧與軟體場景" loading="lazy" decoding="async" data-credit="影像：Martin Vorel「Programming code」（CC BY-SA 4.0）">
-            <img class="focus-panel-image" data-focus-image="2" src="/assets/img/editorial/technoprobe-photo.webp" width="1536" height="1024" alt="探針卡與晶圓示意，對應半導體與數位基礎建設" loading="lazy" decoding="async" data-credit="影像：和平資本編輯示意（半導體測試場景）">
-            <img class="focus-panel-image" data-focus-image="3" src="/assets/img/focus/focus-energy.webp" width="1536" height="1024" alt="太陽光電陣列，對應能源與永續場景" loading="lazy" decoding="async" data-credit="影像：Wikimedia Commons「Solar Panel Array」（CC0）">
-            <img class="focus-panel-image" data-focus-image="4" src="/assets/img/editorial/materials-lab-to-industry-photo.webp" width="1536" height="1024" alt="材料試片示意，對應先進材料場景" loading="lazy" decoding="async" data-credit="影像：和平資本編輯示意（先進材料場景）">
+        <div class="sector-explorer" data-sector-explorer>
+          <nav class="sector-nav" aria-label="選擇關注領域">
+            <a class="sector-nav-link" id="sector-tab-biotech" href="#sector-panel-biotech">
+              <span class="sector-index" aria-hidden="true">01</span>
+              <span class="sector-nav-name">生技與醫療<small lang="en">Biotechnology &amp; Healthcare</small></span>
+              <span class="sector-nav-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="sector-nav-link" id="sector-tab-software" href="#sector-panel-software">
+              <span class="sector-index" aria-hidden="true">02</span>
+              <span class="sector-nav-name">人工智慧與軟體<small lang="en">Artificial Intelligence &amp; Software</small></span>
+              <span class="sector-nav-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="sector-nav-link" id="sector-tab-semiconductor" href="#sector-panel-semiconductor">
+              <span class="sector-index" aria-hidden="true">03</span>
+              <span class="sector-nav-name">半導體與數位基礎建設<small lang="en">Semiconductors &amp; Digital Infrastructure</small></span>
+              <span class="sector-nav-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="sector-nav-link" id="sector-tab-energy" href="#sector-panel-energy">
+              <span class="sector-index" aria-hidden="true">04</span>
+              <span class="sector-nav-name">能源與永續<small lang="en">Energy &amp; Sustainability</small></span>
+              <span class="sector-nav-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="sector-nav-link" id="sector-tab-materials" href="#sector-panel-materials">
+              <span class="sector-index" aria-hidden="true">05</span>
+              <span class="sector-nav-name">先進材料<small lang="en">Advanced Materials</small></span>
+              <span class="sector-nav-arrow" aria-hidden="true">→</span>
+            </a>
+          </nav>
+          <div class="sector-panels">
+          <article class="sector-panel" id="sector-panel-biotech" aria-labelledby="sector-title-biotech">
+            <figure class="sector-figure">
+              <div class="sector-media">
+                <img src="/assets/img/focus/sector-biotech-1440.webp"
+                  srcset="/assets/img/focus/sector-biotech-800.webp 800w, /assets/img/focus/sector-biotech-1440.webp 1440w"
+                  sizes="(max-width: 900px) calc(100vw - 36px), 660px" width="1440" height="960"
+                  alt="自動化生命科學實驗室與研究人員的產業情境示意" loading="lazy" decoding="async">
+              </div>
+              <figcaption>產業情境示意</figcaption>
+            </figure>
+            <div class="sector-panel-copy">
+              <h3 id="sector-title-biotech">生技與醫療</h3>
+              <p>從研發證據與臨床需求出發，觀察技術能否改善醫療結果，並形成可持續的商業模式。</p>
+              <ul class="sector-lenses" aria-label="觀察重點"><li>臨床與應用驗證</li><li>醫療需求</li><li>商業化路徑</li></ul>
+              <a class="text-link" href="/focus/#biotech">深入了解此領域 <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="sector-panel" id="sector-panel-software" aria-labelledby="sector-title-software">
+            <figure class="sector-figure">
+              <div class="sector-media">
+                <img src="/assets/img/focus/sector-software-1440.webp"
+                  srcset="/assets/img/focus/sector-software-800.webp 800w, /assets/img/focus/sector-software-1440.webp 1440w"
+                  sizes="(max-width: 900px) calc(100vw - 36px), 660px" width="1440" height="960"
+                  alt="企業軟體工作流程與團隊協作的產業情境示意" loading="lazy" decoding="async">
+              </div>
+              <figcaption>產業情境示意</figcaption>
+            </figure>
+            <div class="sector-panel-copy">
+              <h3 id="sector-title-software">人工智慧與軟體</h3>
+              <p>觀察 AI 與企業軟體如何融入工作流程，並以持續採用、付費意願與營運效益驗證價值。</p>
+              <ul class="sector-lenses" aria-label="觀察重點"><li>實際採用</li><li>工作流程</li><li>可擴展性</li></ul>
+              <a class="text-link" href="/focus/#software">深入了解此領域 <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="sector-panel" id="sector-panel-semiconductor" aria-labelledby="sector-title-semiconductor">
+            <figure class="sector-figure">
+              <div class="sector-media">
+                <img src="/assets/img/focus/sector-semiconductor-1440.webp"
+                  srcset="/assets/img/focus/sector-semiconductor-800.webp 800w, /assets/img/focus/sector-semiconductor-1440.webp 1440w"
+                  sizes="(max-width: 900px) calc(100vw - 36px), 660px" width="1440" height="960"
+                  alt="晶圓檢測設備、自動化搬運與無塵室的產業情境示意" loading="lazy" decoding="async">
+              </div>
+              <figcaption>產業情境示意</figcaption>
+            </figure>
+            <div class="sector-panel-copy">
+              <h3 id="sector-title-semiconductor">半導體與數位基礎建設</h3>
+              <p>從設計、製造、封裝測試到運算與連線基礎建設，研究關鍵技術、供應鏈分工與投入效率。</p>
+              <ul class="sector-lenses" aria-label="觀察重點"><li>技術門檻</li><li>供應鏈分工</li><li>資本效率</li></ul>
+              <a class="text-link" href="/focus/#semiconductor">深入了解此領域 <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="sector-panel" id="sector-panel-energy" aria-labelledby="sector-title-energy">
+            <figure class="sector-figure">
+              <div class="sector-media">
+                <img src="/assets/img/focus/sector-energy-1440.webp"
+                  srcset="/assets/img/focus/sector-energy-800.webp 800w, /assets/img/focus/sector-energy-1440.webp 1440w"
+                  sizes="(max-width: 900px) calc(100vw - 36px), 660px" width="1440" height="960"
+                  alt="儲能設備、光電陣列與電網設施的產業情境示意" loading="lazy" decoding="async">
+              </div>
+              <figcaption>產業情境示意</figcaption>
+            </figure>
+            <div class="sector-panel-copy">
+              <h3 id="sector-title-energy">能源與永續</h3>
+              <p>從發電、儲能到能源管理，觀察方案在成本、可靠度與系統整合上的長期競爭力。</p>
+              <ul class="sector-lenses" aria-label="觀察重點"><li>儲能與電網</li><li>成本結構</li><li>長期運轉</li></ul>
+              <a class="text-link" href="/focus/#energy">深入了解此領域 <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="sector-panel" id="sector-panel-materials" aria-labelledby="sector-title-materials">
+            <figure class="sector-figure">
+              <div class="sector-media">
+                <img src="/assets/img/focus/sector-materials-1440.webp"
+                  srcset="/assets/img/focus/sector-materials-800.webp 800w, /assets/img/focus/sector-materials-1440.webp 1440w"
+                  sizes="(max-width: 900px) calc(100vw - 36px), 660px" width="1440" height="960"
+                  alt="複合材料試片、測試治具與中試製程的產業情境示意" loading="lazy" decoding="async">
+              </div>
+              <figcaption>產業情境示意</figcaption>
+            </figure>
+            <div class="sector-panel-copy">
+              <h3 id="sector-title-materials">先進材料</h3>
+              <p>連結材料性能、製程與終端需求，關注技術如何通過驗證，走向穩定量產與工業應用。</p>
+              <ul class="sector-lenses" aria-label="觀察重點"><li>性能驗證</li><li>製程穩定</li><li>應用導入</li></ul>
+              <a class="text-link" href="/focus/#materials">深入了解此領域 <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
           </div>
         </div>
-        <p class="focus-panel-credit" data-focus-credit>影像：Wikimedia Commons「P1000 pipette」（CC0）</p>
       </div>
     </section>
 
@@ -309,6 +392,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/site.js?v=20261024-fin" defer></script>
+  <script src="/assets/js/site.js?v=20261024-sectors" defer></script>
 </body>
 </html>

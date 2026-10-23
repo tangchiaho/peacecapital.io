@@ -1,0 +1,65 @@
+[
+  {
+    "width": 1440,
+    "home": "5 sectors switch correctly",
+    "keyboard": "pass",
+    "fieldGuide": "5 images and 15 observation points",
+    "anchors": "pass",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "home": "5 sectors switch correctly",
+    "keyboard": "pass",
+    "fieldGuide": "5 images and 15 observation points",
+    "anchors": "pass",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 768,
+    "home": "5 sectors switch correctly",
+    "keyboard": "pass",
+    "fieldGuide": "5 images and 15 observation points",
+    "anchors": "pass",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "home": "5 sectors switch correctly",
+    "keyboard": "pass",
+    "fieldGuide": "5 images and 15 observation points",
+    "anchors": "pass",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 360,
+    "home": "5 sectors switch correctly",
+    "keyboard": "pass",
+    "fieldGuide": "5 images and 15 observation points",
+    "anchors": "pass",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "mode": "no-js",
+    "home": "pass",
+    "fieldGuide": "pass"
+  },
+  {
+    "mode": "reduced",
+    "home": "pass",
+    "fieldGuide": "pass"
+  },
+  {
+    "mode": "no-observer",
+    "home": "pass",
+    "fieldGuide": "pass"
+  },
+  {
+    "deepLink": "pass"
+  }
+]

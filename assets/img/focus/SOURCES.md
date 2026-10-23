@@ -1,11 +1,25 @@
-# Focus panel image sources
+# Sector imagery
 
-| Topic | File | Source | License | Notes |
-| --- | --- | --- | --- | --- |
-| 生技與醫療 | `focus-biotech.webp` | [P1000_pipette.jpg](https://commons.wikimedia.org/wiki/File:P1000_pipette.jpg) (Wetitpig0) | CC0 1.0 | Cropped/resized for panel |
-| 人工智慧與軟體 | `focus-ai-software.webp` | [Programming_code.jpg](https://commons.wikimedia.org/wiki/File:Programming_code.jpg) (Martin Vorel / martinvorel.com) | CC BY-SA 4.0 | Attribution required; shown under focus panel |
-| 半導體與數位基礎建設 | `/assets/img/editorial/technoprobe-photo.webp` | Peace Capital editorial AI illustration (site asset) | Site use | Semiconductor probe/wafer scene |
-| 能源與永續 | `focus-energy.webp` | [Solar_Panel_Array.jpg](https://commons.wikimedia.org/wiki/File:Solar_Panel_Array.jpg) (MarkBuckawicki) | CC0 1.0 | Cropped/resized for panel |
-| 先進材料 | `/assets/img/editorial/materials-lab-to-industry-photo.webp` | Peace Capital editorial AI illustration (site asset) | Site use | Materials lab / sample scene |
+The `sector-*-1440.webp` and `sector-*-800.webp` files are responsive exports
+of five original industry illustrations created for Peace Capital using
+OpenAI image generation. They depict fictional settings and people, not
+Peace Capital facilities, investee companies, employees or actual products.
+The site labels the images as industry illustrations.
 
-No unrelated probe-card stills are used for energy or biotech.
+| Prefix | Subject |
+| --- | --- |
+| `sector-biotech` | Life-science research and laboratory automation |
+| `sector-software` | Enterprise software workflows and collaboration |
+| `sector-semiconductor` | Wafer handling and semiconductor manufacturing |
+| `sector-energy` | Battery energy storage, solar generation and grid equipment |
+| `sector-materials` | Composite material testing and pilot manufacturing |
+
+Originals: 1536 × 1024 PNG. Site exports: 1440 × 960 and 800 × 533 WebP.
+
+## Existing licensed assets
+
+| File | Photographer / source | License |
+| --- | --- | --- |
+| `focus-biotech.webp` | [P1000 pipette](https://commons.wikimedia.org/wiki/File:P1000_pipette.jpg), Wetitpig0 | CC0 1.0 |
+| `focus-ai-software.webp` | [Programming code](https://commons.wikimedia.org/wiki/File:Programming_code.jpg), Martin Vorel | CC BY-SA 4.0 |
+| `focus-energy.webp` | [Solar Panel Array](https://commons.wikimedia.org/wiki/File:Solar_Panel_Array.jpg), MarkBuckawicki | CC0 1.0 |
