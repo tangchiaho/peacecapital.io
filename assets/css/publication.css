@@ -13,7 +13,7 @@ body.publication {
   --bg: #ffffff;
   --pub-ink: #1c211e;
   --pub-body: #2e342f;
-  --pub-muted: #5f6963;
+  --pub-muted: #555c55;
   --pub-rule: #dce0da;
   --pub-accent: #315a4b;
   --pub-soft: #f3f5f2;
@@ -57,7 +57,7 @@ body.publication {
 }
 
 .publication-kicker span {
-  color: #9ba59e;
+  color: #555c55;
   margin: 0 8px;
 }
 
@@ -231,7 +231,7 @@ body.publication {
   background: none;
   padding: 8px 0;
   min-height: 44px;
-  color: #717a72;
+  color: #555c55;
   cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
@@ -298,7 +298,7 @@ body.publication {
 
 .publication-story-meta {
   font-size: 0.75rem;
-  color: #778177;
+  color: #555c55;
   display: flex;
   flex-wrap: wrap;
   gap: 8px 14px;
@@ -417,7 +417,7 @@ body.publication {
   font-size: 0.75rem;
   line-height: 1.8;
   margin-bottom: 28px;
-  color: #778177;
+  color: #555c55;
 }
 
 .publication.article-publication .article-title {
@@ -478,7 +478,7 @@ body.publication {
   display: flex;
   gap: 10px 15px;
   flex-wrap: wrap;
-  color: #7b847b;
+  color: #555c55;
   font-size: 0.75rem;
   line-height: 1.8;
   margin-top: 3px;
@@ -621,7 +621,7 @@ body.publication {
   font-size: 0.78rem;
   line-height: 1.7;
   display: block;
-  color: #7d867d;
+  color: #555c55;
   text-decoration: none;
   border: 0;
   transition: color var(--dur-fast) var(--ease-out);
@@ -758,7 +758,7 @@ body.publication {
 .article-publication article .publication-figure figcaption {
   font-size: 0.8rem !important;
   line-height: 1.8 !important;
-  color: #7c857b;
+  color: #555c55;
   margin-top: 12px;
   padding: 0 24px;
 }
@@ -830,7 +830,7 @@ body.publication {
 .article-publication article .table-hint {
   font-size: 0.75rem !important;
   line-height: 1.5 !important;
-  color: #939b91;
+  color: #555c55;
   margin-bottom: 0;
 }
 
@@ -870,14 +870,14 @@ body.publication {
 .article-publication article .company-portal p,
 .article-publication article .reading-portal p {
   font-size: 0.92rem !important;
-  color: #75806f;
+  color: #555c55;
   margin: 10px 0 0;
 }
 
 .article-publication article .company-portal-label,
 .article-publication article .reading-portal > span {
   font-size: 0.72rem;
-  color: #71816a;
+  color: #555c55;
   margin-bottom: 10px;
   letter-spacing: 0.06em;
 }
@@ -918,7 +918,7 @@ body.publication {
 .article-publication article .pc-article-small {
   font-size: 0.86rem !important;
   line-height: 1.8 !important;
-  color: #75806e;
+  color: #555c55;
 }
 
 .article-publication article .pc-article-foot {
@@ -1018,7 +1018,7 @@ body.publication {
   font-size: 0.9rem !important;
   line-height: 1.75 !important;
   margin: 0;
-  color: #778272;
+  color: #555c55;
 }
 
 .publication-next-story > span {
@@ -1207,7 +1207,7 @@ body.publication {
 
   .publication-mobile-toc a {
     font-size: 0.88rem;
-    color: #687b60;
+    color: #555c55;
     text-decoration: none;
   }
 

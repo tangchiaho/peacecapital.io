@@ -3,23 +3,34 @@
 
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.nav');
+
   if (toggle && nav) {
+    var lastFocus = null;
+
     function setOpen(open, options) {
       var opts = options || {};
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       toggle.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
       nav.classList.toggle('is-open', open);
       document.body.classList.toggle('nav-open', open);
-      if (!open && opts.returnFocus) toggle.focus();
+
+      if (open) {
+        lastFocus = document.activeElement;
+        var first = nav.querySelector('a');
+        if (first) first.focus();
+        return;
+      }
+
+      if (opts.returnFocus) {
+        var target = lastFocus && typeof lastFocus.focus === 'function' ? lastFocus : toggle;
+        target.focus();
+        lastFocus = null;
+      }
     }
 
     toggle.addEventListener('click', function () {
       var willOpen = toggle.getAttribute('aria-expanded') !== 'true';
       setOpen(willOpen, { returnFocus: !willOpen });
-      if (willOpen) {
-        var first = nav.querySelector('a');
-        if (first) first.focus();
-      }
     });
 
     nav.querySelectorAll('a').forEach(function (link) {
@@ -39,6 +50,9 @@
         setOpen(false);
       }
     });
+
+    // Enable collapsible behaviour only after handlers are wired.
+    document.documentElement.classList.add('js-nav');
   }
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
