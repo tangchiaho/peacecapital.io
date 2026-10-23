@@ -1,6 +1,11 @@
 (function () {
   document.documentElement.classList.add('js-ready');
 
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) {
+    document.documentElement.classList.add('js-reduced');
+  }
+
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.nav');
 
@@ -54,6 +59,84 @@
     document.documentElement.classList.add('js-nav');
   }
 
+  /* Brand mark: one-shot line draw, then settle */
+  var heroVisual = document.querySelector('.hero-visual');
+  if (heroVisual) {
+    if (reduceMotion) {
+      heroVisual.classList.add('is-drawn');
+    } else {
+      requestAnimationFrame(function () {
+        heroVisual.classList.add('is-drawn');
+      });
+    }
+  }
+
+  /* Focus panel: keyboard + click selection with image crossfade */
+  document.querySelectorAll('[data-focus-panel]').forEach(function (panel) {
+    var options = Array.prototype.slice.call(panel.querySelectorAll('.focus-panel-option'));
+    var images = Array.prototype.slice.call(panel.querySelectorAll('.focus-panel-image'));
+    var list = panel.querySelector('.focus-panel-list');
+    if (!options.length) return;
+
+    function select(index, focusOption) {
+      var i = Math.max(0, Math.min(index, options.length - 1));
+      options.forEach(function (opt, idx) {
+        var on = idx === i;
+        opt.classList.toggle('is-active', on);
+        opt.setAttribute('aria-selected', on ? 'true' : 'false');
+        opt.tabIndex = on ? 0 : -1;
+      });
+      var creditText = '';
+      images.forEach(function (img) {
+        var on = String(img.getAttribute('data-focus-image')) === String(i);
+        img.classList.toggle('is-active', on);
+        if (on) creditText = img.getAttribute('data-credit') || '';
+      });
+      var credit = panel.parentElement
+        ? panel.parentElement.querySelector('[data-focus-credit]')
+        : null;
+      if (!credit) credit = document.querySelector('[data-focus-credit]');
+      // Prefer credit sibling within the same section container
+      var sectionCredit = panel.closest('.container') && panel.closest('.container').querySelector('[data-focus-credit]');
+      if (sectionCredit) credit = sectionCredit;
+      if (credit && creditText) credit.textContent = creditText;
+      if (list) {
+        list.setAttribute('aria-activedescendant', options[i].id);
+      }
+      if (focusOption) options[i].focus();
+    }
+
+    select(0, false);
+
+    options.forEach(function (opt, idx) {
+      opt.addEventListener('click', function () {
+        select(idx, false);
+      });
+
+      opt.addEventListener('keydown', function (event) {
+        var next = idx;
+        if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+          event.preventDefault();
+          next = (idx + 1) % options.length;
+          select(next, true);
+        } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+          event.preventDefault();
+          next = (idx - 1 + options.length) % options.length;
+          select(next, true);
+        } else if (event.key === 'Home') {
+          event.preventDefault();
+          select(0, true);
+        } else if (event.key === 'End') {
+          event.preventDefault();
+          select(options.length - 1, true);
+        } else if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          select(idx, false);
+        }
+      });
+    });
+  });
+
   var nodes = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
   if (!nodes.length) return;
 
@@ -64,7 +147,7 @@
     });
   }
 
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (reduceMotion) {
     showAll();
     return;
   }
@@ -97,10 +180,8 @@
     observer.observe(el);
   });
 
-  // Arm hide-until-visible only after observers are attached.
   document.documentElement.classList.add('js-reveal');
 
-  // Immediately reveal anything already in (or near) the viewport.
   requestAnimationFrame(function () {
     nodes.forEach(function (el) {
       var rect = el.getBoundingClientRect();
@@ -111,6 +192,5 @@
     });
   });
 
-  // Failsafe: never leave content invisible after fast scroll / stalled IO.
   window.setTimeout(showAll, 900);
 })();

@@ -1,0 +1,90 @@
+{
+  "desktop": [
+    {
+      "alt": "依公司產品與技術資料整理的分析框架。採用、投入與回款都需要個別證據；圖示不代表固定採購週期或保證訂單。",
+      "src": "http://127.0.0.1:8765/assets/img/editorial/companies/business-model.png",
+      "complete": true,
+      "nw": 1400,
+      "nh": 930,
+      "cw": 728,
+      "ch": 484,
+      "display": "block",
+      "opacity": "1",
+      "figH": 519,
+      "parent": "PICTURE",
+      "pictureHTML": "<picture><source media=\"(max-width:640px)\" srcset=\"/assets/img/editorial/companies/business-model-mobile.png\"><img src=\"/assets/img/editorial/companies/business-model.png\" alt=\"依公司"
+    },
+    {
+      "alt": "同期間、同集團比較。圖中金額四捨五入至百萬歐元一位小數；EBITDA 為非 IFRS 指標。來源 [3]。",
+      "src": "http://127.0.0.1:8765/assets/img/editorial/companies/growth-and-profit.png",
+      "complete": true,
+      "nw": 1400,
+      "nh": 900,
+      "cw": 728,
+      "ch": 468,
+      "display": "block",
+      "opacity": "1",
+      "figH": 503,
+      "parent": "PICTURE",
+      "pictureHTML": "<picture><source media=\"(max-width:640px)\" srcset=\"/assets/img/editorial/companies/growth-and-profit-mobile.png\"><img src=\"/assets/img/editorial/companies/growth-and-profit.png\" al"
+    },
+    {
+      "alt": "採半年報現金流量表項目，顯示本期營業淨現金流與兩項資產購置支出的關係。相減餘額為本文計算，不是公司正式自由現金流指標。來",
+      "src": "http://127.0.0.1:8765/assets/img/editorial/companies/cash-and-investment.png",
+      "complete": true,
+      "nw": 1400,
+      "nh": 900,
+      "cw": 728,
+      "ch": 468,
+      "display": "block",
+      "opacity": "1",
+      "figH": 526,
+      "parent": "PICTURE",
+      "pictureHTML": "<picture><source media=\"(max-width:640px)\" srcset=\"/assets/img/editorial/companies/cash-and-investment-mobile.png\"><img src=\"/assets/img/editorial/companies/cash-and-investment.png"
+    }
+  ],
+  "mobile": [
+    {
+      "alt": "依公司產品與技術資料整理的分析框架。採用、投入與回款都需要個別證據；圖示不代表固定採購週期或保證訂單。",
+      "src": "http://127.0.0.1:8765/assets/img/editorial/companies/business-model-mobile.png",
+      "complete": true,
+      "nw": 800,
+      "nh": 1420,
+      "cw": 366,
+      "ch": 650,
+      "display": "block",
+      "opacity": "1",
+      "figH": 708,
+      "parent": "PICTURE",
+      "pictureHTML": "<picture><source media=\"(max-width:640px)\" srcset=\"/assets/img/editorial/companies/business-model-mobile.png\"><img src=\"/assets/img/editorial/companies/business-model.png\" alt=\"依公司"
+    },
+    {
+      "alt": "同期間、同集團比較。圖中金額四捨五入至百萬歐元一位小數；EBITDA 為非 IFRS 指標。來源 [3]。",
+      "src": "http://127.0.0.1:8765/assets/img/editorial/companies/growth-and-profit-mobile.png",
+      "complete": true,
+      "nw": 800,
+      "nh": 1200,
+      "cw": 366,
+      "ch": 549,
+      "display": "block",
+      "opacity": "1",
+      "figH": 607,
+      "parent": "PICTURE",
+      "pictureHTML": "<picture><source media=\"(max-width:640px)\" srcset=\"/assets/img/editorial/companies/growth-and-profit-mobile.png\"><img src=\"/assets/img/editorial/companies/growth-and-profit.png\" al"
+    },
+    {
+      "alt": "採半年報現金流量表項目，顯示本期營業淨現金流與兩項資產購置支出的關係。相減餘額為本文計算，不是公司正式自由現金流指標。來",
+      "src": "http://127.0.0.1:8765/assets/img/editorial/companies/cash-and-investment-mobile.png",
+      "complete": true,
+      "nw": 800,
+      "nh": 1200,
+      "cw": 366,
+      "ch": 549,
+      "display": "block",
+      "opacity": "1",
+      "figH": 630,
+      "parent": "PICTURE",
+      "pictureHTML": "<picture><source media=\"(max-width:640px)\" srcset=\"/assets/img/editorial/companies/cash-and-investment-mobile.png\"><img src=\"/assets/img/editorial/companies/cash-and-investment.png"
+    }
+  ]
+}

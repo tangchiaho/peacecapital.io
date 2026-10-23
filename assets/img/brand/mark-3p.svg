@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="none" aria-hidden="true">
+  <!-- Peace: balanced arc pair -->
+  <path class="mark-peace" d="M120 240c0-66.274 53.726-120 120-120s120 53.726 120 120" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <path class="mark-peace" d="M140 240c0-55.228 44.772-100 100-100s100 44.772 100 100" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.55"/>
+  <!-- Patience: ascending time steps -->
+  <path class="mark-patience" d="M96 340H184V292H272V244H360" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path class="mark-patience" d="M360 244V196" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" opacity="0.55"/>
+  <!-- Partnership: interlocking bars -->
+  <path class="mark-partner" d="M168 156L248 236L328 156" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="mark-partner" d="M168 324L248 244L328 324" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+</svg>

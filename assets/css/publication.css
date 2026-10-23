@@ -1,30 +1,49 @@
-/* Peace Capital publication system — editorial reading + quiet motion */
-
-@font-face {
-  font-family: PeaceEditorial;
-  src: url(/assets/fonts/editorial-serif.woff) format("woff");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
+/* Peace Capital publication system — research reading + quiet motion */
 
 body.publication {
   --paper: #ffffff;
   --bg: #ffffff;
-  --pub-ink: #1c211e;
-  --pub-body: #2e342f;
-  --pub-muted: #555c55;
-  --pub-rule: #dce0da;
-  --pub-accent: #315a4b;
-  --pub-soft: #f3f5f2;
-  --pub-serif: PeaceEditorial, "Noto Serif TC", "Noto Serif CJK TC", "Songti TC", "PMingLiU", Georgia, serif;
+  --pub-ink: #1b2421;
+  --pub-body: #2a3330;
+  --pub-muted: #5a6561;
+  --pub-rule: #d8dfda;
+  --pub-accent: #1f4a3d;
+  --pub-soft: #eef2f0;
+  --pub-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
   --pub-width: 1180px;
   --pub-measure: 42.5rem;
+  --dur-feedback: 180ms;
   --dur-fast: 180ms;
-  --dur-med: 340ms;
+  --dur-enter: 480ms;
+  --dur-med: 480ms;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   background: var(--paper);
   color: var(--pub-ink);
+  font-family: var(--pub-sans);
+}
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 120;
+  height: 2px;
+  pointer-events: none;
+  background: transparent;
+}
+
+.reading-progress-fill {
+  width: 0;
+  height: 100%;
+  background: var(--pub-accent);
+  transition: width var(--dur-feedback) linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress-fill {
+    transition: none;
+  }
 }
 
 .publication .header {
@@ -67,11 +86,11 @@ body.publication {
 }
 
 .publication-masthead h1 {
-  font-family: var(--pub-serif);
+  font-family: var(--pub-sans);
   font-size: clamp(2.4rem, 5vw, 3.35rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1.28;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.35;
   margin: 0 0 18px;
   color: var(--pub-ink);
 }
@@ -112,17 +131,19 @@ body.publication {
 }
 
 .publication-feature-company {
-  font: italic 1.35rem Georgia, "Times New Roman", serif;
+  font-family: var(--pub-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
   color: var(--pub-muted);
   margin: 0 0 12px;
 }
 
 .publication-feature h2 {
-  font-family: var(--pub-serif);
-  font-weight: 400;
+  font-family: var(--pub-sans);
+  font-weight: 600;
   font-size: clamp(1.85rem, 3.2vw, 2.45rem);
-  line-height: 1.42;
-  letter-spacing: -0.015em;
+  line-height: 1.45;
+  letter-spacing: normal;
   margin: 0 0 16px;
   text-wrap: pretty;
 }
@@ -177,13 +198,13 @@ body.publication {
   width: 100%;
   object-fit: cover;
   display: block;
-  transition: transform var(--dur-med) var(--ease-out);
+  transition: transform var(--dur-enter) var(--ease-out);
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .publication-feature-image:hover img,
   .publication-feature-image:focus-visible img {
-    transform: scale(1.025);
+    transform: scale(1.02);
   }
 }
 
@@ -270,10 +291,11 @@ body.publication {
 }
 
 .publication-story h3 {
-  font-family: var(--pub-serif);
+  font-family: var(--pub-sans);
   font-size: clamp(1.2rem, 2vw, 1.4rem);
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: normal;
   margin: 0 0 10px;
   text-wrap: pretty;
 }
@@ -334,10 +356,11 @@ body.publication {
 }
 
 .publication-sidebar h2 {
-  font-family: var(--pub-serif);
+  font-family: var(--pub-sans);
   font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: normal;
   line-height: 1.55;
-  font-weight: 400;
   margin: 0 0 26px;
 }
 
@@ -421,11 +444,11 @@ body.publication {
 }
 
 .publication.article-publication .article-title {
-  font-family: var(--pub-serif);
+  font-family: var(--pub-sans);
   font-size: clamp(1.85rem, 3.6vw, 2.65rem);
-  font-weight: 400;
-  line-height: 1.42;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: normal;
   margin: 0 0 20px;
   color: var(--pub-ink);
   max-width: none;
@@ -465,7 +488,7 @@ body.publication {
   border-radius: 50%;
   background: var(--pub-soft);
   color: #3f604d;
-  font-family: var(--pub-serif);
+  font-family: var(--pub-sans);
   font-size: 1.15rem;
 }
 
@@ -518,40 +541,48 @@ body.publication {
   min-width: 0;
   margin: 0;
   padding: 0;
-  font-size: 1.125rem;
-  line-height: 1.9;
+  font-family: var(--pub-sans);
+  font-size: 1.125rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.8;
   color: var(--pub-body);
 }
 
 .article-publication article p {
-  font-size: 1.125rem !important;
-  line-height: 1.9 !important;
+  font-family: var(--pub-sans);
+  font-size: 1.125rem !important; /* 18px */
+  font-weight: 400;
+  line-height: 1.8 !important;
   margin: 0 0 1.35em;
+  letter-spacing: normal;
 }
 
 .article-publication article li {
-  font-size: 1.05rem;
-  line-height: 1.9;
+  font-family: var(--pub-sans);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.8;
 }
 
 .article-publication article h2 {
-  font-family: var(--pub-serif);
-  font-size: clamp(1.45rem, 2.2vw, 1.7rem);
-  font-weight: 400;
-  line-height: 1.45;
-  letter-spacing: -0.01em;
+  font-family: var(--pub-sans);
+  font-size: clamp(1.35rem, 2vw, 1.55rem);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: normal;
   color: var(--pub-ink);
-  margin: 2.6em 0 0.9em;
+  margin: 2.75em 0 0.85em;
   scroll-margin-top: calc(var(--header-h, 76px) + 24px);
   text-wrap: pretty;
 }
 
 .article-publication article h3 {
-  font-family: var(--font-cjk);
-  font-size: 1.2rem;
+  font-family: var(--pub-sans);
+  font-size: 1.12rem;
   line-height: 1.55;
   font-weight: 600;
-  margin: 1.8em 0 0.75em;
+  letter-spacing: normal;
+  margin: 1.9em 0 0.7em;
   color: #293f32;
   scroll-margin-top: calc(var(--header-h, 76px) + 24px);
 }
@@ -624,12 +655,24 @@ body.publication {
   color: #555c55;
   text-decoration: none;
   border: 0;
-  transition: color var(--dur-fast) var(--ease-out);
+  padding-left: 10px;
+  border-left: 2px solid transparent;
+  transition:
+    color var(--dur-feedback) var(--ease-out),
+    border-color var(--dur-feedback) var(--ease-out),
+    background-color var(--dur-feedback) var(--ease-out);
 }
 
 .publication-toc a:hover,
 .publication-toc a:focus-visible {
   color: #263c2c;
+}
+
+.publication-toc a.is-current,
+.publication-mobile-toc a.is-current {
+  color: var(--pub-accent);
+  font-weight: 600;
+  border-left-color: var(--pub-accent);
 }
 
 .article-publication article .publication-mobile-toc {
@@ -722,8 +765,10 @@ body.publication {
 }
 
 .article-publication article .v5-analysis h3 {
-  font-family: var(--pub-serif);
-  font-size: 1.4rem;
+  font-family: var(--pub-sans);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: normal;
   line-height: 1.5;
   margin: 12px 0 18px;
 }
@@ -863,10 +908,11 @@ body.publication {
 
 .article-publication article .company-portal > a,
 .article-publication article .reading-portal > a {
-  font-family: var(--pub-serif);
-  font-size: 1.25rem;
+  font-family: var(--pub-sans);
+  font-size: 1.12rem;
   line-height: 1.55;
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: normal;
 }
 
 .article-publication article .company-portal p,
@@ -993,8 +1039,10 @@ body.publication {
 }
 
 .article-publication article .publication-next > h2 {
-  font-family: var(--font-cjk);
-  font-size: 1.2rem;
+  font-family: var(--pub-sans);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: normal;
   margin: 24px 0 14px;
 }
 
@@ -1010,9 +1058,10 @@ body.publication {
 }
 
 .article-publication article .publication-next-story h3 {
-  font-family: var(--pub-serif);
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-family: var(--pub-sans);
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: normal;
   line-height: 1.5;
   margin: 0 0 8px;
   color: var(--pub-ink);
@@ -1175,12 +1224,17 @@ body.publication {
   }
 
   .article-publication article p {
-    font-size: 1.0625rem !important;
-    line-height: 1.88 !important;
+    font-size: 1.0625rem !important; /* 17px */
+    line-height: 1.8 !important;
   }
 
   .article-publication article li {
-    font-size: 1rem;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+
+  .publication.article-publication .article-title {
+    letter-spacing: normal;
   }
 
   .article-publication article .publication-mobile-toc {
