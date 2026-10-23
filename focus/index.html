@@ -33,7 +33,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20261024-inst">
 
   <script type="application/ld+json">
   {
@@ -111,38 +111,38 @@
 
     <section class="section reveal" aria-label="Focus Areas">
       <div class="container">
-        <ul class="focus-detail-list">
-          <li>
-            <h3>生技與醫療<span class="industry-en" lang="en">Biotechnology &amp; Healthcare</span></h3>
-            <p>
-              生技創新、醫療體系與精準醫療。關注能夠改善長期健康結果、並具備可持續商業模式的技術與平台。
-            </p>
-          </li>
-          <li>
-            <h3>人工智慧與軟體<span class="industry-en" lang="en">Artificial Intelligence &amp; Software</span></h3>
-            <p>
-              AI 應用、企業軟體與垂直產業解決方案。重視真實工作流程中的採用率、數據優勢與可擴展性。
-            </p>
-          </li>
-          <li>
-            <h3>半導體與數位基礎建設<span class="industry-en" lang="en">Technology &amp; Digital Infrastructure</span></h3>
-            <p>
-              半導體、通訊與數位基礎建設。關注支撐下一階段運算與連線需求的關鍵技術與供應鏈能力。
-            </p>
-          </li>
-          <li>
-            <h3>能源與永續<span class="industry-en" lang="en">Energy &amp; Sustainability</span></h3>
-            <p>
-              再生能源、儲能技術與永續轉型。尋找能在長週期中形成成本優勢與系統價值的解決方案。
-            </p>
-          </li>
-          <li>
-            <h3>先進材料<span class="industry-en" lang="en">Advanced Materials</span></h3>
-            <p>
-              新材料研發與工業應用創新。關注可落地於製造、能源與電子等高價值場景的材料突破。
-            </p>
-          </li>
-        </ul>
+        <div class="focus-panel focus-panel--detail" data-focus-panel>
+          <div class="focus-panel-list" role="listbox" aria-label="關注領域" aria-activedescendant="focus-page-opt-0">
+            <button type="button" role="option" id="focus-page-opt-0" class="focus-panel-option is-active" aria-selected="true" data-focus-index="0">
+              <span class="focus-name">生技與醫療<small class="focus-name-en" lang="en">Biotechnology &amp; Healthcare</small></span>
+              <span class="focus-desc">生技創新、醫療體系與精準醫療。關注能夠改善長期健康結果、並具備可持續商業模式的技術與平台。</span>
+            </button>
+            <button type="button" role="option" id="focus-page-opt-1" class="focus-panel-option" aria-selected="false" data-focus-index="1">
+              <span class="focus-name">人工智慧與軟體<small class="focus-name-en" lang="en">Artificial Intelligence &amp; Software</small></span>
+              <span class="focus-desc">AI 應用、企業軟體與垂直產業解決方案。重視真實工作流程中的採用率、數據優勢與可擴展性。</span>
+            </button>
+            <button type="button" role="option" id="focus-page-opt-2" class="focus-panel-option" aria-selected="false" data-focus-index="2">
+              <span class="focus-name">半導體與數位基礎建設<small class="focus-name-en" lang="en">Technology &amp; Digital Infrastructure</small></span>
+              <span class="focus-desc">半導體、通訊與數位基礎建設。關注支撐下一階段運算與連線需求的關鍵技術與供應鏈能力。</span>
+            </button>
+            <button type="button" role="option" id="focus-page-opt-3" class="focus-panel-option" aria-selected="false" data-focus-index="3">
+              <span class="focus-name">能源與永續<small class="focus-name-en" lang="en">Energy &amp; Sustainability</small></span>
+              <span class="focus-desc">再生能源、儲能技術與永續轉型。尋找能在長週期中形成成本優勢與系統價值的解決方案。</span>
+            </button>
+            <button type="button" role="option" id="focus-page-opt-4" class="focus-panel-option" aria-selected="false" data-focus-index="4">
+              <span class="focus-name">先進材料<small class="focus-name-en" lang="en">Advanced Materials</small></span>
+              <span class="focus-desc">新材料研發與工業應用創新。關注可落地於製造、能源與電子等高價值場景的材料突破。</span>
+            </button>
+          </div>
+
+          <div class="focus-panel-media" aria-hidden="true">
+            <img class="focus-panel-image is-active" data-focus-image="0" src="/assets/img/editorial/materials-lab-to-industry-photo.webp" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+            <img class="focus-panel-image" data-focus-image="1" src="/assets/img/editorial/advanced-packaging-value-chain-photo.webp" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+            <img class="focus-panel-image" data-focus-image="2" src="/assets/img/editorial/technoprobe-photo.webp" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+            <img class="focus-panel-image" data-focus-image="3" src="/assets/img/editorial/probe-card-industry-photo.webp" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+            <img class="focus-panel-image" data-focus-image="4" src="/assets/img/editorial/material-customer-qualification-photo.webp" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
 
         <p class="section-text focus-closing">
           這些領域並非固定名單，而是持續研究後形成的關注範圍。
@@ -197,6 +197,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/site.js?v=20261024-inst" defer></script>
 </body>
 </html>

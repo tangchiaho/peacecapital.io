@@ -3,21 +3,47 @@
 body.publication {
   --paper: #ffffff;
   --bg: #ffffff;
-  --pub-ink: #1c211e;
-  --pub-body: #2e342f;
-  --pub-muted: #555c55;
-  --pub-rule: #dce0da;
-  --pub-accent: #315a4b;
-  --pub-soft: #f3f5f2;
+  --pub-ink: #1b2421;
+  --pub-body: #2a3330;
+  --pub-muted: #5a6561;
+  --pub-rule: #d8dfda;
+  --pub-accent: #1f4a3d;
+  --pub-soft: #eef2f0;
   --pub-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
   --pub-width: 1180px;
   --pub-measure: 42.5rem;
+  --dur-feedback: 180ms;
   --dur-fast: 180ms;
-  --dur-med: 340ms;
+  --dur-enter: 480ms;
+  --dur-med: 480ms;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   background: var(--paper);
   color: var(--pub-ink);
   font-family: var(--pub-sans);
+}
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 120;
+  height: 2px;
+  pointer-events: none;
+  background: transparent;
+}
+
+.reading-progress-fill {
+  width: 0;
+  height: 100%;
+  background: var(--pub-accent);
+  transition: width var(--dur-feedback) linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress-fill {
+    transition: none;
+  }
 }
 
 .publication .header {
@@ -172,13 +198,13 @@ body.publication {
   width: 100%;
   object-fit: cover;
   display: block;
-  transition: transform var(--dur-med) var(--ease-out);
+  transition: transform var(--dur-enter) var(--ease-out);
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .publication-feature-image:hover img,
   .publication-feature-image:focus-visible img {
-    transform: scale(1.025);
+    transform: scale(1.02);
   }
 }
 
@@ -630,12 +656,24 @@ body.publication {
   color: #555c55;
   text-decoration: none;
   border: 0;
-  transition: color var(--dur-fast) var(--ease-out);
+  padding-left: 10px;
+  border-left: 2px solid transparent;
+  transition:
+    color var(--dur-feedback) var(--ease-out),
+    border-color var(--dur-feedback) var(--ease-out),
+    background-color var(--dur-feedback) var(--ease-out);
 }
 
 .publication-toc a:hover,
 .publication-toc a:focus-visible {
   color: #263c2c;
+}
+
+.publication-toc a.is-current,
+.publication-mobile-toc a.is-current {
+  color: var(--pub-accent);
+  font-weight: 600;
+  border-left-color: var(--pub-accent);
 }
 
 .article-publication article .publication-mobile-toc {

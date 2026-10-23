@@ -43,7 +43,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20261024-inst">
 
   <script type="application/ld+json">
   {
@@ -119,7 +119,7 @@
 
   <main>
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="container">
+      <div class="container hero-layout">
         <div class="hero-copy-block">
           <div class="hero-brand">
             <span class="hero-brand-en">Independent Investment</span>
@@ -135,18 +135,31 @@
             <a class="btn btn-ghost" href="/about/">了解和平資本</a>
           </div>
         </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <svg class="brand-mark" viewBox="0 0 480 480" fill="none" role="presentation">
+            <path class="mark-path mark-peace" pathLength="1" d="M120 240c0-66.274 53.726-120 120-120s120 53.726 120 120" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path class="mark-path mark-peace" pathLength="1" d="M140 240c0-55.228 44.772-100 100-100s100 44.772 100 100" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+            <path class="mark-path mark-patience" pathLength="1" d="M96 340H184V292H272V244H360V196" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/>
+            <path class="mark-path mark-partner" pathLength="1" d="M168 156L248 236L328 156" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="mark-path mark-partner" pathLength="1" d="M168 324L248 244L328 324" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.72"/>
+          </svg>
+          <p class="hero-mark-caption">
+            <span>Peace</span><span>Patience</span><span>Partnership</span>
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="section reveal" aria-labelledby="belief-title">
+    <section class="section section-ink reveal" aria-labelledby="belief-title">
       <div class="container">
-        <div class="section-intro">
+        <div class="section-intro section-intro-on-ink">
           <p class="section-label">What We Value</p>
           <h2 id="belief-title" class="section-title">我們重視的三件事</h2>
-          <a class="text-link" href="/about/#philosophy">了解我們的理念</a>
+          <a class="text-link text-link-on-ink" href="/about/#philosophy">了解我們的理念</a>
         </div>
 
-        <div class="method-grid">
+        <div class="method-grid principles-grid">
           <article class="method-item">
             <h3>Peace｜互信與共識</h3>
             <p>以坦誠溝通建立信任，讓雙方在重要決策上形成共識。</p>
@@ -154,7 +167,7 @@
 
           <article class="method-item">
             <h3>Patience｜耐心與長期</h3>
-            <p>以足夠時間觀察與判斷，不急於追求短期結果。</p>
+            <p>尊重企業成長與價值累積所需的時間，以長期視角看待企業發展。</p>
           </article>
 
           <article class="method-item">
@@ -167,39 +180,45 @@
 
     <section class="section reveal" aria-labelledby="focus-preview-title">
       <div class="container">
-        <div class="split-section">
-          <div class="split-heading">
-            <p class="section-label">Investment Focus</p>
-            <h2 id="focus-preview-title" class="section-title">從產業理解，尋找長期機會。</h2>
-            <p class="section-text">
-              和平資本聚焦具備長期價值與結構性成長潛力的產業。
-            </p>
-            <a class="text-link" href="/focus/">探索關注領域</a>
+        <div class="section-intro">
+          <p class="section-label">Investment Focus</p>
+          <h2 id="focus-preview-title" class="section-title">從產業理解，尋找長期機會。</h2>
+          <p class="section-text">
+            和平資本聚焦具備長期價值與結構性成長潛力的產業。
+          </p>
+          <a class="text-link" href="/focus/">探索關注領域</a>
+        </div>
+
+        <div class="focus-panel" data-focus-panel>
+          <div class="focus-panel-list" role="listbox" aria-label="關注領域" aria-activedescendant="focus-opt-0">
+            <button type="button" role="option" id="focus-opt-0" class="focus-panel-option is-active" aria-selected="true" data-focus-index="0">
+              <span class="focus-name">生技與醫療<small class="focus-name-en" lang="en">Biotechnology &amp; Healthcare</small></span>
+              <span class="focus-desc">生技創新、醫療體系與精準醫療</span>
+            </button>
+            <button type="button" role="option" id="focus-opt-1" class="focus-panel-option" aria-selected="false" data-focus-index="1">
+              <span class="focus-name">人工智慧與軟體<small class="focus-name-en" lang="en">Artificial Intelligence &amp; Software</small></span>
+              <span class="focus-desc">AI 應用、企業軟體與垂直產業解決方案</span>
+            </button>
+            <button type="button" role="option" id="focus-opt-2" class="focus-panel-option" aria-selected="false" data-focus-index="2">
+              <span class="focus-name">半導體與數位基礎建設<small class="focus-name-en" lang="en">Technology &amp; Digital Infrastructure</small></span>
+              <span class="focus-desc">半導體、通訊與數位基礎建設</span>
+            </button>
+            <button type="button" role="option" id="focus-opt-3" class="focus-panel-option" aria-selected="false" data-focus-index="3">
+              <span class="focus-name">能源與永續<small class="focus-name-en" lang="en">Energy &amp; Sustainability</small></span>
+              <span class="focus-desc">再生能源、儲能技術與永續轉型</span>
+            </button>
+            <button type="button" role="option" id="focus-opt-4" class="focus-panel-option" aria-selected="false" data-focus-index="4">
+              <span class="focus-name">先進材料<small class="focus-name-en" lang="en">Advanced Materials</small></span>
+              <span class="focus-desc">新材料研發與工業應用創新</span>
+            </button>
           </div>
 
-          <div class="split-body">
-            <ul class="focus-list">
-              <li>
-                <span class="focus-name">生技與醫療<small class="focus-name-en" lang="en">Biotechnology &amp; Healthcare</small></span>
-                <span class="focus-desc">生技創新、醫療體系與精準醫療</span>
-              </li>
-              <li>
-                <span class="focus-name">人工智慧與軟體<small class="focus-name-en" lang="en">Artificial Intelligence &amp; Software</small></span>
-                <span class="focus-desc">AI 應用、企業軟體與垂直產業解決方案</span>
-              </li>
-              <li>
-                <span class="focus-name">半導體與數位基礎建設<small class="focus-name-en" lang="en">Technology &amp; Digital Infrastructure</small></span>
-                <span class="focus-desc">半導體、通訊與數位基礎建設</span>
-              </li>
-              <li>
-                <span class="focus-name">能源與永續<small class="focus-name-en" lang="en">Energy &amp; Sustainability</small></span>
-                <span class="focus-desc">再生能源、儲能技術與永續轉型</span>
-              </li>
-              <li>
-                <span class="focus-name">先進材料<small class="focus-name-en" lang="en">Advanced Materials</small></span>
-                <span class="focus-desc">新材料研發與工業應用創新</span>
-              </li>
-            </ul>
+          <div class="focus-panel-media" aria-hidden="true">
+            <img class="focus-panel-image is-active" data-focus-image="0" src="/assets/img/editorial/materials-lab-to-industry-photo.webp" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+            <img class="focus-panel-image" data-focus-image="1" src="/assets/img/editorial/advanced-packaging-value-chain-photo.webp" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+            <img class="focus-panel-image" data-focus-image="2" src="/assets/img/editorial/technoprobe-photo.webp" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+            <img class="focus-panel-image" data-focus-image="3" src="/assets/img/editorial/probe-card-industry-photo.webp" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+            <img class="focus-panel-image" data-focus-image="4" src="/assets/img/editorial/material-customer-qualification-photo.webp" width="1536" height="1024" alt="" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -288,6 +307,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/site.js?v=20261024-inst" defer></script>
 </body>
 </html>
