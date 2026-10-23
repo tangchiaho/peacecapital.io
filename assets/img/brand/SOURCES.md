@@ -1,9 +1,8 @@
-# Homepage photograph
+# Homepage brand image
 
-| Files | Photographer | Photograph | License |
-| --- | --- | --- | --- |
-| `industry-context-1440.webp`, `industry-context-800.webp` | CHUTTERSNAP | [Container terminal from above](https://commons.wikimedia.org/wiki/File:Container_terminal_from_above_(Unsplash).jpg), Bukit Merah, Singapore, 10 May 2017 | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
+`city-vision-1440.webp` and `city-vision-800.webp` are responsive exports of
+the city, river and bridge brand visual created for Peace Capital using
+OpenAI image generation. The image is a fictional cityscape, not a photograph
+of a named location, company property or investment.
 
-Original: 3936 × 2624 JPEG. Site copies are resized and encoded as WebP;
-photographic content and colours are unchanged. Photographer and source are
-credited below the homepage image.
+Original: 1536 × 1024 PNG. WebP exports: 1440 × 960 and 800 × 533.
