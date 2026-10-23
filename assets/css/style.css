@@ -384,6 +384,16 @@ summary:focus-visible,
 .section-text:last-child { margin-bottom: 0; }
 .section-intro { max-width: 38em; margin-bottom: 48px; }
 
+.section-intro .text-link {
+  display: inline-block;
+  margin-top: 4px;
+}
+
+#philosophy,
+#founder {
+  scroll-margin-top: 96px;
+}
+
 .approach-grid {
   display: grid;
   grid-template-columns: 1.35fr 1fr 1fr;
@@ -579,10 +589,19 @@ summary:focus-visible,
 }
 
 .founder-name-en-sub {
-  margin-bottom: 28px;
+  margin: 0 0 8px;
   font-family: var(--font-en);
   font-size: 0.9rem;
   color: var(--muted-lt);
+}
+
+.founder-title-zh {
+  margin: 0 0 28px;
+  font-family: var(--font-cjk);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--accent);
 }
 
 .founder-divider {
