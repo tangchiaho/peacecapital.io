@@ -1316,3 +1316,9 @@ body.publication {
     transition: none !important;
   }
 }
+
+/* Research index: one filter bar and one centered article feed. */
+.publication-index .publication-feed-layout {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 960px;
+}
