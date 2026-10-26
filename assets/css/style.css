@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+TC:wght@300;400;500;600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+/* Google Fonts loaded via <link> in HTML (not @import) to avoid render-blocking CSS chain. */
 
 @font-face {
   font-family: PeaceEditorial;
@@ -216,37 +216,38 @@ summary:focus-visible,
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
-  margin-bottom: 22px;
+  gap: 8px;
+  margin-bottom: 28px;
 }
 
 .hero-brand-en {
-  font-family: var(--font-en);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
+  font-family: var(--font-brand);
+  font-size: clamp(1.55rem, 2.8vw, 2.05rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--muted-lt);
-  line-height: 1.2;
+  color: var(--bg-dark);
+  line-height: 1.05;
+  padding-right: 0.06em;
 }
 
 .hero-brand-zh {
   font-family: var(--font-cjk);
-  font-size: 0.82rem;
+  font-size: clamp(0.95rem, 1.4vw, 1.08rem);
   font-weight: 600;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.42em;
   color: var(--accent);
   line-height: 1.2;
 }
 
 .hero-title,
 .hero-title.zh-title {
-  max-width: 18em;
+  max-width: 16em;
   font-family: var(--font-cjk);
-  font-size: clamp(2rem, 4vw, 3.05rem);
+  font-size: clamp(1.72rem, 3.2vw, 2.45rem);
   font-weight: 600;
   letter-spacing: normal;
-  line-height: 1.4;
+  line-height: 1.42;
   color: var(--text);
   text-wrap: pretty;
 }
@@ -289,8 +290,8 @@ summary:focus-visible,
 }
 
 .hero-visual {
-  justify-self: end;
-  width: min(100%, 520px);
+  justify-self: stretch;
+  width: min(100%, 580px);
   min-width: 0;
   margin: 0;
   color: var(--accent);
@@ -298,7 +299,7 @@ summary:focus-visible,
 
 .hero-artwork {
   overflow: hidden;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 4 / 3;
   background: #e9eeeb;
   border: 1px solid var(--line);
 }
@@ -307,7 +308,7 @@ summary:focus-visible,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: 52% 42%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -387,6 +388,29 @@ summary:focus-visible,
 .btn-ghost:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.btn-on-ink {
+  background: #f5f7f6;
+  color: var(--ink);
+  border: 1px solid #f5f7f6;
+}
+
+.btn-on-ink:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--ink);
+}
+
+.btn-ghost-on-ink {
+  background: transparent;
+  color: #e7eeea;
+  border: 1px solid rgba(231, 238, 234, 0.45);
+}
+
+.btn-ghost-on-ink:hover {
+  border-color: #f5f7f6;
+  color: #ffffff;
 }
 
 .text-link {
@@ -536,17 +560,43 @@ summary:focus-visible,
   gap: 56px 72px;
 }
 
-/* Homepage featured research — editorial, not card stack */
-.home-feature {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(220px, 0.85fr);
-  gap: 40px 48px;
-  align-items: center;
-  padding-top: 8px;
+/* Homepage research picks — 1 featured + 2 secondary */
+.home-picks-intro {
+  margin-bottom: 40px;
 }
 
-.home-feature-kicker {
-  margin: 0 0 12px;
+.home-picks {
+  display: grid;
+  gap: 48px;
+}
+
+.home-pick {
+  display: grid;
+  gap: 24px 36px;
+  align-items: start;
+}
+
+.home-pick-feature {
+  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.1fr);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.home-pick-secondary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px 48px;
+}
+
+.home-pick-compact {
+  grid-template-columns: 1fr;
+}
+
+.home-pick-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin: 0 0 10px;
   font-family: var(--font-cjk);
   font-size: 0.78rem;
   font-weight: 600;
@@ -554,10 +604,9 @@ summary:focus-visible,
   color: var(--accent);
 }
 
-.home-feature-title {
-  margin: 0 0 14px;
+.home-pick-title {
+  margin: 0 0 12px;
   font-family: var(--font-cjk);
-  font-size: clamp(1.45rem, 2.4vw, 1.85rem);
   font-weight: 600;
   letter-spacing: normal;
   line-height: 1.45;
@@ -565,42 +614,59 @@ summary:focus-visible,
   text-wrap: pretty;
 }
 
-.home-feature-title a {
+.home-pick-feature .home-pick-title {
+  font-size: clamp(1.4rem, 2.3vw, 1.8rem);
+}
+
+.home-pick-compact .home-pick-title {
+  font-size: clamp(1.12rem, 1.8vw, 1.28rem);
+}
+
+.home-pick-title a {
   color: inherit;
   text-decoration: none;
   transition: color var(--dur-fast) var(--ease-out);
 }
 
-.home-feature-title a:hover,
-.home-feature-title a:focus-visible {
+.home-pick-title a:hover,
+.home-pick-title a:focus-visible {
   color: var(--accent);
 }
 
-.home-feature-deck {
-  margin: 0 0 8px;
-  max-width: 38em;
-  font-size: 1.02rem;
-  line-height: 1.85;
+.home-pick-deck {
+  margin: 0;
+  max-width: 40em;
+  font-size: 0.98rem;
+  line-height: 1.8;
   color: var(--muted);
 }
 
-.home-feature-meta {
+.home-pick-compact .home-pick-deck {
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+.home-pick-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 14px;
-  margin: 16px 0 0;
+  margin: 14px 0 0;
   font-size: 0.82rem;
   color: var(--muted-lt);
 }
 
-.home-feature-media {
+.home-pick .text-link {
+  margin-top: 16px;
+}
+
+.home-pick-media {
   display: block;
   aspect-ratio: 3 / 2;
   overflow: hidden;
   background: var(--bg-soft);
 }
 
-.home-feature-media img {
+.home-pick-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -608,10 +674,46 @@ summary:focus-visible,
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .home-feature-media:hover img,
-  .home-feature-media:focus-visible img {
+  .home-pick-media:hover img,
+  .home-pick-media:focus-visible img {
     transform: scale(1.02);
   }
+}
+
+.home-engage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+  gap: 40px 64px;
+  align-items: end;
+}
+
+.home-engage-copy .section-text {
+  max-width: 36em;
+  margin-top: 16px;
+}
+
+.home-engage-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.home-engage-mail {
+  font-family: var(--font-en);
+  font-size: 0.95rem;
+  color: #d7e4de;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.home-engage-mail:hover,
+.home-engage-mail:focus-visible {
+  color: #ffffff;
+}
+
+.sector-panel-copy > .text-link {
+  margin-top: 22px;
 }
 
 .section-text-accent {
@@ -1489,6 +1591,35 @@ summary:focus-visible,
 
 .contact-block a:hover { color: var(--text); }
 
+.contact-email-cta {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.contact-email-cta .btn {
+  margin-top: 8px;
+}
+
+.contact-intent-list {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.contact-intent-list li {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.contact-intent-list strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .contact-note {
   padding: 32px;
   background: var(--bg-read);
@@ -1657,8 +1788,8 @@ summary:focus-visible,
     gap: 28px;
   }
   .hero-visual {
-    justify-self: start;
-    width: min(100%, 420px);
+    justify-self: stretch;
+    width: min(100%, 520px);
     order: 0; /* keep after copy: title → intro → CTA → artwork */
     margin-top: 4px;
   }
@@ -1671,11 +1802,19 @@ summary:focus-visible,
   .hero-actions {
     margin-top: 24px;
   }
-  .home-feature {
+  .home-pick-feature {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .home-pick-secondary {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .home-engage {
     grid-template-columns: 1fr;
     gap: 28px;
+    align-items: start;
   }
-  .home-feature-media { max-width: 420px; }
   .pc-insight-item {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -1707,13 +1846,21 @@ summary:focus-visible,
   :root { --header-h: 68px; }
   .brand-en { font-size: 1.02rem; letter-spacing: 0.18em; }
   .nav { top: var(--header-h); }
-  .hero-brand { margin-bottom: 18px; }
+  .hero-brand { margin-bottom: 18px; gap: 6px; }
+  .hero-brand-en {
+    font-size: clamp(1.35rem, 6vw, 1.7rem);
+    letter-spacing: 0.16em;
+  }
+  .hero-brand-zh {
+    font-size: 0.92rem;
+    letter-spacing: 0.32em;
+  }
   .hero-title,
   .hero-title.zh-title { max-width: none; }
 
   .hero-title,
   .hero-title.zh-title {
-    font-size: clamp(1.85rem, 7.2vw, 2.35rem);
+    font-size: clamp(1.65rem, 6.4vw, 2.1rem);
     line-height: 1.48;
   }
 

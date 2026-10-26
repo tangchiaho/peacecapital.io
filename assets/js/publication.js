@@ -2,19 +2,71 @@
   const buttons = [...document.querySelectorAll('.publication-filter button')];
   const stories = [...document.querySelectorAll('.publication-story')];
   const status = document.querySelector('.publication-filter-status');
+  if (!buttons.length || !stories.length) return;
+
+  function tokens(value) {
+    return String(value || '')
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean);
+  }
+
+  function storyMatches(story, category) {
+    if (!category || category === 'all') return true;
+    const industry = tokens(story.dataset.industry);
+    const type = tokens(story.dataset.type);
+    const legacy = tokens(story.dataset.topic);
+    return industry.includes(category) || type.includes(category) || legacy.includes(category);
+  }
+
+  function applyFilter(category, options) {
+    const opts = options || {};
+    let n = 0;
+    const active = buttons.find((b) => b.dataset.category === category) || buttons[0];
+    const selected = active.dataset.category || 'all';
+
+    buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === active)));
+    stories.forEach((s) => {
+      const show = storyMatches(s, selected);
+      s.hidden = !show;
+      if (show) n += 1;
+    });
+
+    if (status) {
+      status.textContent = `顯示${selected === 'all' ? '全部' : selected} ${n} 篇文章`;
+    }
+
+    if (opts.updateUrl && window.history && window.history.replaceState) {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('topic');
+      url.searchParams.delete('type');
+      if (selected !== 'all') {
+        const isType = ['產業入門', '專題研究', '企業分析'].includes(selected);
+        url.searchParams.set(isType ? 'type' : 'topic', selected);
+      }
+      window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+    }
+
+    if (opts.scrollToFeed) {
+      const feed = document.getElementById('all-stories');
+      if (feed) feed.scrollIntoView({ block: 'start' });
+    }
+  }
+
+  function categoryFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('type') || params.get('topic') || 'all';
+  }
+
   buttons.forEach((button) =>
     button.addEventListener('click', () => {
-      let n = 0;
-      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
-      stories.forEach((s) => {
-        s.hidden = button.dataset.category !== 'all' && s.dataset.topic !== button.dataset.category;
-        if (!s.hidden) n++;
-      });
-      if (status) {
-        status.textContent = `顯示${button.dataset.category === 'all' ? '全部' : button.dataset.category} ${n} 篇文章`;
-      }
+      applyFilter(button.dataset.category, { updateUrl: true });
     })
   );
+
+  const initial = categoryFromUrl();
+  const known = buttons.some((b) => b.dataset.category === initial);
+  applyFilter(known ? initial : 'all', { updateUrl: false, scrollToFeed: known && initial !== 'all' });
 })();
 
 (() => {
