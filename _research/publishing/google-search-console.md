@@ -71,3 +71,14 @@
 - 正式研究頁：`/insights/{slug}/` → 進 sitemap  
 - 內部規劃與模板：`_research/` → Pages 建置排除  
 - 分類入口：僅在達門檻後建立並再提交 sitemap  
+
+
+## G. Favicon 在 Google 搜尋結果更新
+
+Google 搜尋結果的網站 icon 可能快取數天到數週。站方已提供 48／96 PNG 與多尺寸 `favicon.ico`。
+
+若結果仍顯示舊標誌：
+
+1. GSC →「網址檢查」→ `https://peacecapital.io/` →「要求建立索引」。
+2. 確認 `https://peacecapital.io/favicon-48x48.png`、`/favicon-96x96.png`、`/favicon.ico` 皆可公開存取（非 robots 封鎖）。
+3. 等待重新抓取；無法強制即時替換。
