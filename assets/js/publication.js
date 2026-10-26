@@ -2,13 +2,35 @@
   const buttons = [...document.querySelectorAll('.publication-filter button')];
   const stories = [...document.querySelectorAll('.publication-story')];
   const status = document.querySelector('.publication-filter-status');
-  if (!buttons.length || !stories.length) return;
+  if (!stories.length) return;
+
+  /* Valid URL values — independent of which filter buttons are rendered. */
+  const INDUSTRIES = [
+    '生技與醫療',
+    '人工智慧與軟體',
+    '半導體',
+    '能源與永續',
+    '先進材料',
+  ];
+  const TYPES = ['產業入門', '專題研究', '企業分析'];
 
   function tokens(value) {
     return String(value || '')
       .trim()
       .split(/\s+/)
       .filter(Boolean);
+  }
+
+  function isType(category) {
+    return TYPES.includes(category);
+  }
+
+  function isIndustry(category) {
+    return INDUSTRIES.includes(category);
+  }
+
+  function isValidCategory(category) {
+    return category === 'all' || isType(category) || isIndustry(category);
   }
 
   function storyMatches(story, category) {
@@ -21,11 +43,15 @@
 
   function applyFilter(category, options) {
     const opts = options || {};
+    const selected = isValidCategory(category) ? category : 'all';
     let n = 0;
-    const active = buttons.find((b) => b.dataset.category === category) || buttons[0];
-    const selected = active.dataset.category || 'all';
+    const matchingButton = buttons.find((b) => b.dataset.category === selected);
 
-    buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === active)));
+    buttons.forEach((b) => {
+      const pressed = matchingButton ? b === matchingButton : false;
+      b.setAttribute('aria-pressed', String(pressed));
+    });
+
     stories.forEach((s) => {
       const show = storyMatches(s, selected);
       s.hidden = !show;
@@ -41,8 +67,7 @@
       url.searchParams.delete('topic');
       url.searchParams.delete('type');
       if (selected !== 'all') {
-        const isType = ['產業入門', '專題研究', '企業分析'].includes(selected);
-        url.searchParams.set(isType ? 'type' : 'topic', selected);
+        url.searchParams.set(isType(selected) ? 'type' : 'topic', selected);
       }
       window.history.replaceState({}, '', url.pathname + url.search + url.hash);
     }
@@ -51,22 +76,30 @@
       const feed = document.getElementById('all-stories');
       if (feed) feed.scrollIntoView({ block: 'start' });
     }
+
+    return selected;
   }
 
   function categoryFromUrl() {
     const params = new URLSearchParams(window.location.search);
-    return params.get('type') || params.get('topic') || 'all';
+    const type = params.get('type');
+    const topic = params.get('topic');
+    if (type) return isValidCategory(type) ? type : 'all';
+    if (topic) return isValidCategory(topic) ? topic : 'all';
+    return 'all';
   }
 
   buttons.forEach((button) =>
     button.addEventListener('click', () => {
-      applyFilter(button.dataset.category, { updateUrl: true });
+      applyFilter(button.dataset.category || 'all', { updateUrl: true });
     })
   );
 
   const initial = categoryFromUrl();
-  const known = buttons.some((b) => b.dataset.category === initial);
-  applyFilter(known ? initial : 'all', { updateUrl: false, scrollToFeed: known && initial !== 'all' });
+  applyFilter(initial, {
+    updateUrl: false,
+    scrollToFeed: initial !== 'all',
+  });
 })();
 
 (() => {

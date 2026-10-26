@@ -1584,12 +1584,16 @@ summary:focus-visible,
 
 .contact-block + .contact-block { margin-top: 36px; }
 
-.contact-block a {
+/* Text links only — do not override .btn CTA colors */
+.contact-block a:not(.btn) {
   color: var(--muted);
   transition: color 0.2s;
 }
 
-.contact-block a:hover { color: var(--text); }
+.contact-block a:not(.btn):hover,
+.contact-block a:not(.btn):focus-visible {
+  color: var(--text);
+}
 
 .contact-email-cta {
   margin-top: 28px;
@@ -1599,6 +1603,20 @@ summary:focus-visible,
 
 .contact-email-cta .btn {
   margin-top: 8px;
+  max-width: 100%;
+  height: auto;
+  min-height: 46px;
+  padding: 12px 22px;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.contact-email-cta .btn-primary,
+.contact-email-cta .btn-primary:hover,
+.contact-email-cta .btn-primary:focus-visible {
+  color: #f5f7f6;
 }
 
 .contact-intent-list {
