@@ -2,19 +2,104 @@
   const buttons = [...document.querySelectorAll('.publication-filter button')];
   const stories = [...document.querySelectorAll('.publication-story')];
   const status = document.querySelector('.publication-filter-status');
+  if (!stories.length) return;
+
+  /* Valid URL values — independent of which filter buttons are rendered. */
+  const INDUSTRIES = [
+    '生技與醫療',
+    '人工智慧與軟體',
+    '半導體',
+    '能源與永續',
+    '先進材料',
+  ];
+  const TYPES = ['產業入門', '專題研究', '企業分析'];
+
+  function tokens(value) {
+    return String(value || '')
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean);
+  }
+
+  function isType(category) {
+    return TYPES.includes(category);
+  }
+
+  function isIndustry(category) {
+    return INDUSTRIES.includes(category);
+  }
+
+  function isValidCategory(category) {
+    return category === 'all' || isType(category) || isIndustry(category);
+  }
+
+  function storyMatches(story, category) {
+    if (!category || category === 'all') return true;
+    const industry = tokens(story.dataset.industry);
+    const type = tokens(story.dataset.type);
+    const legacy = tokens(story.dataset.topic);
+    return industry.includes(category) || type.includes(category) || legacy.includes(category);
+  }
+
+  function applyFilter(category, options) {
+    const opts = options || {};
+    const selected = isValidCategory(category) ? category : 'all';
+    let n = 0;
+    const matchingButton = buttons.find((b) => b.dataset.category === selected);
+
+    buttons.forEach((b) => {
+      const pressed = matchingButton ? b === matchingButton : false;
+      b.setAttribute('aria-pressed', String(pressed));
+    });
+
+    stories.forEach((s) => {
+      const show = storyMatches(s, selected);
+      s.hidden = !show;
+      if (show) n += 1;
+    });
+
+    if (status) {
+      status.textContent = `顯示${selected === 'all' ? '全部' : selected} ${n} 篇文章`;
+    }
+
+    if (opts.updateUrl && window.history && window.history.replaceState) {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('topic');
+      url.searchParams.delete('type');
+      if (selected !== 'all') {
+        url.searchParams.set(isType(selected) ? 'type' : 'topic', selected);
+      }
+      window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+    }
+
+    if (opts.scrollToFeed) {
+      const feed = document.getElementById('all-stories');
+      if (feed) feed.scrollIntoView({ block: 'start' });
+    }
+
+    return selected;
+  }
+
+  function categoryFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get('type');
+    const topic = params.get('topic');
+    if (type) return isValidCategory(type) ? type : 'all';
+    if (topic) return isValidCategory(topic) ? topic : 'all';
+    return 'all';
+  }
+
   buttons.forEach((button) =>
     button.addEventListener('click', () => {
-      let n = 0;
-      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
-      stories.forEach((s) => {
-        s.hidden = button.dataset.category !== 'all' && s.dataset.topic !== button.dataset.category;
-        if (!s.hidden) n++;
-      });
-      if (status) {
-        status.textContent = `顯示${button.dataset.category === 'all' ? '全部' : button.dataset.category} ${n} 篇文章`;
-      }
+      applyFilter(button.dataset.category || 'all', { updateUrl: true });
     })
   );
+
+  const initial = categoryFromUrl();
+  applyFilter(initial, {
+    updateUrl: false,
+    scrollToFeed: initial !== 'all',
+  });
 })();
 
 (() => {
