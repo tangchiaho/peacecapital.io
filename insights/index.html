@@ -39,6 +39,7 @@
   <link rel="manifest" href="/site.webmanifest?v=20261027-classic">
 <link rel="stylesheet" href="/assets/css/style.css?v=20261027-batch1b">
   <link rel="stylesheet" href="/assets/css/publication.css?v=20261027-feed">
+  <link rel="stylesheet" href="/assets/css/insights-index.css?v=20261027-reading">
 
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://peacecapital.io/insights/#collection","url":"https://peacecapital.io/insights/","name":"產業研究與企業分析｜和平資本","description":"從生技與醫療、人工智慧與軟體、先進材料、半導體與產業結構出發，整理公開資料與企業分析。","inLanguage":"zh-Hant","isPartOf":{"@type":"WebSite","@id":"https://peacecapital.io/#website","url":"https://peacecapital.io/","name":"Peace Capital"},"about":{"@type":"Organization","@id":"https://peacecapital.io/#organization","name":"和平資本","alternateName":"Peace Capital"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://peacecapital.io/insights/biopharma-commercialization-market-access/","name":"拿到藥證之後，如何把產品變成生意？"},{"@type":"ListItem","position":2,"url":"https://peacecapital.io/insights/clinical-results-investment-evidence/","name":"臨床結果怎麼讀？"},{"@type":"ListItem","position":3,"url":"https://peacecapital.io/insights/ai-value-chain-business-models/","name":"AI 產業鏈如何分工？"},{"@type":"ListItem","position":4,"url":"https://peacecapital.io/insights/biopharma-pipeline-clinical-investment/","name":"新藥公司還沒獲利，投資人在看什麼？"},{"@type":"ListItem","position":5,"url":"https://peacecapital.io/insights/advanced-packaging-value-chain/","name":"先進封裝產業鏈：封裝、測試、設備與材料如何連在一起"},{"@type":"ListItem","position":6,"url":"https://peacecapital.io/insights/probe-card-industry/","name":"探針卡是什麼？從晶圓測試、AI 與 HBM，看半導體測試產業的技術與商業門檻"},{"@type":"ListItem","position":7,"url":"https://peacecapital.io/insights/hbm-test-quality-gates/","name":"HBM 為什麼需要更完整的測試？從晶粒到堆疊的品質關卡"},{"@type":"ListItem","position":8,"url":"https://peacecapital.io/insights/semiconductor-customer-qualification/","name":"從送樣到量產：如何判斷半導體供應商的客戶導入進度？"},{"@type":"ListItem","position":9,"url":"https://peacecapital.io/insights/materials-lab-to-industry/","name":"新材料從實驗室走向產業應用，真正的門檻在哪裡？"},{"@type":"ListItem","position":10,"url":"https://peacecapital.io/insights/material-customer-qualification/","name":"材料通過測試，為什麼仍拿不到量產訂單？"},{"@type":"ListItem","position":11,"url":"https://peacecapital.io/insights/companies/technoprobe/","name":"Technoprobe 公司分析：探針卡的技術門檻，如何轉成獲利與現金？"}],"numberOfItems":11}},{"@type":"BreadcrumbList","@id":"https://peacecapital.io/insights/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://peacecapital.io/"},{"@type":"ListItem","position":2,"name":"產業觀點","item":"https://peacecapital.io/insights/"}]}]}</script>
 </head>
@@ -73,14 +74,14 @@
         <p class="publication-kicker">和平資本研究部</p>
         <h1>產業觀點</h1>
         <p class="publication-masthead-deck">看懂技術，也看懂技術背後的生意。</p>
-        <p class="publication-masthead-note">從產業結構、企業能力到資本回收，記錄值得長期追蹤的問題。</p>
+        <p class="publication-masthead-note">不定期分享產業觀察、閱讀整理與思考。</p>
       </div>
     </header>
 
-    <section class="publication-feature publication-index-width" aria-label="本期選讀">
+    <section class="publication-feature publication-index-width" aria-label="文章選讀">
       <div class="publication-feature-grid">
         <div class="publication-feature-copy">
-          <p class="publication-kicker">本期選讀 <span>／</span> 企業分析</p>
+          <p class="publication-kicker">文章選讀 <span>／</span> 企業分析</p>
           <p class="publication-feature-company">Technoprobe</p>
           <h2>
             <a href="/insights/companies/technoprobe/">技術門檻，如何轉成獲利與現金？</a>
@@ -103,26 +104,49 @@
     <div class="publication-index-width publication-feed-layout">
       <section class="publication-feed" aria-labelledby="all-stories">
         <div class="publication-feed-heading">
-          <h2 id="all-stories">研究文章</h2>
-          <span>11 篇</span>
+          <h2 id="all-stories">文章列表</h2>
         </div>
 
-        <div class="publication-filter" role="group" aria-label="依產業主題或文章類型篩選">
-          <button type="button" data-category="all" aria-pressed="true">全部</button>
-          <button type="button" data-category="生技與醫療" aria-pressed="false">生技與醫療</button>
-          <button type="button" data-category="人工智慧與軟體" aria-pressed="false">人工智慧與軟體</button>
-          <button type="button" data-category="半導體" aria-pressed="false">半導體</button>
-          <button type="button" data-category="先進材料" aria-pressed="false">先進材料</button>
-          <button type="button" data-category="企業分析" aria-pressed="false">企業分析</button>
+        <div class="publication-tools" hidden>
+          <div class="publication-tools-top">
+            <form class="publication-search" role="search">
+              <label class="sr-only" for="article-search">搜尋標題或摘要</label>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+              <input id="article-search" type="search" placeholder="搜尋標題或摘要" autocomplete="off" maxlength="160">
+            </form>
+            <div class="publication-type-control">
+              <label for="article-type">文章類型</label>
+              <select id="article-type">
+                <option value="all">全部類型</option>
+                <option value="產業入門">產業入門</option>
+                <option value="專題研究">專題研究</option>
+                <option value="企業分析">企業分析</option>
+              </select>
+            </div>
+          </div>
+          <div class="publication-filter" role="group" aria-label="依產業篩選文章">
+            <button type="button" data-category="all" aria-pressed="true">全部產業</button>
+            <button type="button" data-category="生技與醫療" aria-pressed="false">生技與醫療</button>
+            <button type="button" data-category="人工智慧與軟體" aria-pressed="false">人工智慧與軟體</button>
+            <button type="button" data-category="半導體" aria-pressed="false">半導體</button>
+            <button type="button" data-category="先進材料" aria-pressed="false">先進材料</button>
+          </div>
         </div>
-        <p class="publication-filter-status sr-only" role="status" aria-live="polite">顯示全部 11 篇文章</p>
+        <div class="publication-results-row">
+          <p id="article-results" class="publication-filter-status" role="status" aria-live="polite" aria-atomic="true">11 篇文章</p>
+          <button class="publication-clear" type="button" hidden>清除篩選</button>
+        </div>
+        <div class="publication-empty" hidden>
+          <p>沒有符合條件的文章。</p>
+          <p>試試其他關鍵字，或清除篩選。</p>
+        </div>
 
         <div class="publication-story-list">
 <article class="publication-story" data-industry="生技與醫療" data-type="專題研究" data-topic="生技與醫療">
-            <div class="publication-story-grid">
+            <a class="publication-story-grid" href="/insights/biopharma-commercialization-market-access/" aria-labelledby="story-1">
               <div class="publication-story-copy">
                 <p class="publication-kicker">生技與醫療</p>
-                <h3><a href="/insights/biopharma-commercialization-market-access/">拿到藥證之後，如何把產品變成生意？</a></h3>
+                <h3 id="story-1">拿到藥證之後，如何把產品變成生意？</h3>
                 <p class="publication-story-deck">從市場採用、支付與供應，看新藥商業化的投資價值</p>
                 <div class="publication-story-meta">
                   <span>和平資本研究部</span>
@@ -130,16 +154,16 @@
                   <span>約 11 分鐘</span>
                 </div>
               </div>
-              <a class="publication-story-image" href="/insights/biopharma-commercialization-market-access/" tabindex="-1" aria-hidden="true">
+              <span class="publication-story-image" aria-hidden="true">
                 <img src="/assets/img/editorial/biopharma-commercialization-market-access-cover-v2.webp" alt="" width="1672" height="941" loading="lazy" style="object-position:50% 48%">
-              </a>
-            </div>
+              </span>
+            </a>
           </article>
 <article class="publication-story" data-industry="生技與醫療" data-type="專題研究" data-topic="生技與醫療">
-            <div class="publication-story-grid">
+            <a class="publication-story-grid" href="/insights/clinical-results-investment-evidence/" aria-labelledby="story-2">
               <div class="publication-story-copy">
                 <p class="publication-kicker">生技與醫療</p>
-                <h3><a href="/insights/clinical-results-investment-evidence/">臨床結果怎麼讀？</a></h3>
+                <h3 id="story-2">臨床結果怎麼讀？</h3>
                 <p class="publication-story-deck">從試驗設計、效果幅度到投資判斷</p>
                 <div class="publication-story-meta">
                   <span>和平資本研究部</span>
@@ -147,16 +171,16 @@
                   <span>約 11 分鐘</span>
                 </div>
               </div>
-              <a class="publication-story-image" href="/insights/clinical-results-investment-evidence/" tabindex="-1" aria-hidden="true">
+              <span class="publication-story-image" aria-hidden="true">
                 <img src="/assets/img/editorial/clinical-results-investment-evidence-cover-v2.webp" alt="" width="1672" height="941" loading="lazy" style="object-position:45% 40%">
-              </a>
-            </div>
+              </span>
+            </a>
           </article>
           <article class="publication-story" data-industry="人工智慧與軟體" data-type="專題研究" data-topic="人工智慧與軟體">
-            <div class="publication-story-grid">
+            <a class="publication-story-grid" href="/insights/ai-value-chain-business-models/" aria-labelledby="story-3">
               <div class="publication-story-copy">
                 <p class="publication-kicker">人工智慧與軟體</p>
-                <h3><a href="/insights/ai-value-chain-business-models/">AI 產業鏈如何分工？</a></h3>
+                <h3 id="story-3">AI 產業鏈如何分工？</h3>
                 <p class="publication-story-deck">從一筆企業採購往後追，理解應用、模型、雲端、硬體與資料的分工與收入模式。</p>
                 <div class="publication-story-meta">
                   <span>和平資本研究部</span>
@@ -164,17 +188,17 @@
                   <span>約 9 分鐘</span>
                 </div>
               </div>
-              <a class="publication-story-image" href="/insights/ai-value-chain-business-models/" tabindex="-1" aria-hidden="true">
+              <span class="publication-story-image" aria-hidden="true">
                 <img src="/assets/img/editorial/ai-value-chain-business-models-cover-v2.webp" alt="" width="1672" height="941" loading="lazy" style="object-position:50% 40%">
-              </a>
-            </div>
+              </span>
+            </a>
           </article>
 
           <article class="publication-story" data-industry="生技與醫療" data-type="專題研究" data-topic="生技與醫療">
-            <div class="publication-story-grid">
+            <a class="publication-story-grid" href="/insights/biopharma-pipeline-clinical-investment/" aria-labelledby="story-4">
               <div class="publication-story-copy">
                 <p class="publication-kicker">生技與醫療</p>
-                <h3><a href="/insights/biopharma-pipeline-clinical-investment/">新藥公司還沒獲利，投資人在看什麼？</a></h3>
+                <h3 id="story-4">新藥公司還沒獲利，投資人在看什麼？</h3>
                 <p class="publication-story-deck">從臨床證據、產品權利與商業模式，理解資金需求、競爭條件與價值判斷。</p>
                 <div class="publication-story-meta">
                   <span>和平資本研究部</span>
@@ -182,17 +206,17 @@
                   <span>約 9 分鐘</span>
                 </div>
               </div>
-              <a class="publication-story-image" href="/insights/biopharma-pipeline-clinical-investment/" tabindex="-1" aria-hidden="true">
+              <span class="publication-story-image" aria-hidden="true">
                 <img src="/assets/img/editorial/biopharma-pipeline-clinical-investment-cover-v2.webp" alt="" width="1672" height="941" loading="lazy" style="object-position:55% 35%">
-              </a>
-            </div>
+              </span>
+            </a>
           </article>
 
           <article class="publication-story" data-industry="半導體" data-type="專題研究" data-topic="半導體">
-            <div class="publication-story-grid">
+            <a class="publication-story-grid" href="/insights/advanced-packaging-value-chain/" aria-labelledby="story-5">
               <div class="publication-story-copy">
                 <p class="publication-kicker">半導體</p>
-                <h3><a href="/insights/advanced-packaging-value-chain/">先進封裝產業鏈：設備、材料與測試，如何連在一起？</a></h3>
+                <h3 id="story-5">先進封裝產業鏈：設備、材料與測試，如何連在一起？</h3>
                 <p class="publication-story-deck">從系統需求到交付責任，理解先進封裝各環節提供什麼，又承擔什麼。</p>
                 <div class="publication-story-meta">
                   <span>和平資本研究部</span>
@@ -200,17 +224,17 @@
                   <span>約 10 分鐘</span>
                 </div>
               </div>
-              <a class="publication-story-image" href="/insights/advanced-packaging-value-chain/" tabindex="-1" aria-hidden="true">
+              <span class="publication-story-image" aria-hidden="true">
                 <img src="/assets/img/editorial/advanced-packaging-value-chain-photo.webp" alt="" width="1536" height="1024" loading="lazy">
-              </a>
-            </div>
+              </span>
+            </a>
           </article>
 
           <article class="publication-story" data-industry="半導體" data-type="產業入門" data-topic="半導體">
-            <div class="publication-story-grid">
+            <a class="publication-story-grid" href="/insights/probe-card-industry/" aria-labelledby="story-6">
               <div class="publication-story-copy">
                 <p class="publication-kicker">半導體</p>
-                <h3><a href="/insights/probe-card-industry/">探針卡是什麼？從微小接點，看測試產業的技術與商業門檻</a></h3>
+                <h3 id="story-6">探針卡是什麼？從微小接點，看測試產業的技術與商業門檻</h3>
                 <p class="publication-story-deck">理解探針卡、測試機與探針台的分工，再看 AI、HBM 與供應商的競爭。</p>
                 <div class="publication-story-meta">
                   <span>和平資本研究部</span>
@@ -218,17 +242,17 @@
                   <span>約 19 分鐘</span>
                 </div>
               </div>
-              <a class="publication-story-image" href="/insights/probe-card-industry/" tabindex="-1" aria-hidden="true">
+              <span class="publication-story-image" aria-hidden="true">
                 <img src="/assets/img/editorial/probe-card-industry-photo.webp" alt="" width="1536" height="1024" loading="lazy">
-              </a>
-            </div>
+              </span>
+            </a>
           </article>
 
           <article class="publication-story" data-industry="半導體" data-type="專題研究" data-topic="半導體">
-            <div class="publication-story-grid">
+            <a class="publication-story-grid" href="/insights/hbm-test-quality-gates/" aria-labelledby="story-7">
               <div class="publication-story-copy">
                 <p class="publication-kicker">半導體</p>
-                <h3><a href="/insights/hbm-test-quality-gates/">HBM 的品質關卡：為什麼晶粒合格，還要測試堆疊？</a></h3>
+                <h3 id="story-7">HBM 的品質關卡：為什麼晶粒合格，還要測試堆疊？</h3>
                 <p class="publication-story-deck">堆疊前後回答不同的品質問題；測試的價值，也要和成本一起評估。</p>
                 <div class="publication-story-meta">
                   <span>和平資本研究部</span>
@@ -236,17 +260,17 @@
                   <span>約 11 分鐘</span>
                 </div>
               </div>
-              <a class="publication-story-image" href="/insights/hbm-test-quality-gates/" tabindex="-1" aria-hidden="true">
+              <span class="publication-story-image" aria-hidden="true">
                 <img src="/assets/img/editorial/hbm-test-quality-gates-photo.webp" alt="" width="1536" height="1024" loading="lazy">
-              </a>
-            </div>
+              </span>
+            </a>
           </article>
 
           <article class="publication-story" data-industry="半導體" data-type="專題研究" data-topic="半導體">
-            <div class="publication-story-grid">
+            <a class="publication-story-grid" href="/insights/semiconductor-customer-qualification/" aria-labelledby="story-8">
               <div class="publication-story-copy">
                 <p class="publication-kicker">半導體</p>
-                <h3><a href="/insights/semiconductor-customer-qualification/">從送樣到量產：如何讀懂供應商的客戶導入進度？</a></h3>
+                <h3 id="story-8">從送樣到量產：如何讀懂供應商的客戶導入進度？</h3>
                 <p class="publication-story-deck">用 Micron 的公開事件，分開產品版本、客戶採用與尚待確認的經濟結果。</p>
                 <div class="publication-story-meta">
                   <span>和平資本研究部</span>
@@ -254,17 +278,17 @@
                   <span>約 10 分鐘</span>
                 </div>
               </div>
-              <a class="publication-story-image" href="/insights/semiconductor-customer-qualification/" tabindex="-1" aria-hidden="true">
+              <span class="publication-story-image" aria-hidden="true">
                 <img src="/assets/img/editorial/semiconductor-customer-qualification-photo.webp" alt="" width="1536" height="1024" loading="lazy">
-              </a>
-            </div>
+              </span>
+            </a>
           </article>
 
           <article class="publication-story" data-industry="先進材料" data-type="產業入門" data-topic="先進材料">
-            <div class="publication-story-grid">
+            <a class="publication-story-grid" href="/insights/materials-lab-to-industry/" aria-labelledby="story-9">
               <div class="publication-story-copy">
                 <p class="publication-kicker">先進材料</p>
-                <h3><a href="/insights/materials-lab-to-industry/">新材料走出實驗室，真正的門檻在哪裡？</a></h3>
+                <h3 id="story-9">新材料走出實驗室，真正的門檻在哪裡？</h3>
                 <p class="publication-story-deck">從 Apple／Corning 與 Toray／Boeing 的合作，看製造、供應與資本投入。</p>
                 <div class="publication-story-meta">
                   <span>和平資本研究部</span>
@@ -272,17 +296,17 @@
                   <span>約 11 分鐘</span>
                 </div>
               </div>
-              <a class="publication-story-image" href="/insights/materials-lab-to-industry/" tabindex="-1" aria-hidden="true">
+              <span class="publication-story-image" aria-hidden="true">
                 <img src="/assets/img/editorial/materials-lab-to-industry-photo.webp" alt="" width="1536" height="1024" loading="lazy">
-              </a>
-            </div>
+              </span>
+            </a>
           </article>
 
           <article class="publication-story" data-industry="先進材料" data-type="專題研究" data-topic="先進材料">
-            <div class="publication-story-grid">
+            <a class="publication-story-grid" href="/insights/material-customer-qualification/" aria-labelledby="story-10">
               <div class="publication-story-copy">
                 <p class="publication-kicker">先進材料</p>
-                <h3><a href="/insights/material-customer-qualification/">材料通過測試，為什麼仍拿不到量產訂單？</a></h3>
+                <h3 id="story-10">材料通過測試，為什麼仍拿不到量產訂單？</h3>
                 <p class="publication-story-deck">從買方風險出發，找出試片、製程條件與穩定採購之間的缺口。</p>
                 <div class="publication-story-meta">
                   <span>和平資本研究部</span>
@@ -290,17 +314,17 @@
                   <span>約 11 分鐘</span>
                 </div>
               </div>
-              <a class="publication-story-image" href="/insights/material-customer-qualification/" tabindex="-1" aria-hidden="true">
+              <span class="publication-story-image" aria-hidden="true">
                 <img src="/assets/img/editorial/material-customer-qualification-photo.webp" alt="" width="1536" height="1024" loading="lazy">
-              </a>
-            </div>
+              </span>
+            </a>
           </article>
 
           <article class="publication-story" data-industry="半導體" data-type="企業分析" data-topic="企業分析">
-            <div class="publication-story-grid">
+            <a class="publication-story-grid" href="/insights/companies/technoprobe/" aria-labelledby="story-11">
               <div class="publication-story-copy">
                 <p class="publication-kicker">企業分析</p>
-                <h3><a href="/insights/companies/technoprobe/">Technoprobe：技術門檻，如何轉成獲利與現金？</a></h3>
+                <h3 id="story-11">Technoprobe：技術門檻，如何轉成獲利與現金？</h3>
                 <p class="publication-story-deck">從探針卡的客製介面，走進 Technoprobe 的商業模式、擴產與現金回收。</p>
                 <div class="publication-story-meta">
                   <span>和平資本研究部</span>
@@ -308,10 +332,10 @@
                   <span>約 11 分鐘</span>
                 </div>
               </div>
-              <a class="publication-story-image" href="/insights/companies/technoprobe/" tabindex="-1" aria-hidden="true">
+              <span class="publication-story-image" aria-hidden="true">
                 <img src="/assets/img/editorial/technoprobe-photo.webp" alt="" width="1536" height="1024" loading="lazy">
-              </a>
-            </div>
+              </span>
+            </a>
           </article>
         </div>
       </section>
@@ -364,6 +388,6 @@
   </footer>
 
   <script src="/assets/js/site.js?v=20261027-batch1b" defer></script>
-  <script src="/assets/js/publication.js?v=20261027-batch1b" defer></script>
+  <script src="/assets/js/insights-index.js?v=20261027-reading" defer></script>
 </body>
 </html>
